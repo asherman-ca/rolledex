@@ -10,6 +10,17 @@ const PostSchema = new Schema({
     type: String,
     required: true
   },
+  vector: {
+    type: String,
+    required: true
+  },
+  position: {
+    type: String,
+    required: true
+  },
+  youtube: {
+    type: String
+  },
   name: {
     type: String
   },
