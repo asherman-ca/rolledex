@@ -11,18 +11,14 @@ const ProfileSchema = new Schema({
     required: true,
     max: 40
   },
-  company: {
+  gym: {
     type: String
   },
-  website: {
+  rank: {
     type: String
   },
   location: {
     type: String
-  },
-  status: {
-    type: String,
-    required: true
   },
   skills: {
     type: [String],
@@ -31,49 +27,35 @@ const ProfileSchema = new Schema({
   bio: {
     type: String
   },
-  githubusername: {
-    type: String
-  },
   experience: [
     {
-      title: {
-        type: String,
-        required: true
-      },
-      company: {
+      name: {
         type: String,
         required: true
       },
       location: {
-        type: String
+        type: String,
+        required: true
       },
-      from: {
+      date: {
         type: Date,
         required: true
       },
-      to: {
-        type: Date
-      },
-      current: {
-        type: Boolean,
-        default: false
-      },
       description: {
         type: String
+      },
+      place: {
+        type: Number
       }
     }
   ],
   education: [
     {
-      school: {
+      gym: {
         type: String,
         required: true
       },
-      degree: {
-        type: String,
-        required: true
-      },
-      field: {
+      location: {
         type: String,
         required: true
       },
@@ -83,6 +65,9 @@ const ProfileSchema = new Schema({
       },
       to: {
         type: Date
+      },
+      website: {
+        type: String
       },
       current: {
         type: Boolean,
