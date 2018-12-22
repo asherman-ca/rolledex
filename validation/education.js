@@ -4,18 +4,17 @@ const isEmpty = require('./is-empty');
 module.exports = function validateEducationInput(data) {
   let errors = {};
 
-  data.school = !isEmpty(data.school) ? data.school : '';
-  data.degree = !isEmpty(data.degree) ? data.degree : '';
+  data.gym = !isEmpty(data.gym) ? data.gym : '';
+  data.location = !isEmpty(data.location) ? data.location : '';
   data.from = !isEmpty(data.from) ? data.from : '';
-  data.field = !isEmpty(data.field) ? data.field : '';
-  data.to = !isEmpty(data.to) ? data.to : '';
+  // data.to = !isEmpty(data.to) ? data.to : '';
 
-  if (Validator.isEmpty(data.school)) {
-    errors.school = 'School field is required';
+  if (Validator.isEmpty(data.gym)) {
+    errors.gym = 'Gym field is required';
   }
 
-  if (Validator.isEmpty(data.degree)) {
-    errors.degree = 'Degree field is required';
+  if (Validator.isEmpty(data.location)) {
+    errors.location = 'Location field is required';
   }
 
   if (Validator.isEmpty(data.from)) {
@@ -25,10 +24,6 @@ module.exports = function validateEducationInput(data) {
   // if (Validator.isEmpty(data.to)) {
   //   errors.to = 'To field is required';
   // }
-
-  if (Validator.isEmpty(data.field)) {
-    errors.field = 'Field field is required';
-  }
 
   return {
     errors,
