@@ -4,7 +4,7 @@ vscode extensions:
 ---commonly used snippets: rcc, rfc
 -Live Server
 -Node.js Modules Intellisense
--Prettier - Code Formatter
+-Prettier: code formatter
 
 vscode user settings:
 {
