@@ -33,14 +33,108 @@ class App extends Component {
               </div>
               <div className="col-lg-6">
                 <img
-                  src="img/triangle.jpg"
+                  src="img/aojpano.jpg"
                   alt="Triangle"
                   className="d-none d-lg-block img-fluid img-thumbnail triangle"
                 />
               </div>
             </div>
           </div>
-          <div className="bg-skew bg-skew-light" />
+          <div className="bg-skew bg-skew-light">
+            <div className="container">
+              <div className="row pt-5">
+                <div className="col-sm-6 col-md-4 mb-4 mb-md-5">
+                  <div className="pr-lg-3">
+                    <span className="icon icon-primary mb-3">
+                      <i
+                        className="icon-inner fab fa-accessible-icon"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <h3 className="h4">Accessible</h3>
+                    <p className="mb-md-0">
+                      Built with accessibility in mind and following best
+                      practices.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-4 mb-4 mb-md-5">
+                  <div className="pr-lg-3">
+                    <span className="icon icon-primary mb-3">
+                      <i
+                        className="icon-inner fas fa-mobile-alt"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <h3 className="h4">Mobile First</h3>
+                    <p className="mb-md-0">
+                      Mobile-first flexbox grid to build layouts of all shapes
+                      and sizes.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-4 mb-4 mb-md-5">
+                  <div className="pr-lg-3">
+                    <span className="icon icon-primary mb-3">
+                      <i
+                        className="icon-inner fab fa-font-awesome-flag"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <h3 className="h4">Font Awesome</h3>
+                    <p className="mb-md-0">
+                      More than 1200 vector icons from the web's most popular
+                      icon set.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-4 mb-4 mb-md-5">
+                  <div className="pr-lg-3">
+                    <span className="icon icon-primary mb-3">
+                      <i
+                        className="icon-inner fas fa-code"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <h3 className="h4">Valid Code</h3>
+                    <p className="mb-md-0">
+                      W3C valid code to ensure the site works properly on all
+                      major browsers.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-4 mb-4 mb-md-5">
+                  <div className="pr-lg-3">
+                    <span className="icon icon-primary mb-3">
+                      <i
+                        className="icon-inner fab fa-sass"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <h3 className="h4">Sass Files</h3>
+                    <p className="mb-md-0">
+                      Easily customize your site modifying the source scss
+                      files.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-sm-6 col-md-4 mb-4 mb-md-5">
+                  <div className="pr-lg-3">
+                    <span className="icon icon-primary mb-3">
+                      <i
+                        className="icon-inner fab fa-gulp"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <h3 className="h4">Gulp</h3>
+                    <p className="mb-md-0">
+                      Automated workflow for your development tasks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="container" />
           <div className="bg-skew bg-skew-light" />
         </main>
