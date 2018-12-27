@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta charset="utf-8" />
     <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#000000" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
     <link
       href="https://fonts.googleapis.com/css?family=Cabin"
       rel="stylesheet"
@@ -56,6 +55,11 @@
     <script src="./assets/js/material-kit.js?v=2.0.3"></script>
     <!-- Fixed Sidebar Nav - js With initialisations For Demo Purpose, Don't Include it in your project -->
     <script src="./assets/assets-for-demo/js/material-kit-demo.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        materialKitDemo.presentationAnimations();
+      });
+    </script>
     <script>
       $(document).ready(function() {
         //init DateTimePickers
