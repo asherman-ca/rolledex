@@ -8,6 +8,10 @@ body {
 */
 
 .navbar-brand {
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 1.5rem !important;
+}
+
+.navbar {
+  color: black !important;
 }
