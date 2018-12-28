@@ -52,8 +52,21 @@ class Register extends Component {
                           <p className="description">
                             Share your BJJ profile and connect with other users.
                             Also, permaban on{' '}
-                            <i className="material-icons">bug_report</i>Anthony
-                            <i className="material-icons">bug_report</i>
+                            <i
+                              style={{ color: 'red' }}
+                              className="material-icons"
+                            >
+                              bug_report
+                            </i>
+                            <strong>
+                              <span style={{ color: 'red' }}>Anthony </span>
+                            </strong>
+                            <i
+                              style={{ color: 'red' }}
+                              className="material-icons"
+                            >
+                              bug_report
+                            </i>
                           </p>
                         </div>
                       </div>
