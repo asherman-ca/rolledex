@@ -11,7 +11,7 @@ class Navbar extends Component {
         <div className="container">
           <div className="navbar-translate">
             <a className="navbar-brand" href="../index.html">
-              Rolledex{' '}
+              ROLLEDEX{' '}
             </a>
             <button
               className="navbar-toggler"
