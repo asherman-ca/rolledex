@@ -5,15 +5,18 @@ import { Provider } from 'react-redux';
 import setAuthToken from './utils/setAuthToken';
 import './App.css';
 
-import Landing from './components/layout/Landing';
+import Register from './components/layout/Register';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 class App extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        <Landing />
+        <div className="signup-page">
+          <Register />
+        </div>
       </div>
     );
   }
