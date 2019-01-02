@@ -1,7 +1,33 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import TextFieldGroup from '../common/TextFieldGroup';
 
 class Register extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: '',
+      email: '',
+      password: '',
+      password2: '',
+      errors: {}
+    };
+  }
+
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+    console.log('hits');
+  };
+
   render() {
+    const { errors } = this.state;
+
     return (
       <div className="signup-page">
         <div
@@ -74,54 +100,48 @@ class Register extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-5 mr-auto">
+                      <div className="col-md-5 mr-auto mt-auto mb-auto">
                         <form className="form" method="" action="">
-                          <div className="form-group">
-                            <div className="input-group">
-                              <div className="input-group-prepend">
-                                <span className="input-group-text">
-                                  <i className="material-icons">face</i>
-                                </span>
-                              </div>
-                              <input
-                                type="text"
-                                className="form-control"
-                                placeholder="First Name..."
-                              />
-                            </div>
-                          </div>
-                          <div className="form-group">
-                            <div className="input-group">
-                              <div className="input-group-prepend">
-                                <span className="input-group-text">
-                                  <i className="material-icons">mail</i>
-                                </span>
-                              </div>
-                              <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Email..."
-                              />
-                            </div>
-                          </div>
-                          <div className="form-group">
-                            <div className="input-group">
-                              <div className="input-group-prepend">
-                                <span className="input-group-text">
-                                  <i className="material-icons">lock_outline</i>
-                                </span>
-                              </div>
-                              <input
-                                type="password"
-                                placeholder="Password..."
-                                className="form-control"
-                              />
-                            </div>
-                          </div>
+                          <TextFieldGroup
+                            placeholder="name"
+                            name="name"
+                            type="text"
+                            value={this.state.name}
+                            onChange={this.onChange}
+                            error={errors.name}
+                            prepend="face"
+                          />
+                          <TextFieldGroup
+                            placeholder="Email"
+                            name="email"
+                            type="text"
+                            value={this.state.email}
+                            onChange={this.onChange}
+                            error={errors.email}
+                            prepend="mail"
+                          />
+                          <TextFieldGroup
+                            placeholder="Password"
+                            name="password"
+                            type="password"
+                            value={this.state.password}
+                            onChange={this.onChange}
+                            error={errors.password}
+                            prepend="lock_outline"
+                          />
+                          <TextFieldGroup
+                            placeholder="Confirm Password"
+                            name="password2"
+                            type="password"
+                            value={this.state.password2}
+                            onChange={this.onChange}
+                            error={errors.password2}
+                            prepend="lock_outline"
+                          />
                           <div className="text-center">
                             <a
                               href="#pablo"
-                              className="btn btn-primary btn-round"
+                              className="mt-4 btn btn-info btn-round"
                             >
                               Get Started
                             </a>
@@ -140,4 +160,12 @@ class Register extends Component {
   }
 }
 
-export default Register;
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+
+export default connect(
+  mapStateToProps,
+  {}
+)(Register);
