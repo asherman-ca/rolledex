@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
@@ -10,9 +11,9 @@ class Navbar extends Component {
       >
         <div className="container">
           <div className="navbar-translate">
-            <a className="navbar-brand" href="../index.html">
+            <Link className="navbar-brand" to="/">
               ROLLEDEX{' '}
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -53,12 +54,9 @@ class Navbar extends Component {
                   <i className="material-icons">account_circle</i> Account
                 </a>
                 <div className="dropdown-menu dropdown-with-icons">
-                  <a
-                    href="../examples/signup-page.html"
-                    className="dropdown-item"
-                  >
+                  <Link className="dropdown-item" to="/register">
                     <i className="material-icons">person_add</i> Sign In / Out
-                  </a>
+                  </Link>
                   <a
                     href="../examples/profile-page.html"
                     className="dropdown-item"
