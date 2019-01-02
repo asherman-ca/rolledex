@@ -31,7 +31,7 @@ class Register extends Component {
     return (
       <div className="signup-page">
         <div
-          className="page-header"
+          className="page-header header-filter"
           style={{
             backgroundImage: "url('../assets/img/bg7.jpg')",
             backgroundSize: 'cover',
