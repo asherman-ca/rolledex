@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { registerUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 
 class Register extends Component {
@@ -22,7 +23,14 @@ class Register extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    console.log('hits');
+    const newUser = {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2
+    };
+
+    this.props.registerUser(newUser, this.props.history);
   };
 
   render() {
@@ -101,7 +109,12 @@ class Register extends Component {
                         </div>
                       </div>
                       <div className="col-md-5 mr-auto mt-auto mb-auto">
-                        <form className="form" method="" action="">
+                        <form
+                          className="form"
+                          method=""
+                          action=""
+                          onSubmit={this.onSubmit}
+                        >
                           <TextFieldGroup
                             placeholder="name"
                             name="name"
@@ -139,12 +152,10 @@ class Register extends Component {
                             prepend="lock_outline"
                           />
                           <div className="text-center">
-                            <a
-                              href="#pablo"
+                            <input
+                              type="submit"
                               className="mt-4 btn btn-info btn-round"
-                            >
-                              Get Started
-                            </a>
+                            />
                           </div>
                         </form>
                       </div>
@@ -160,6 +171,12 @@ class Register extends Component {
   }
 }
 
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
 const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
@@ -167,5 +184,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  {}
-)(Register);
+  { registerUser }
+)(withRouter(Register));

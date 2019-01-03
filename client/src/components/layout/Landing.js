@@ -53,11 +53,11 @@ class Landing extends Component {
                       <div className="icon icon-info">
                         <i className="material-icons">chat</i>
                       </div>
-                      <h4 className="info-title">Technique sharing</h4>
+                      <h4 className="info-title">Technique Sharing</h4>
                       <p>
-                        Share and discuss the techniques in the community. Sort
-                        by rating and add your favorite techniques into your
-                        arsenal.
+                        Share and discuss the most effective techniques in the
+                        community. Sort by rating and add your favorite
+                        techniques into your arsenal.
                       </p>
                     </div>
                   </div>
