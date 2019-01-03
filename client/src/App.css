@@ -27,3 +27,9 @@ body {
 .info-title {
   font-family: 'Averta', 'Helvetica Neue', 'Open Sans', Arial, sans-serif !important;
 }
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}

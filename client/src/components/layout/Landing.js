@@ -92,7 +92,7 @@ class Landing extends Component {
                 </div>
               </div>
 
-              <div class="section text-center">
+              <div class="section text-center" style={{ paddingBottom: '0px' }}>
                 <h2 class="title">Rolledex Users</h2>
                 <div class="team">
                   <div class="row">
@@ -125,8 +125,9 @@ class Landing extends Component {
                                 Head Coach @ RGA
                               </h6>
                               <p class="card-description">
-                                Don't be scared of the truth because we need to
-                                restart the human foundation in truth...
+                                When competing - do not concern yourself with
+                                how different everything seems from daily
+                                training - focus instead on similarities.
                               </p>
                             </div>
                             <div class="card-footer justify-content-center">

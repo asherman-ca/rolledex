@@ -108,9 +108,9 @@ class Register extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-5 mr-auto mt-auto mb-auto">
+                      <div className="col-md-5 mr-auto mt-auto mb-auto register-form">
                         <form
-                          className="form"
+                          className="form register-form"
                           method=""
                           action=""
                           onSubmit={this.onSubmit}
@@ -154,7 +154,7 @@ class Register extends Component {
                           <div className="text-center">
                             <input
                               type="submit"
-                              className="mt-4 btn btn-info btn-round"
+                              className="btn btn-info btn-round"
                             />
                           </div>
                         </form>
