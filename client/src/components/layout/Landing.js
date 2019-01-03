@@ -34,7 +34,10 @@ class Landing extends Component {
         </div>
         <div className="main main-raised">
           <div className="container">
-            <div className="section text-center">
+            <div
+              className="section text-center"
+              style={{ paddingBottom: '0px' }}
+            >
               <div className="row">
                 <div className="col-md-8 ml-auto mr-auto">
                   <h2 className="title">Accelerate your Jiu Jitsu</h2>
