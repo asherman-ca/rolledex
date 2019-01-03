@@ -17,12 +17,6 @@
   font-family: 'Averta', 'Helvetica Neue', 'Open Sans', Arial, sans-serif !important;
 }
 
-.register-form {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-}
-
 .mb-reset {
   margin-bottom: 0px !important;
 }
