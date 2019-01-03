@@ -12,11 +12,11 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-6">
-                <h1 className="title">Your BJJ Story Starts With Us.</h1>
+                <h1 className="title">Your BJJ Story Starts Here.</h1>
                 <h4>
-                  Rolledex will empower you to track your BJJ development and
-                  gain a better understanding of your progress. In doing so,
-                  you'll accellerate the pace of your training and enjoy better
+                  Rolledex is a tool to track your BJJ development and gain a
+                  better understanding of your progress. In doing so, you'll
+                  accellerate the pace of your training and enjoy better
                   results. We beleive in training smarter - not harder.
                 </h4>
                 <br />
@@ -36,13 +36,13 @@ class Landing extends Component {
             <div className="section text-center">
               <div className="row">
                 <div className="col-md-8 ml-auto mr-auto">
-                  <h2 className="title">All the features you need</h2>
+                  <h2 className="title">Accelerate your Jiu Jitsu</h2>
                   <h5 className="description">
-                    Forgeting small and important details happens to the best of
-                    us, but those details are often required for success. By
-                    keeping a log of the various facets of their game and
-                    reviewing them regurly, our users enjoy unparalleled success
-                    in training and competition.
+                    Join a community of practitioners dedicated to optimizing
+                    their craft. The most important details are often the
+                    smallest and easiest to forget. Tracking and reviewing
+                    techniques and concepts can be vital to progression and
+                    we're here to help.
                   </h5>
                 </div>
               </div>
@@ -68,9 +68,9 @@ class Landing extends Component {
                       </div>
                       <h4 className="info-title">BJJ Community</h4>
                       <p>
-                        Create your own profile and browse through the profiles
-                        of others. Learn the secrets to your favorite players
-                        success by studying the map of their game.
+                        Browse through community profiles and learn the systems
+                        used by your favorite players. Ever wonder what Gordon
+                        Ryan's top 3 back attacks are?
                       </p>
                     </div>
                   </div>
@@ -79,11 +79,11 @@ class Landing extends Component {
                       <div className="icon icon-danger">
                         <i className="material-icons">settings</i>
                       </div>
-                      <h4 className="info-title">Service</h4>
+                      <h4 className="info-title">Map Your System</h4>
                       <p>
-                        Rolledex service is always available to help with any
-                        questions you have. Rest easy knowing that your account
-                        is always safe and secure.
+                        Keep track of your favorite techniques and concepts and
+                        organize them into your game. It's never been easier to
+                        visualize someone's game.
                       </p>
                     </div>
                   </div>
