@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LandingTile from './LandingTile';
 
 class Landing extends Component {
   render() {
@@ -46,6 +47,7 @@ class Landing extends Component {
                   </h5>
                 </div>
               </div>
+
               <div className="features">
                 <div className="row">
                   <div className="col-md-4">
@@ -83,8 +85,171 @@ class Landing extends Component {
                       <p>
                         Keep track of your favorite techniques and concepts and
                         organize them into your game. It's never been easier to
-                        visualize someone's game.
+                        visualize someone's system.
                       </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section text-center">
+                <h2 class="title">Rolledex Users</h2>
+                <div class="team">
+                  <div class="row">
+                    <LandingTile
+                      name="Keenan Cornelius"
+                      title="2x IBJJF Champion"
+                      bio="Don't be scared of the truth because we need to
+                      restart the human foundation in truth..."
+                      insta="https://www.instagram.com"
+                      youtube="https://www.instagram.com"
+                      twitter="https://www.instagram.com"
+                      facebook="https://www.instagram.com"
+                      pic="../img/keenan2.jpeg"
+                    />
+
+                    <div class="col-md-6">
+                      <div class="card card-profile card-plain">
+                        <div class="row">
+                          <div class="col-md-5">
+                            <div class="card-header card-header-image">
+                              <a href="#pablo">
+                                <img class="img" src="../img/donjon.jpg" />
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-md-7">
+                            <div class="card-body">
+                              <h4 class="card-title">Jon Danahar</h4>
+                              <h6 class="category text-muted">
+                                Head Coach @ RGA
+                              </h6>
+                              <p class="card-description">
+                                Don't be scared of the truth because we need to
+                                restart the human foundation in truth...
+                              </p>
+                            </div>
+                            <div class="card-footer justify-content-center">
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-linkedin"
+                              >
+                                <i class="fa fa-linkedin" />
+                              </a>
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-facebook"
+                              >
+                                <i class="fa fa-facebook-square" />
+                              </a>
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-dribbble"
+                              >
+                                <i class="fa fa-dribbble" />
+                              </a>
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-google"
+                              >
+                                <i class="fa fa-google" />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="card card-profile card-plain">
+                        <div class="row">
+                          <div class="col-md-5">
+                            <div class="card-header card-header-image">
+                              <a href="#pablo">
+                                <img class="img" src="../img/miyao.jpg" />
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-md-7">
+                            <div class="card-body">
+                              <h4 class="card-title">Paulo Miyao</h4>
+                              <h6 class="category text-muted">
+                                4x IBJJF Champion
+                              </h6>
+                              <p class="card-description">
+                                I love you like Kanye loves Kanye. Don't be
+                                scared of the truth.
+                              </p>
+                            </div>
+                            <div class="card-footer justify-content-center">
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-youtube"
+                              >
+                                <i class="fa fa-youtube-play" />
+                              </a>
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-twitter"
+                              >
+                                <i class="fa fa-twitter" />
+                              </a>
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-instagram"
+                              >
+                                <i class="fa fa-instagram" />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card card-profile card-plain">
+                        <div class="row">
+                          <div class="col-md-5">
+                            <div class="card-header card-header-image">
+                              <a href="#pablo">
+                                <img class="img" src="../img/gary.jpg" />
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-md-7">
+                            <div class="card-body">
+                              <h4 class="card-title">Gary Tonnen</h4>
+                              <h6 class="category text-muted">
+                                MMA & BJJ Champion
+                              </h6>
+                              <p class="card-description">
+                                I love you like Kanye loves Kanye. Don't be
+                                scared of the truth because we need to restart
+                                the human foundation.
+                              </p>
+                            </div>
+                            <div class="card-footer justify-content-center">
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-linkedin"
+                              >
+                                <i class="fa fa-linkedin" />
+                              </a>
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-facebook"
+                              >
+                                <i class="fa fa-facebook-square" />
+                              </a>
+                              <a
+                                href="#pablo"
+                                class="btn btn-just-icon btn-link btn-google"
+                              >
+                                <i class="fa fa-google" />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
