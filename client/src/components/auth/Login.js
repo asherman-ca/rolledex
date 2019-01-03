@@ -53,61 +53,34 @@ class Login extends Component {
         >
           <div className="container">
             <div className="row">
-              <div className="col-md-4 col-sm-6 ml-auto mr-auto">
+              <div className="col-md-5 col-sm-6 ml-auto mr-auto">
                 <div className="card card-signup">
                   <form
-                    className="form"
+                    className="form mb-auto"
                     method=""
                     action=""
                     onSubmit={this.onSubmit}
                   >
-                    <div className="text-center">
-                      <h4 className="card-title mb-4">Login</h4>
-                    </div>
-                    <div class="card-body">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons">mail</i>
-                          </span>
-                        </div>
-                        <input
-                          type="email"
-                          class="form-control"
-                          placeholder={'Email'}
-                          value={this.state.email}
-                          onChange={this.onChange}
-                          name="email"
-                        />
-                        {errors.email && (
-                          <span className="description">{errors.email}</span>
-                        )}
-                      </div>
-                      <div class="input-group mt-4">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons">lock_outline</i>
-                          </span>
-                        </div>
-
-                        <input
-                          type="password"
-                          class="form-control"
-                          placeholder={'Password'}
-                          value={this.state.password}
-                          onChange={this.onChange}
-                          name="password"
-                        />
-                        {errors.password && (
-                          <div className="description">{errors.password}</div>
-                        )}
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <input
-                        type="submit"
-                        className="mt-4 btn btn-info btn-round"
-                      />
+                    <TextFieldGroup
+                      placeholder="Email"
+                      name="email"
+                      type="text"
+                      value={this.state.email}
+                      onChange={this.onChange}
+                      error={errors.email}
+                      prepend="mail"
+                    />
+                    <TextFieldGroup
+                      placeholder="Password"
+                      name="password"
+                      type="password"
+                      value={this.state.password}
+                      onChange={this.onChange}
+                      error={errors.password}
+                      prepend="lock_outline"
+                    />
+                    <div className="text-center mt-4">
+                      <input type="submit" className="btn btn-info btn-round" />
                     </div>
                   </form>
                 </div>
