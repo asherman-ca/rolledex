@@ -15,6 +15,16 @@ class Login extends Component {
     };
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.auth.isAuthenticated) {
+      this.props.history.push('./dashboard');
+    }
+
+    if (newProps.errors) {
+      this.setState({ errors: newProps.errors });
+    }
+  }
+
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -64,27 +74,33 @@ class Login extends Component {
                         <input
                           type="email"
                           class="form-control"
-                          placeholder="Email..."
+                          placeholder={'Email'}
                           value={this.state.email}
                           onChange={this.onChange}
                           name="email"
                         />
+                        {errors.email && (
+                          <span className="description">{errors.email}</span>
+                        )}
                       </div>
-
                       <div class="input-group mt-4">
                         <div class="input-group-prepend">
                           <span class="input-group-text">
                             <i class="material-icons">lock_outline</i>
                           </span>
                         </div>
+
                         <input
                           type="password"
                           class="form-control"
-                          placeholder="Password..."
+                          placeholder={'Password'}
                           value={this.state.password}
                           onChange={this.onChange}
                           name="password"
                         />
+                        {errors.password && (
+                          <div className="description">{errors.password}</div>
+                        )}
                       </div>
                     </div>
                     <div className="text-center">

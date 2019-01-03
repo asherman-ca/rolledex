@@ -14,7 +14,9 @@ const TextFieldGroup = ({
   disabled
 }) => {
   return (
-    <div className="form-group bmd-form-group">
+    <div
+      className={classnames('form-group bmd-form-group', { 'mb-reset': error })}
+    >
       <div className="input-group">
         <div className="input-group-prepend">
           <span className="input-group-text">
@@ -22,17 +24,18 @@ const TextFieldGroup = ({
           </span>
         </div>
         <input
-          type={error ? 'text' : type}
+          type={type}
           className={classnames('form-control', {
             'is-invalid': error
           })}
-          placeholder={error ? error : placeholder}
+          placeholder={placeholder}
           name={name}
-          value={error ? error : value}
+          value={value}
           onChange={onChange}
           disabled={disabled}
         />
       </div>
+      {error && <span className="description ml-5">{error}</span>}
     </div>
   );
 };

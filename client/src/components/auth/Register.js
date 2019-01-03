@@ -161,10 +161,7 @@ class Register extends Component {
                             error={errors.password2}
                             prepend="lock_outline"
                           />
-                          <div
-                            className="text-center mb-auto mt-auto"
-                            style={{ paddingBottom: '40px' }}
-                          >
+                          <div className="text-center">
                             <input
                               type="submit"
                               className="btn btn-info btn-round"
