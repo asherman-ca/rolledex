@@ -56,11 +56,15 @@ class Login extends Component {
               <div className="col-md-5 col-sm-6 ml-auto mr-auto">
                 <div className="card card-signup">
                   <form
-                    className="form mb-auto"
+                    className="form mb-auto mr-4"
                     method=""
                     action=""
                     onSubmit={this.onSubmit}
                   >
+                    <h3 className="card-title text-center">Sign in</h3>
+                    <p className="description text-center">
+                      to continue to Rolledex
+                    </p>
                     <TextFieldGroup
                       placeholder="Email"
                       name="email"
