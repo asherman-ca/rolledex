@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { loginUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 
 class Login extends Component {
@@ -24,7 +25,7 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     };
-    console.log(newUser);
+    this.props.loginUser(newUser);
   };
 
   render() {
@@ -40,11 +41,16 @@ class Login extends Component {
             backgroundPosition: 'topcenter'
           }}
         >
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4 col-sm-6 ml-auto mr-auto">
-                <div class="card card-signup">
-                  <form class="form" method="" action="">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4 col-sm-6 ml-auto mr-auto">
+                <div className="card card-signup">
+                  <form
+                    className="form"
+                    method=""
+                    action=""
+                    onSubmit={this.onSubmit}
+                  >
                     <div className="text-center">
                       <h4 className="card-title mb-4">Login</h4>
                     </div>
@@ -59,8 +65,12 @@ class Login extends Component {
                           type="email"
                           class="form-control"
                           placeholder="Email..."
+                          value={this.state.email}
+                          onChange={this.onChange}
+                          name="email"
                         />
                       </div>
+
                       <div class="input-group mt-4">
                         <div class="input-group-prepend">
                           <span class="input-group-text">
@@ -71,6 +81,9 @@ class Login extends Component {
                           type="password"
                           class="form-control"
                           placeholder="Password..."
+                          value={this.state.password}
+                          onChange={this.onChange}
+                          name="password"
                         />
                       </div>
                     </div>
@@ -93,7 +106,8 @@ class Login extends Component {
 
 Login.propTypes = {
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  loginUser: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -103,5 +117,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  {}
+  { loginUser }
 )(withRouter(Login));

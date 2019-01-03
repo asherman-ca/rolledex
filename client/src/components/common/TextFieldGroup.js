@@ -14,7 +14,7 @@ const TextFieldGroup = ({
   disabled
 }) => {
   return (
-    <div className="form-group">
+    <div className="form-group bmd-form-group">
       <div className="input-group">
         <div className="input-group-prepend">
           <span className="input-group-text">

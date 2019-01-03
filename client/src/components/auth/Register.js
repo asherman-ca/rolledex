@@ -108,9 +108,9 @@ class Register extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-5 mr-auto mt-auto mb-auto register-form">
+                      <div className="col-md-5 mr-auto register-form-container">
                         <form
-                          className="form register-form"
+                          className="form mb-auto register-form"
                           method=""
                           action=""
                           onSubmit={this.onSubmit}
@@ -151,7 +151,10 @@ class Register extends Component {
                             error={errors.password2}
                             prepend="lock_outline"
                           />
-                          <div className="text-center">
+                          <div
+                            className="text-center mb-auto mt-auto"
+                            style={{ paddingBottom: '40px' }}
+                          >
                             <input
                               type="submit"
                               className="btn btn-info btn-round"

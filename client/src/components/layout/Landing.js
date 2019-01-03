@@ -95,7 +95,10 @@ class Landing extends Component {
                 </div>
               </div>
 
-              <div class="section text-center" style={{ paddingBottom: '0px' }}>
+              <div
+                class="section text-center"
+                style={{ paddingBottom: '0px', paddingTop: '0px' }}
+              >
                 <h2 class="title">Rolledex Users</h2>
                 <div class="team">
                   <div class="row">
