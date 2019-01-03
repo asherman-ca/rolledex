@@ -55,14 +55,14 @@ class Navbar extends Component {
                 </a>
                 <div className="dropdown-menu dropdown-with-icons">
                   <Link className="dropdown-item" to="/register">
-                    <i className="material-icons">person_add</i> Sign In / Out
+                    <i className="material-icons">account_circle</i> Register
                   </Link>
-                  <a
-                    href="../examples/profile-page.html"
-                    className="dropdown-item"
-                  >
-                    <i className="material-icons">account_circle</i> Profile
-                  </a>
+                  <Link className="dropdown-item" to="/login">
+                    <i className="material-icons">fingerprint</i> Login
+                  </Link>
+                  <Link className="dropdown-item" to="/">
+                    <i className="material-icons">place</i> Landing
+                  </Link>
                 </div>
               </li>
             </ul>

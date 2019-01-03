@@ -51,7 +51,7 @@ class Landing extends Component {
                   <div className="col-md-4">
                     <div className="info">
                       <div className="icon icon-info">
-                        <i className="material-icons">chat</i>
+                        <i className="material-icons">folder_shared</i>
                       </div>
                       <h4 className="info-title">Technique Sharing</h4>
                       <p>
@@ -64,7 +64,7 @@ class Landing extends Component {
                   <div className="col-md-4">
                     <div className="info">
                       <div className="icon icon-success">
-                        <i className="material-icons">face</i>
+                        <i className="material-icons">supervised_user_circle</i>
                       </div>
                       <h4 className="info-title">BJJ Community</h4>
                       <p>
@@ -77,7 +77,7 @@ class Landing extends Component {
                   <div className="col-md-4">
                     <div className="info">
                       <div className="icon icon-danger">
-                        <i className="material-icons">settings</i>
+                        <i className="material-icons">map</i>
                       </div>
                       <h4 className="info-title">Map Your System</h4>
                       <p>
