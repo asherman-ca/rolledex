@@ -22,18 +22,16 @@ const TextFieldGroup = ({
           </span>
         </div>
         <input
-          type={type}
+          type={error ? 'text' : type}
           className={classnames('form-control', {
             'is-invalid': error
           })}
-          placeholder={placeholder}
+          placeholder={error ? error : placeholder}
           name={name}
-          value={value}
+          value={error ? error : value}
           onChange={onChange}
           disabled={disabled}
         />
-        {info && <small className="form-text text-muted">{info}</small>}
-        {error && <div className="invalid-feedback">{error}</div>}
       </div>
     </div>
   );
