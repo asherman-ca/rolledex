@@ -101,160 +101,127 @@ class Landing extends Component {
               >
                 <h2 class="title">Rolledex Users</h2>
                 <div class="team">
-                  <div class="row">
-                    <LandingTile
-                      name="Keenan Cornelius"
-                      title="2x IBJJF Champion"
-                      bio="Don't be scared of the truth because we need to
-                      restart the human foundation in truth..."
-                      insta="https://www.instagram.com"
-                      youtube="https://www.instagram.com"
-                      twitter="https://www.instagram.com"
-                      facebook="https://www.instagram.com"
-                      pic="../img/keenan2.jpeg"
-                    />
-
-                    <div class="col-md-6">
-                      <div class="card card-profile card-plain">
-                        <div class="row">
-                          <div class="col-md-5">
-                            <div class="card-header card-header-image">
-                              <a href="#pablo">
-                                <img class="img" src="../img/donjon.jpg" />
-                              </a>
-                            </div>
-                          </div>
-                          <div class="col-md-7">
-                            <div class="card-body">
-                              <h4 class="card-title">Jon Danahar</h4>
-                              <h6 class="category text-muted">
-                                Head Coach @ RGA
-                              </h6>
-                              <p class="card-description">
-                                When competing - do not concern yourself with
-                                how different everything seems from daily
-                                training - focus instead on similarities.
-                              </p>
-                            </div>
-                            <div class="card-footer justify-content-center">
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-linkedin"
-                              >
-                                <i class="fa fa-linkedin" />
-                              </a>
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-facebook"
-                              >
-                                <i class="fa fa-facebook-square" />
-                              </a>
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-dribbble"
-                              >
-                                <i class="fa fa-dribbble" />
-                              </a>
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-google"
-                              >
-                                <i class="fa fa-google" />
-                              </a>
-                            </div>
-                          </div>
+                  <div class="row pt-5">
+                    <div class="col-md-4">
+                      <div class="card card-profile">
+                        <div class="card-header card-avatar">
+                          <a href="#pablo">
+                            <img class="img" src="../img/keenan2.jpeg" />
+                          </a>
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title">Keenan Cornelius</h4>
+                          <h6 class="card-category text-muted">
+                            CEO / Co-Founder
+                          </h6>
+                          <p class="card-description">
+                            Don't be scared of the truth because we need to
+                            restart the human foundation in truth And I love you
+                            like Kanye loves Kanye I love Rick Owens’ bed design
+                            but the back is...
+                          </p>
+                        </div>
+                        <div class="card-footer justify-content-center">
+                          <a
+                            href="#pablo"
+                            class="btn btn-just-icon btn-linkedin btn-round"
+                          >
+                            <i class="fa fa-linkedin" />
+                          </a>
+                          <a
+                            href="#pablo"
+                            class="btn btn-just-icon btn-twitter btn-round"
+                          >
+                            <i class="fa fa-twitter" />
+                          </a>
+                          <a
+                            href="#pablo"
+                            class="btn btn-just-icon btn-dribbble btn-round"
+                          >
+                            <i class="fa fa-dribbble" />
+                          </a>
                         </div>
                       </div>
                     </div>
-
-                    <div class="col-md-6">
-                      <div class="card card-profile card-plain">
-                        <div class="row">
-                          <div class="col-md-5">
-                            <div class="card-header card-header-image">
-                              <a href="#pablo">
-                                <img class="img" src="../img/miyao.jpg" />
-                              </a>
-                            </div>
-                          </div>
-                          <div class="col-md-7">
-                            <div class="card-body">
-                              <h4 class="card-title">Paulo Miyao</h4>
-                              <h6 class="category text-muted">
-                                4x IBJJF Champion
-                              </h6>
-                              <p class="card-description">
-                                I love you like Kanye loves Kanye. Don't be
-                                scared of the truth.
-                              </p>
-                            </div>
-                            <div class="card-footer justify-content-center">
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-youtube"
-                              >
-                                <i class="fa fa-youtube-play" />
-                              </a>
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-twitter"
-                              >
-                                <i class="fa fa-twitter" />
-                              </a>
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-instagram"
-                              >
-                                <i class="fa fa-instagram" />
-                              </a>
-                            </div>
-                          </div>
+                    <div class="col-md-4">
+                      <div class="card card-profile">
+                        <div class="card-header card-avatar">
+                          <a href="#pablo">
+                            <img class="img" src="../img/donjon.jpg" />
+                          </a>
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title">Jon Danahar</h4>
+                          <h6 class="card-category text-muted">
+                            CEO / Co-Founder
+                          </h6>
+                          <p class="card-description">
+                            Don't be scared of the truth because we need to
+                            restart the human foundation in truth And I love you
+                            like Kanye loves Kanye I love Rick Owens’ bed design
+                            but the back is...
+                          </p>
+                        </div>
+                        <div class="card-footer justify-content-center">
+                          <a
+                            href="#pablo"
+                            class="btn btn-just-icon btn-linkedin btn-round"
+                          >
+                            <i class="fa fa-linkedin" />
+                          </a>
+                          <a
+                            href="#pablo"
+                            class="btn btn-just-icon btn-twitter btn-round"
+                          >
+                            <i class="fa fa-twitter" />
+                          </a>
+                          <a
+                            href="#pablo"
+                            class="btn btn-just-icon btn-dribbble btn-round"
+                          >
+                            <i class="fa fa-dribbble" />
+                          </a>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="card card-profile card-plain">
-                        <div class="row">
-                          <div class="col-md-5">
-                            <div class="card-header card-header-image">
-                              <a href="#pablo">
-                                <img class="img" src="../img/gary.jpg" />
-                              </a>
-                            </div>
-                          </div>
-                          <div class="col-md-7">
-                            <div class="card-body">
-                              <h4 class="card-title">Gary Tonnen</h4>
-                              <h6 class="category text-muted">
-                                MMA & BJJ Champion
-                              </h6>
-                              <p class="card-description">
-                                I love you like Kanye loves Kanye. Don't be
-                                scared of the truth because we need to restart
-                                the human foundation.
-                              </p>
-                            </div>
-                            <div class="card-footer justify-content-center">
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-linkedin"
-                              >
-                                <i class="fa fa-linkedin" />
-                              </a>
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-facebook"
-                              >
-                                <i class="fa fa-facebook-square" />
-                              </a>
-                              <a
-                                href="#pablo"
-                                class="btn btn-just-icon btn-link btn-google"
-                              >
-                                <i class="fa fa-google" />
-                              </a>
-                            </div>
-                          </div>
+                    <div class="col-md-4">
+                      <div class="card card-profile">
+                        <div class="card-header card-avatar">
+                          <a href="#pablo">
+                            <img class="img" src="../img/gary.jpg" />
+                          </a>
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title">Gary Tonnen</h4>
+                          <h6 class="card-category text-muted">
+                            CEO / Co-Founder
+                          </h6>
+                          <p class="card-description">
+                            Don't be scared of the truth because we need to
+                            restart the human foundation in truth And I love you
+                            like Kanye loves Kanye I love Rick Owens’ bed design
+                            but the back is...
+                          </p>
+                        </div>
+                        <div class="card-footer justify-content-center">
+                          <a
+                            href="#pablo"
+                            class="btn btn-just-icon btn-linkedin btn-round"
+                          >
+                            <i class="fa fa-linkedin" />
+                          </a>
+                          <a
+                            href="#pablo"
+                            class="btn btn-just-icon btn-twitter btn-round"
+                          >
+                            <i class="fa fa-twitter" />
+                          </a>
+                          <a
+                            href="#pablo"
+                            class="btn btn-just-icon btn-dribbble btn-round"
+                          >
+                            <i class="fa fa-dribbble" />
+                          </a>
                         </div>
                       </div>
                     </div>
