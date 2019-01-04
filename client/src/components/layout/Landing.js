@@ -101,7 +101,7 @@ class Landing extends Component {
               >
                 <h2 className="title">Rolledex Users</h2>
                 <div className="team">
-                  <div className="row pt-5">
+                  <div className="row" style={{ paddingTop: '70px' }}>
                     <div className="col-md-4">
                       <div className="card card-profile">
                         <div className="card-header card-avatar">
