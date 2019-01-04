@@ -96,131 +96,131 @@ class Landing extends Component {
               </div>
 
               <div
-                class="section text-center rolledex-users"
+                className="section text-center rolledex-users"
                 style={{ paddingBottom: '0px', paddingTop: '0px' }}
               >
-                <h2 class="title">Rolledex Users</h2>
-                <div class="team">
-                  <div class="row pt-5">
-                    <div class="col-md-4">
-                      <div class="card card-profile">
-                        <div class="card-header card-avatar">
+                <h2 className="title">Rolledex Users</h2>
+                <div className="team">
+                  <div className="row pt-5">
+                    <div className="col-md-4">
+                      <div className="card card-profile">
+                        <div className="card-header card-avatar">
                           <a href="#pablo">
-                            <img class="img" src="../img/keenan2.jpeg" />
+                            <img className="img" src="../img/keenan2.jpeg" />
                           </a>
                         </div>
-                        <div class="card-body">
-                          <h4 class="card-title">Keenan Cornelius</h4>
-                          <h6 class="card-category text-muted">
+                        <div className="card-body">
+                          <h4 className="card-title">Keenan Cornelius</h4>
+                          <h6 className="card-category text-muted">
                             CEO / Co-Founder
                           </h6>
-                          <p class="card-description">
+                          <p className="card-description">
                             Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
                             but the back is...
                           </p>
                         </div>
-                        <div class="card-footer justify-content-center">
+                        <div className="card-footer justify-content-center">
                           <a
                             href="#pablo"
-                            class="btn btn-just-icon btn-linkedin btn-round"
+                            className="btn btn-just-icon btn-linkedin btn-round"
                           >
-                            <i class="fa fa-linkedin" />
+                            <i className="fa fa-linkedin" />
                           </a>
                           <a
                             href="#pablo"
-                            class="btn btn-just-icon btn-twitter btn-round"
+                            className="btn btn-just-icon btn-twitter btn-round"
                           >
-                            <i class="fa fa-twitter" />
+                            <i className="fa fa-twitter" />
                           </a>
                           <a
                             href="#pablo"
-                            class="btn btn-just-icon btn-dribbble btn-round"
+                            className="btn btn-just-icon btn-dribbble btn-round"
                           >
-                            <i class="fa fa-dribbble" />
+                            <i className="fa fa-dribbble" />
                           </a>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="card card-profile">
-                        <div class="card-header card-avatar">
+                    <div className="col-md-4">
+                      <div className="card card-profile">
+                        <div className="card-header card-avatar">
                           <a href="#pablo">
-                            <img class="img" src="../img/donjon.jpg" />
+                            <img className="img" src="../img/donjon.jpg" />
                           </a>
                         </div>
-                        <div class="card-body">
-                          <h4 class="card-title">Jon Danahar</h4>
-                          <h6 class="card-category text-muted">
+                        <div className="card-body">
+                          <h4 className="card-title">Jon Danahar</h4>
+                          <h6 className="card-category text-muted">
                             CEO / Co-Founder
                           </h6>
-                          <p class="card-description">
+                          <p className="card-description">
                             Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
                             but the back is...
                           </p>
                         </div>
-                        <div class="card-footer justify-content-center">
+                        <div className="card-footer justify-content-center">
                           <a
                             href="#pablo"
-                            class="btn btn-just-icon btn-linkedin btn-round"
+                            className="btn btn-just-icon btn-linkedin btn-round"
                           >
-                            <i class="fa fa-linkedin" />
+                            <i className="fa fa-linkedin" />
                           </a>
                           <a
                             href="#pablo"
-                            class="btn btn-just-icon btn-twitter btn-round"
+                            className="btn btn-just-icon btn-twitter btn-round"
                           >
-                            <i class="fa fa-twitter" />
+                            <i className="fa fa-twitter" />
                           </a>
                           <a
                             href="#pablo"
-                            class="btn btn-just-icon btn-dribbble btn-round"
+                            className="btn btn-just-icon btn-dribbble btn-round"
                           >
-                            <i class="fa fa-dribbble" />
+                            <i className="fa fa-dribbble" />
                           </a>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="card card-profile">
-                        <div class="card-header card-avatar">
+                    <div className="col-md-4">
+                      <div className="card card-profile">
+                        <div className="card-header card-avatar">
                           <a href="#pablo">
-                            <img class="img" src="../img/gary.jpg" />
+                            <img className="img" src="../img/gary.jpg" />
                           </a>
                         </div>
-                        <div class="card-body">
-                          <h4 class="card-title">Gary Tonnen</h4>
-                          <h6 class="card-category text-muted">
+                        <div className="card-body">
+                          <h4 className="card-title">Gary Tonnen</h4>
+                          <h6 className="card-category text-muted">
                             CEO / Co-Founder
                           </h6>
-                          <p class="card-description">
+                          <p className="card-description">
                             Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
                             but the back is...
                           </p>
                         </div>
-                        <div class="card-footer justify-content-center">
+                        <div className="card-footer justify-content-center">
                           <a
                             href="#pablo"
-                            class="btn btn-just-icon btn-linkedin btn-round"
+                            className="btn btn-just-icon btn-linkedin btn-round"
                           >
-                            <i class="fa fa-linkedin" />
+                            <i className="fa fa-linkedin" />
                           </a>
                           <a
                             href="#pablo"
-                            class="btn btn-just-icon btn-twitter btn-round"
+                            className="btn btn-just-icon btn-twitter btn-round"
                           >
-                            <i class="fa fa-twitter" />
+                            <i className="fa fa-twitter" />
                           </a>
                           <a
                             href="#pablo"
-                            class="btn btn-just-icon btn-dribbble btn-round"
+                            className="btn btn-just-icon btn-dribbble btn-round"
                           >
-                            <i class="fa fa-dribbble" />
+                            <i className="fa fa-dribbble" />
                           </a>
                         </div>
                       </div>

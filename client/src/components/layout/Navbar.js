@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logOutUser } from '../../actions/authActions';
+import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 
 class Navbar extends Component {
-  onLogoutClick = e => {
+  onLogoutClick(e) {
     e.preventDefault();
-    this.props.logOutUser();
-  };
+    this.props.logOutUser(this.props.history);
+  }
 
   render() {
     const { isAuthenticated, user } = this.props.auth;
@@ -38,9 +39,13 @@ class Navbar extends Component {
           <i className="material-icons">account_circle</i> Account
         </a>
         <div className="dropdown-menu dropdown-with-icons">
-          <Link className="dropdown-item" to="/">
+          <a
+            href="/"
+            onClick={this.onLogoutClick.bind(this)}
+            className="dropdown-item"
+          >
             <i className="material-icons">fingerprint</i> Logout
-          </Link>
+          </a>
         </div>
       </li>
     );
@@ -108,4 +113,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { logOutUser }
-)(Navbar);
+)(withRouter(Navbar));
