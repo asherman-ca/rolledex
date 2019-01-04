@@ -1,8 +1,50 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { logOutUser } from '../../actions/authActions';
+import PropTypes from 'prop-types';
 
 class Navbar extends Component {
+  onLogoutClick = e => {
+    e.preventDefault();
+    this.props.logOutUser();
+  };
+
   render() {
+    const { isAuthenticated, user } = this.props.auth;
+
+    const guestLinks = (
+      <li className="dropdown nav-item">
+        <a href="#" className="dropdown-toggle nav-link" data-toggle="dropdown">
+          <i className="material-icons">account_circle</i> Account
+        </a>
+        <div className="dropdown-menu dropdown-with-icons">
+          <Link className="dropdown-item" to="/register">
+            <i className="material-icons">account_circle</i> Register
+          </Link>
+          <Link className="dropdown-item" to="/login">
+            <i className="material-icons">fingerprint</i> Login
+          </Link>
+          <Link className="dropdown-item" to="/">
+            <i className="material-icons">place</i> Landing
+          </Link>
+        </div>
+      </li>
+    );
+
+    const authLinks = (
+      <li className="dropdown nav-item">
+        <a href="#" className="dropdown-toggle nav-link" data-toggle="dropdown">
+          <i className="material-icons">account_circle</i> Account
+        </a>
+        <div className="dropdown-menu dropdown-with-icons">
+          <Link className="dropdown-item" to="/">
+            <i className="material-icons">fingerprint</i> Logout
+          </Link>
+        </div>
+      </li>
+    );
+
     return (
       <nav
         className="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg"
@@ -45,26 +87,7 @@ class Navbar extends Component {
                   </a>
                 </div>
               </li>
-              <li className="dropdown nav-item">
-                <a
-                  href="#"
-                  className="dropdown-toggle nav-link"
-                  data-toggle="dropdown"
-                >
-                  <i className="material-icons">account_circle</i> Account
-                </a>
-                <div className="dropdown-menu dropdown-with-icons">
-                  <Link className="dropdown-item" to="/register">
-                    <i className="material-icons">account_circle</i> Register
-                  </Link>
-                  <Link className="dropdown-item" to="/login">
-                    <i className="material-icons">fingerprint</i> Login
-                  </Link>
-                  <Link className="dropdown-item" to="/">
-                    <i className="material-icons">place</i> Landing
-                  </Link>
-                </div>
-              </li>
+              {isAuthenticated ? authLinks : guestLinks}
             </ul>
           </div>
         </div>
@@ -73,4 +96,16 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+Navbar.propTypes = {
+  logOutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logOutUser }
+)(Navbar);
