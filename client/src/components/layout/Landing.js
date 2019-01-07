@@ -13,7 +13,10 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-6">
-                <h1 className="title">Your BJJ Story Starts Here.</h1>
+                <h1 className="title fonting">
+                  Your BJJ Story
+                  <br /> Starts Here.
+                </h1>
                 <h4>
                   Rolledex is a tool to track your BJJ development and gain a
                   better understanding of your progress. In doing so, you'll
@@ -40,7 +43,7 @@ class Landing extends Component {
             >
               <div className="row">
                 <div className="col-md-8 ml-auto mr-auto">
-                  <h2 className="title">Accelerate your Jiu Jitsu</h2>
+                  <h2 className="title fonting">Accelerate your Jiu Jitsu</h2>
                   <h5 className="description">
                     Join a community of practitioners dedicated to optimizing
                     their craft. The most important details are often the
@@ -99,11 +102,14 @@ class Landing extends Component {
                 className="section text-center rolledex-users"
                 style={{ paddingBottom: '0px', paddingTop: '0px' }}
               >
-                <h2 className="title">Rolledex Users</h2>
+                <h2 className="title fonting">Rolledex Users</h2>
                 <div className="team">
                   <div className="row" style={{ paddingTop: '70px' }}>
                     <div className="col-md-4">
-                      <div className="card card-profile">
+                      <div
+                        className="card card-profile"
+                        style={{ backgroundColor: '#EAEAEA' }}
+                      >
                         <div className="card-header card-avatar">
                           <a href="#pablo">
                             <img className="img" src="../img/keenan2.jpeg" />
@@ -114,7 +120,7 @@ class Landing extends Component {
                           <h6 className="card-category text-muted">
                             CEO / Co-Founder
                           </h6>
-                          <p className="card-description">
+                          <p>
                             Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
@@ -144,7 +150,10 @@ class Landing extends Component {
                       </div>
                     </div>
                     <div className="col-md-4">
-                      <div className="card card-profile">
+                      <div
+                        className="card card-profile"
+                        style={{ backgroundColor: '#EAEAEA' }}
+                      >
                         <div className="card-header card-avatar">
                           <a href="#pablo">
                             <img className="img" src="../img/donjon.jpg" />
@@ -155,7 +164,7 @@ class Landing extends Component {
                           <h6 className="card-category text-muted">
                             CEO / Co-Founder
                           </h6>
-                          <p className="card-description">
+                          <p>
                             Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
@@ -185,7 +194,10 @@ class Landing extends Component {
                       </div>
                     </div>
                     <div className="col-md-4">
-                      <div className="card card-profile">
+                      <div
+                        className="card card-profile"
+                        style={{ backgroundColor: '#EAEAEA' }}
+                      >
                         <div className="card-header card-avatar">
                           <a href="#pablo">
                             <img className="img" src="../img/gary.jpg" />
@@ -196,7 +208,7 @@ class Landing extends Component {
                           <h6 className="card-category text-muted">
                             CEO / Co-Founder
                           </h6>
-                          <p className="card-description">
+                          <p>
                             Don't be scared of the truth because we need to
                             restart the human foundation in truth And I love you
                             like Kanye loves Kanye I love Rick Owens’ bed design
