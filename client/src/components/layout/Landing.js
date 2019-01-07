@@ -112,19 +112,18 @@ class Landing extends Component {
                       >
                         <div className="card-header card-avatar">
                           <a href="#pablo">
-                            <img className="img" src="../img/keenan2.jpeg" />
+                            <img className="img" src="../img/miyao.jpg" />
                           </a>
                         </div>
                         <div className="card-body">
-                          <h4 className="card-title">Keenan Cornelius</h4>
+                          <h4 className="card-title">Paulo Miyao</h4>
                           <h6 className="card-category text-muted">
-                            CEO / Co-Founder
+                            4x IBJJF World Champion
                           </h6>
                           <p>
-                            Don't be scared of the truth because we need to
-                            restart the human foundation in truth And I love you
-                            like Kanye loves Kanye I love Rick Owens’ bed design
-                            but the back is...
+                            "The only thing that stands between a man and what
+                            he wants in life is merely the will to try and the
+                            faith to believe that it is possible."
                           </p>
                         </div>
                         <div className="card-footer justify-content-center">
@@ -162,13 +161,12 @@ class Landing extends Component {
                         <div className="card-body">
                           <h4 className="card-title">Jon Danahar</h4>
                           <h6 className="card-category text-muted">
-                            CEO / Co-Founder
+                            Head Coach @ RGA
                           </h6>
                           <p>
-                            Don't be scared of the truth because we need to
-                            restart the human foundation in truth And I love you
-                            like Kanye loves Kanye I love Rick Owens’ bed design
-                            but the back is...
+                            “The deepest benefits of Jiu Jitsu come off the mat.
+                            It encourages a world-view based upon the idea of
+                            rational problem solving.""
                           </p>
                         </div>
                         <div className="card-footer justify-content-center">
@@ -204,15 +202,14 @@ class Landing extends Component {
                           </a>
                         </div>
                         <div className="card-body">
-                          <h4 className="card-title">Gary Tonnen</h4>
+                          <h4 className="card-title">Gary Tonon</h4>
                           <h6 className="card-category text-muted">
-                            CEO / Co-Founder
+                            MMA & BJJ Champion
                           </h6>
                           <p>
-                            Don't be scared of the truth because we need to
-                            restart the human foundation in truth And I love you
-                            like Kanye loves Kanye I love Rick Owens’ bed design
-                            but the back is...
+                            "In an average 5 round training session I will get
+                            submitted 15 times. Take that information and ask
+                            yourself if you really have no ego."
                           </p>
                         </div>
                         <div className="card-footer justify-content-center">
