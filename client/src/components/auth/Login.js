@@ -60,31 +60,37 @@ class Login extends Component {
                     method=""
                     action=""
                     onSubmit={this.onSubmit}
+                    style={{ height: '100%' }}
                   >
-                    <h3 className="card-title text-center">Sign in</h3>
-                    <p className="description text-center">
-                      to continue to Rolledex
-                    </p>
-                    <TextFieldGroup
-                      placeholder="Email"
-                      name="email"
-                      type="text"
-                      value={this.state.email}
-                      onChange={this.onChange}
-                      error={errors.email}
-                      prepend="mail"
-                    />
-                    <TextFieldGroup
-                      placeholder="Password"
-                      name="password"
-                      type="password"
-                      value={this.state.password}
-                      onChange={this.onChange}
-                      error={errors.password}
-                      prepend="lock_outline"
-                    />
-                    <div className="text-center mt-4">
-                      <input type="submit" className="btn btn-info btn-round" />
+                    <div className="form-style">
+                      <h3 className="card-title text-center">Sign in</h3>
+                      <p className="description text-center">
+                        to continue to Rolledex
+                      </p>
+                      <TextFieldGroup
+                        placeholder="Email"
+                        name="email"
+                        type="text"
+                        value={this.state.email}
+                        onChange={this.onChange}
+                        error={errors.email}
+                        prepend="mail"
+                      />
+                      <TextFieldGroup
+                        placeholder="Password"
+                        name="password"
+                        type="password"
+                        value={this.state.password}
+                        onChange={this.onChange}
+                        error={errors.password}
+                        prepend="lock_outline"
+                      />
+                      <div className="text-center mt-4">
+                        <input
+                          type="submit"
+                          className="btn btn-info btn-round"
+                        />
+                      </div>
                     </div>
                   </form>
                 </div>

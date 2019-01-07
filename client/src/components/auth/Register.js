@@ -126,7 +126,7 @@ class Register extends Component {
                           onSubmit={this.onSubmit}
                           style={{ height: '100%', width: '100%' }}
                         >
-                          <div className="form-stlye">
+                          <div className="form-style">
                             <TextFieldGroup
                               placeholder="name"
                               name="name"
