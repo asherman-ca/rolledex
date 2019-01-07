@@ -106,10 +106,7 @@ class Landing extends Component {
                 <div className="team">
                   <div className="row" style={{ paddingTop: '70px' }}>
                     <div className="col-md-4">
-                      <div
-                        className="card card-profile"
-                        style={{ backgroundColor: '#EAEAEA' }}
-                      >
+                      <div className="card card-profile lightbg">
                         <div className="card-header card-avatar">
                           <a href="#pablo">
                             <img className="img" src="../img/miyao.jpg" />
@@ -149,10 +146,7 @@ class Landing extends Component {
                       </div>
                     </div>
                     <div className="col-md-4">
-                      <div
-                        className="card card-profile"
-                        style={{ backgroundColor: '#EAEAEA' }}
-                      >
+                      <div className="card card-profile lightbg">
                         <div className="card-header card-avatar">
                           <a href="#pablo">
                             <img className="img" src="../img/donjon.jpg" />
@@ -192,10 +186,7 @@ class Landing extends Component {
                       </div>
                     </div>
                     <div className="col-md-4">
-                      <div
-                        className="card card-profile"
-                        style={{ backgroundColor: '#EAEAEA' }}
-                      >
+                      <div className="card card-profile lightbg">
                         <div className="card-header card-avatar">
                           <a href="#pablo">
                             <img className="img" src="../img/gary.jpg" />

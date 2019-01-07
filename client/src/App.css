@@ -24,3 +24,7 @@
 .fonting {
   font-family: 'Averta', 'Helvetica Neue', 'Open Sans', Arial, sans-serif !important;
 }
+
+.lightbg {
+  background-color: rgba(234, 234, 234, 0.4) !important;
+}
