@@ -124,48 +124,51 @@ class Register extends Component {
                           method=""
                           action=""
                           onSubmit={this.onSubmit}
+                          style={{ height: '100%', width: '100%' }}
                         >
-                          <TextFieldGroup
-                            placeholder="name"
-                            name="name"
-                            type="text"
-                            value={this.state.name}
-                            onChange={this.onChange}
-                            error={errors.name}
-                            prepend="face"
-                          />
-                          <TextFieldGroup
-                            placeholder="Email"
-                            name="email"
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.onChange}
-                            error={errors.email}
-                            prepend="mail"
-                          />
-                          <TextFieldGroup
-                            placeholder="Password"
-                            name="password"
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.onChange}
-                            error={errors.password}
-                            prepend="lock_outline"
-                          />
-                          <TextFieldGroup
-                            placeholder="Confirm Password"
-                            name="password2"
-                            type="password"
-                            value={this.state.password2}
-                            onChange={this.onChange}
-                            error={errors.password2}
-                            prepend="lock_outline"
-                          />
-                          <div className="text-center mt-4">
-                            <input
-                              type="submit"
-                              className="btn btn-info btn-round"
+                          <div className="form-stlye">
+                            <TextFieldGroup
+                              placeholder="name"
+                              name="name"
+                              type="text"
+                              value={this.state.name}
+                              onChange={this.onChange}
+                              error={errors.name}
+                              prepend="face"
                             />
+                            <TextFieldGroup
+                              placeholder="Email"
+                              name="email"
+                              type="text"
+                              value={this.state.email}
+                              onChange={this.onChange}
+                              error={errors.email}
+                              prepend="mail"
+                            />
+                            <TextFieldGroup
+                              placeholder="Password"
+                              name="password"
+                              type="password"
+                              value={this.state.password}
+                              onChange={this.onChange}
+                              error={errors.password}
+                              prepend="lock_outline"
+                            />
+                            <TextFieldGroup
+                              placeholder="Confirm Password"
+                              name="password2"
+                              type="password"
+                              value={this.state.password2}
+                              onChange={this.onChange}
+                              error={errors.password2}
+                              prepend="lock_outline"
+                            />
+                            <div className="text-center mt-4">
+                              <input
+                                type="submit"
+                                className="btn btn-info btn-round"
+                              />
+                            </div>
                           </div>
                         </form>
                       </div>

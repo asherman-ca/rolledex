@@ -28,3 +28,11 @@
 .lightbg {
   background-color: rgba(234, 234, 234, 0.4) !important;
 }
+
+.form-stlye {
+  height: 100% !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
