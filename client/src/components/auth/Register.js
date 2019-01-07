@@ -59,7 +59,7 @@ class Register extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-10 ml-auto mr-auto">
-                <div className="card card-signup">
+                <div className="card card-signup fonting">
                   <h2 className="card-title text-center">Register</h2>
                   <div className="card-body">
                     <div className="row">
@@ -118,7 +118,7 @@ class Register extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-5 mr-auto">
+                      <div className="col-md-5 mr-auto mb-4">
                         <form
                           className="form"
                           method=""
@@ -163,7 +163,7 @@ class Register extends Component {
                               error={errors.password2}
                               prepend="lock_outline"
                             />
-                            <div className="text-center mt-4">
+                            <div className="text-center">
                               <input
                                 type="submit"
                                 className="btn btn-info btn-round"
