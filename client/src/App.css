@@ -36,3 +36,7 @@
   flex-direction: column !important;
   justify-content: space-between !important;
 }
+
+.nav-pills .nav-item .nav-link.active {
+  background-color: black;
+}

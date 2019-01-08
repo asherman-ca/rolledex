@@ -24,7 +24,7 @@ class Dashboard extends Component {
                       />
                     </div>
                     <div className="name">
-                      <h3 className="title">Christian Louboutin</h3>
+                      <h3 className="title">Jon Danaher</h3>
                       <h6>Head Coach @ RGA</h6>
                       <a
                         href="#pablo"
@@ -72,7 +72,7 @@ class Dashboard extends Component {
                         role="tab"
                         data-toggle="tab"
                       >
-                        <i class="material-icons">palette</i> Gym
+                        <i class="material-icons">palette</i> Affiliation
                       </a>
                     </li>
                     <li class="nav-item">
