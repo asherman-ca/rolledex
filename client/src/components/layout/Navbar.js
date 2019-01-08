@@ -46,6 +46,9 @@ class Navbar extends Component {
           >
             <i className="material-icons">fingerprint</i> Logout
           </a>
+          <Link className="dropdown-item" to="/dashboard">
+            <i className="material-icons">place</i> Dashboard
+          </Link>
         </div>
       </li>
     );
