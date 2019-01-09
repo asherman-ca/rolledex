@@ -40,3 +40,18 @@
 .nav-pills .nav-item .nav-link.active {
   background-color: black;
 }
+
+.edits {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.card-profile .card-footer .btn.btn-just-icon {
+  padding: 0px !important;
+}

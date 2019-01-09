@@ -121,24 +121,15 @@ router.post(
 
     // these expressions prevent users from clearing their fields by sending back open strings
     if (req.body.handle) profileFields.handle = req.body.handle;
-    if (req.body.company) profileFields.company = req.body.company;
-    if (req.body.website) profileFields.website = req.body.website;
     if (req.body.location) profileFields.location = req.body.location;
     if (req.body.status) profileFields.status = req.body.status;
     if (req.body.bio) profileFields.bio = req.body.bio;
-    if (req.body.githubusername)
-      profileFields.githubusername = req.body.githubusername;
+    if (req.body.belt) profileFields.belt = req.body.belt;
+    if (req.body.gym) profileFields.gym = req.body.gym;
 
-    // split skills into array
-    if (typeof req.body.skills !== undefined) {
-      profileFields.skills = req.body.skills.split(',');
-    }
     // if (req.body.social) profileFields.social = req.body.social;
     profileFields.social = {};
     if (req.body.youtube) profileFields.social.youtube = req.body.youtube;
-    if (req.body.twitter) profileFields.social.twitter = req.body.twitter;
-    if (req.body.facebook) profileFields.social.facebook = req.body.facebook;
-    if (req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
     if (req.body.instagram) profileFields.social.instagram = req.body.instagram;
 
     Profile.findOne({ user: req.user.id }).then(profile => {

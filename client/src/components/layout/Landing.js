@@ -124,23 +124,15 @@ class Landing extends Component {
                           </p>
                         </div>
                         <div className="card-footer justify-content-center">
-                          <a
-                            href="#pablo"
-                            className="btn btn-just-icon btn-linkedin btn-round"
-                          >
-                            <i className="fa fa-linkedin" />
+                          <a href="#pablo">
+                            <button class="btn btn-just-icon btn-round btn-instagram">
+                              <i class="fab fa-instagram"> </i>
+                            </button>
                           </a>
-                          <a
-                            href="#pablo"
-                            className="btn btn-just-icon btn-twitter btn-round"
-                          >
-                            <i className="fa fa-twitter" />
-                          </a>
-                          <a
-                            href="#pablo"
-                            className="btn btn-just-icon btn-dribbble btn-round"
-                          >
-                            <i className="fa fa-dribbble" />
+                          <a href="#pablo">
+                            <button class="btn btn-just-icon btn-round btn-youtube">
+                              <i class="fab fa-youtube"> </i>
+                            </button>
                           </a>
                         </div>
                       </div>
@@ -164,23 +156,15 @@ class Landing extends Component {
                           </p>
                         </div>
                         <div className="card-footer justify-content-center">
-                          <a
-                            href="#pablo"
-                            className="btn btn-just-icon btn-linkedin btn-round"
-                          >
-                            <i className="fa fa-linkedin" />
+                          <a href="#pablo">
+                            <button class="btn btn-just-icon btn-round btn-instagram">
+                              <i class="fab fa-instagram"> </i>
+                            </button>
                           </a>
-                          <a
-                            href="#pablo"
-                            className="btn btn-just-icon btn-twitter btn-round"
-                          >
-                            <i className="fa fa-twitter" />
-                          </a>
-                          <a
-                            href="#pablo"
-                            className="btn btn-just-icon btn-dribbble btn-round"
-                          >
-                            <i className="fa fa-dribbble" />
+                          <a href="#pablo">
+                            <button class="btn btn-just-icon btn-round btn-youtube">
+                              <i class="fab fa-youtube"> </i>
+                            </button>
                           </a>
                         </div>
                       </div>
@@ -204,23 +188,15 @@ class Landing extends Component {
                           </p>
                         </div>
                         <div className="card-footer justify-content-center">
-                          <a
-                            href="#pablo"
-                            className="btn btn-just-icon btn-linkedin btn-round"
-                          >
-                            <i className="fa fa-linkedin" />
+                          <a href="#pablo">
+                            <button class="btn btn-just-icon btn-round btn-instagram">
+                              <i class="fab fa-instagram"> </i>
+                            </button>
                           </a>
-                          <a
-                            href="#pablo"
-                            className="btn btn-just-icon btn-twitter btn-round"
-                          >
-                            <i className="fa fa-twitter" />
-                          </a>
-                          <a
-                            href="#pablo"
-                            className="btn btn-just-icon btn-dribbble btn-round"
-                          >
-                            <i className="fa fa-dribbble" />
+                          <a href="#pablo">
+                            <button class="btn btn-just-icon btn-round btn-youtube">
+                              <i class="fab fa-youtube"> </i>
+                            </button>
                           </a>
                         </div>
                       </div>

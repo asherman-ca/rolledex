@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { getCurrentProfile } from '../../actions/profileActions';
 
 class Dashboard extends Component {
+  componentDidMount() {
+    this.props.getCurrentProfile();
+  }
+
   render() {
     return (
       <div className="profile-page">
@@ -24,26 +30,24 @@ class Dashboard extends Component {
                       />
                     </div>
                     <div className="name">
-                      <h3 className="title">Jon Danaher</h3>
+                      <h3 className="title fonting">Jon Danaher</h3>
                       <h6>Head Coach @ RGA</h6>
-                      <a
-                        href="#pablo"
-                        className="btn btn-just-icon btn-link btn-dribbble"
-                      >
-                        <i className="fab fa-instagram" />
+                      <a href="#pablo">
+                        <button class="btn btn-just-icon btn-round btn-instagram">
+                          <i class="fab fa-instagram"> </i>
+                        </button>
                       </a>
-                      <a
-                        href="#pablo"
-                        className="btn btn-just-icon btn-link btn-twitter"
-                      >
-                        <i className="fab fa-youtube" />
+                      <a href="#pablo">
+                        <button class="btn btn-just-icon btn-round btn-youtube">
+                          <i class="fab fa-youtube"> </i>
+                        </button>
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="description text-center">
+            <div className="description text-center">
               <p>
                 An artist of considerable range, Chet Faker &#x2014; the name
                 taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014;
@@ -51,47 +55,26 @@ class Dashboard extends Component {
                 warm, intimate feel with a solid groove structure.{' '}
               </p>
             </div>
-
-            <div class="row">
-              <div class="col-md-6 ml-auto mr-auto">
-                <div class="profile-tabs">
-                  <ul
-                    class="nav nav-pills nav-pills-icons justify-content-center"
-                    role="tablist"
-                  >
-                    <li class="nav-item">
-                      <a
-                        class="nav-link active"
-                        href="#work"
-                        role="tab"
-                        data-toggle="tab"
-                      >
-                        <i class="material-icons">palette</i> Affiliation
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        href="#connections"
-                        role="tab"
-                        data-toggle="tab"
-                      >
-                        <i class="material-icons">people</i> Competition
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        href="#media"
-                        role="tab"
-                        data-toggle="tab"
-                      >
-                        <i class="material-icons">camera</i> Techniques
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            <div className="row mt-4 mb-4">
+              <div className="col-md-6 ml-auto mr-auto edit-buttons">
+                <button className="btn btn-info">Edit Tournaments</button>
+                <Link to="/create-profile">
+                  <button className="btn btn-info">Edit Profile</button>
+                </Link>
+                <button className="btn btn-info">Edit Experience</button>
               </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4 ml-auto mb-5">
+              <h3 className="text-center">
+                <strong>Tournament Record</strong>
+              </h3>
+            </div>
+            <div className="col-md-4 mr-auto">
+              <h3 className="text-center">
+                <strong>Gym Affiliations</strong>
+              </h3>
             </div>
           </div>
         </div>
@@ -102,5 +85,5 @@ class Dashboard extends Component {
 
 export default connect(
   null,
-  {}
+  { getCurrentProfile }
 )(Dashboard);
