@@ -12,7 +12,6 @@ class CreateProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displaySocialInputs: false,
       handle: '',
       gym: '',
       belt: '',
@@ -53,19 +52,16 @@ class CreateProfile extends Component {
   }
 
   render() {
-    const { errors, displaySocialInputs } = this.state;
+    const { errors } = this.state;
 
     // select options for status
     const options = [
-      { label: '* Select Professional Status', value: 0 },
-      { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junioer Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Student or Learning', value: 'Student or Learning' },
-      { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
-      { label: 'Intern', value: 'Intern' },
-      { label: 'Manager', value: 'Manager' },
-      { label: 'Other', value: 'Other' }
+      { label: '* Select Belt', value: 0 },
+      { label: 'White', value: 'White' },
+      { label: 'Blue', value: 'Blue' },
+      { label: 'Purple', value: 'Purple' },
+      { label: 'Brown', value: 'Brown' },
+      { label: 'Black', value: 'Black' }
     ];
 
     return (
@@ -172,6 +168,9 @@ class CreateProfile extends Component {
                           prepend="fab fa-youtube"
                         />
                       </div>
+                    </div>
+                    <div className="text-center mt-4">
+                      <input type="submit" className="btn btn-info btn-round" />
                     </div>
                   </form>
                 </div>

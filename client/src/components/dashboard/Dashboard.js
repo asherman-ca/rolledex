@@ -30,19 +30,13 @@ class Dashboard extends Component {
                         href="#pablo"
                         className="btn btn-just-icon btn-link btn-dribbble"
                       >
-                        <i className="fa fa-dribbble" />
+                        <i className="fab fa-instagram" />
                       </a>
                       <a
                         href="#pablo"
                         className="btn btn-just-icon btn-link btn-twitter"
                       >
-                        <i className="fa fa-twitter" />
-                      </a>
-                      <a
-                        href="#pablo"
-                        className="btn btn-just-icon btn-link btn-pinterest"
-                      >
-                        <i className="fa fa-pinterest" />
+                        <i className="fab fa-youtube" />
                       </a>
                     </div>
                   </div>
