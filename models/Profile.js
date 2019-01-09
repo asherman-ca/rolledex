@@ -14,7 +14,7 @@ const ProfileSchema = new Schema({
   gym: {
     type: String
   },
-  rank: {
+  belt: {
     type: String
   },
   location: {

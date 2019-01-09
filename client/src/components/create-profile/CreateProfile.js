@@ -4,9 +4,9 @@ import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import InputGroup from '../common/InputGroup';
+import AwesomeGroup from '../common/AwesomeGroup';
 import SelectListGroup from '../common/SelectListGroup';
-// import { createProfile } from '../../actions/profileActions';
+import { createProfile } from '../../actions/profileActions';
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -14,16 +14,10 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
-      company: '',
-      website: '',
+      gym: '',
+      belt: '',
       location: '',
-      status: '',
-      skills: '',
-      githubusername: '',
       bio: '',
-      twitter: '',
-      facebook: '',
-      linkedin: '',
       youtube: '',
       instagram: '',
       errors: {}
@@ -43,21 +37,15 @@ class CreateProfile extends Component {
     e.preventDefault();
     const profileData = {
       handle: this.state.handle,
-      company: this.state.company,
-      website: this.state.website,
+      belt: this.state.belt,
       location: this.state.location,
-      status: this.state.status,
-      skills: this.state.skills,
-      githubusername: this.state.githubusername,
+      gym: this.state.gym,
       bio: this.state.bio,
-      twitter: this.state.twitter,
-      facebook: this.state.facebook,
-      linkedin: this.state.linkedin,
       youtube: this.state.youtube,
       instagram: this.state.instagram
     };
 
-    // this.props.createProfile(profileData, this.props.history);
+    this.props.createProfile(profileData, this.props.history);
   }
 
   onChange(e) {
@@ -80,155 +68,114 @@ class CreateProfile extends Component {
       { label: 'Other', value: 'Other' }
     ];
 
-    let socialInputs;
-
-    if (displaySocialInputs) {
-      socialInputs = (
-        <div>
-          <InputGroup
-            placeholder="Twitter Profile URL"
-            name="twitter"
-            icon="fab fa-twitter"
-            value={this.state.twitter}
-            onChange={this.onChange}
-            error={errors.twitter}
-          />
-          <InputGroup
-            placeholder="Facebook Profile URL"
-            name="facebook"
-            icon="fab fa-facebook"
-            value={this.state.facebook}
-            onChange={this.onChange}
-            error={errors.facebook}
-          />
-          <InputGroup
-            placeholder="Linkedin Profile URL"
-            name="linkedin"
-            icon="fab fa-linkedin"
-            value={this.state.linkedin}
-            onChange={this.onChange}
-            error={errors.linkedin}
-          />
-          <InputGroup
-            placeholder="YouTube Channel URL"
-            name="youtube"
-            icon="fab fa-youtube"
-            value={this.state.youtube}
-            onChange={this.onChange}
-            error={errors.youtube}
-          />
-          <InputGroup
-            placeholder="Instagram Page URL"
-            name="instagram"
-            icon="fab fa-instagram"
-            value={this.state.instagram}
-            onChange={this.onChange}
-            error={errors.instagram}
-          />
-        </div>
-      );
-    }
-
     return (
-      <div className="create-profile">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Create Your Profile</h1>
-              <p className="lead text-center">
-                Let's get some information to make your profile stand out
-              </p>
-              <small className="d-block pb-3">* = required fields</small>
-              <form onSubmit={this.onSubmit}>
-                <TextFieldGroup
-                  placeholder="* Profile Handle"
-                  name="handle"
-                  value={this.state.handle}
-                  onChange={this.onChange}
-                  error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, nickname, etc"
-                />
-                <SelectListGroup
-                  placeholder="Status"
-                  name="status"
-                  value={this.state.status}
-                  onChange={this.onChange}
-                  error={errors.status}
-                  options={options}
-                  info="Give us an idea of where you are at in your career"
-                />
-                <TextFieldGroup
-                  placeholder="Company"
-                  name="company"
-                  value={this.state.company}
-                  onChange={this.onChange}
-                  error={errors.company}
-                  info="Could be your own company or one you work for"
-                />
-                <TextFieldGroup
-                  placeholder="Website"
-                  name="website"
-                  value={this.state.website}
-                  onChange={this.onChange}
-                  error={errors.website}
-                  info="Could be your own or a company website (must include http)"
-                />
-                <TextFieldGroup
-                  placeholder="Location"
-                  name="location"
-                  value={this.state.location}
-                  onChange={this.onChange}
-                  error={errors.location}
-                  info="City & state suggested (eg. Boston, MA)"
-                />
-                <TextFieldGroup
-                  placeholder="Skills"
-                  name="skills"
-                  value={this.state.skills}
-                  onChange={this.onChange}
-                  error={errors.skills}
-                  info="Please use comma seperated values (eg. HTML,CSS,JS,PHP)"
-                />
-                <TextFieldGroup
-                  placeholder="Github Username"
-                  name="githubusername"
-                  value={this.state.githubusername}
-                  onChange={this.onChange}
-                  error={errors.githubusername}
-                  info="If you want your latest repos and a Github link, include your username"
-                />
-                <TextAreaFieldGroup
-                  placeholder="Bio"
-                  name="bio"
-                  value={this.state.bio}
-                  onChange={this.onChange}
-                  error={errors.bio}
-                  info="Tell us a little about yourself"
-                />
-                {socialInputs}
-                <div className="mb-3">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      this.setState(prevState => ({
-                        displaySocialInputs: !prevState.displaySocialInputs
-                      }));
-                    }}
-                    className="btn btn-warning"
-                  >
-                    {displaySocialInputs
-                      ? 'Hide Social Links'
-                      : 'Show Social Links'}
-                  </button>
-                  {/* <span className="text-muted ml-3">Optional</span> */}
+      <div className="signup-page">
+        <div
+          className="page-header header-filter"
+          style={{
+            backgroundImage: "url('../assets/img/bg7.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'topcenter'
+          }}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 ml-auto mr-auto">
+                <div className="card card-signup">
+                  <form onSubmit={this.onSubmit} className="form mb-auto">
+                    <h3 className="card-title text-center">
+                      Create Your Profile
+                    </h3>
+                    <p className="description text-center">
+                      This information can be viewed by others
+                    </p>
+                    <div className="row mr-4">
+                      <div className="col-md-6">
+                        <TextFieldGroup
+                          placeholder="Handle"
+                          name="handle"
+                          type="text"
+                          value={this.state.handle}
+                          onChange={this.onChange}
+                          error={errors.handle}
+                          prepend="person_pin"
+                        />
+                      </div>
+                      <div className="col-md-6">
+                        <TextFieldGroup
+                          placeholder="Current Gym"
+                          name="gym"
+                          type="text"
+                          value={this.state.gym}
+                          onChange={this.onChange}
+                          error={errors.gym}
+                          prepend="home"
+                        />
+                      </div>
+                    </div>
+                    <div className="row mr-4">
+                      <div className="col-md-6">
+                        <TextFieldGroup
+                          placeholder="Belt"
+                          name="belt"
+                          type="text"
+                          value={this.state.belt}
+                          onChange={this.onChange}
+                          error={errors.belt}
+                          prepend="horizontal_split"
+                        />
+                      </div>
+                      <div className="col-md-6">
+                        <TextFieldGroup
+                          placeholder="Location"
+                          name="location"
+                          type="text"
+                          value={this.state.location}
+                          onChange={this.onChange}
+                          error={errors.location}
+                          prepend="location_on"
+                        />
+                      </div>
+                    </div>
+                    <div className="row mr-4">
+                      <div className="col-12">
+                        <TextAreaFieldGroup
+                          placeholder="Bio"
+                          name="bio"
+                          value={this.state.bio}
+                          onChange={this.onChange}
+                          error={errors.bio}
+                          prepend="description"
+                        />
+                      </div>
+                    </div>
+                    <div className="row mr-4" style={{ marginLeft: '-9px' }}>
+                      <div className="col-md-6">
+                        <AwesomeGroup
+                          placeholder="Instagram"
+                          name="instagram"
+                          type="text"
+                          value={this.state.instagram}
+                          onChange={this.onChange}
+                          error={errors.instagram}
+                          prepend="fab fa-instagram"
+                        />
+                      </div>
+                      <div className="col-md-6">
+                        <AwesomeGroup
+                          placeholder="Youtube"
+                          name="youtube"
+                          type="text"
+                          value={this.state.youtube}
+                          onChange={this.onChange}
+                          error={errors.youtube}
+                          prepend="fab fa-youtube"
+                        />
+                      </div>
+                    </div>
+                  </form>
                 </div>
-
-                <input
-                  type="submit"
-                  value="Submit"
-                  className="btn btn-info btn-block mt-3"
-                />
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -238,13 +185,11 @@ class CreateProfile extends Component {
 }
 
 CreateProfile.propTypes = {
-  profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,
   createProfile: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile,
   errors: state.errors
 });
 
