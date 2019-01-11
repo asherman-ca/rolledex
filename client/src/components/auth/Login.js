@@ -54,7 +54,7 @@ class Login extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-5 col-sm-6 ml-auto mr-auto">
-                <div className="card card-signup">
+                <div className="card card-signup" style={{ padding: '20px' }}>
                   <form
                     className="form mb-auto mr-4"
                     method=""

@@ -77,7 +77,7 @@ class CreateProfile extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-8 ml-auto mr-auto">
-                <div className="card card-signup">
+                <div className="card card-signup" style={{ padding: '20px' }}>
                   <form onSubmit={this.onSubmit} className="form mb-auto">
                     <h3 className="card-title text-center">
                       Create Your Profile
@@ -169,7 +169,7 @@ class CreateProfile extends Component {
                         />
                       </div>
                     </div>
-                    <div className="text-center mt-4">
+                    <div className="text-center mt-4 mb-4">
                       <input type="submit" className="btn btn-info btn-round" />
                     </div>
                   </form>
