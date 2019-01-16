@@ -19,11 +19,9 @@ class EducationForm extends Component {
       website: '',
       current: false,
       description: '',
+      disabled: false,
       errors: {}
     };
-
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,7 +30,7 @@ class EducationForm extends Component {
     }
   }
 
-  onSubmit(e) {
+  onSubmit = e => {
     e.preventDefault();
     const profileData = {
       location: this.state.location,
@@ -45,11 +43,18 @@ class EducationForm extends Component {
     };
 
     // this.props.createProfile(profileData, this.props.history);
-  }
+  };
 
-  onChange(e) {
+  onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  }
+  };
+
+  onCheck = e => {
+    this.setState({
+      current: !this.state.current,
+      disabled: !this.state.disabled
+    });
+  };
 
   render() {
     const { errors } = this.state;
@@ -95,6 +100,46 @@ class EducationForm extends Component {
                           error={errors.location}
                           prepend="home"
                         />
+                      </div>
+                    </div>
+                    <div className="row mr-4">
+                      <TextFieldGroup
+                        placeholder="From Date"
+                        name="from"
+                        value={this.state.from}
+                        onChange={this.onChange}
+                        error={errors.from}
+                        type="date"
+                        info="From Date"
+                      />
+                      <TextFieldGroup
+                        placeholder="To Date"
+                        name="to"
+                        value={this.state.to}
+                        onChange={this.onChange}
+                        error={errors.to}
+                        type="date"
+                        info="to Date"
+                        disabled={this.state.disabled ? 'disabled' : ''}
+                      />
+                    </div>
+                    <div className="row mr-4">
+                      <div className="form-check">
+                        <label className="form-check-label">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            name="current"
+                            value={this.state.current}
+                            onChange={this.onCheck}
+                            checked={this.state.current}
+                            id="current"
+                          />
+                          Current
+                          <span className="form-check-sign">
+                            <span className="check" />
+                          </span>
+                        </label>
                       </div>
                     </div>
                     <div className="text-center mt-4 mb-4">
