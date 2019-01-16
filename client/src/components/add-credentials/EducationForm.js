@@ -103,28 +103,34 @@ class EducationForm extends Component {
                       </div>
                     </div>
                     <div className="row mr-4">
-                      <TextFieldGroup
-                        placeholder="From Date"
-                        name="from"
-                        value={this.state.from}
-                        onChange={this.onChange}
-                        error={errors.from}
-                        type="date"
-                        info="From Date"
-                      />
-                      <TextFieldGroup
-                        placeholder="To Date"
-                        name="to"
-                        value={this.state.to}
-                        onChange={this.onChange}
-                        error={errors.to}
-                        type="date"
-                        info="to Date"
-                        disabled={this.state.disabled ? 'disabled' : ''}
-                      />
+                      <div className="col-md-6">
+                        <TextFieldGroup
+                          placeholder="From Date"
+                          name="from"
+                          value={this.state.from}
+                          onChange={this.onChange}
+                          error={errors.from}
+                          type="date"
+                          info="From Date"
+                          prepend="date_range"
+                        />
+                      </div>
+                      <div className="col-md-6">
+                        <TextFieldGroup
+                          placeholder="To Date"
+                          name="to"
+                          value={this.state.to}
+                          onChange={this.onChange}
+                          error={errors.to}
+                          type="date"
+                          info="to Date"
+                          prepend="update"
+                          disabled={this.state.disabled ? 'disabled' : ''}
+                        />
+                      </div>
                     </div>
                     <div className="row mr-4">
-                      <div className="form-check">
+                      <div className="form-check" style={{ paddingTop: '0px' }}>
                         <label className="form-check-label">
                           <input
                             className="form-check-input"

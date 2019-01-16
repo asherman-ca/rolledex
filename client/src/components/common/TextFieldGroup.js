@@ -35,6 +35,11 @@ const TextFieldGroup = ({
           disabled={disabled}
         />
       </div>
+      {info && (
+        <small className="form-text text-muted" style={{ marginLeft: '56px' }}>
+          {info}
+        </small>
+      )}
       {error && <span className="description ml-5">{error}</span>}
     </div>
   );
