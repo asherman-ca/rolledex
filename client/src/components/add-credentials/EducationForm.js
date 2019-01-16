@@ -44,7 +44,7 @@ class EducationForm extends Component {
       description: this.state.description
     };
 
-    this.props.createProfile(profileData, this.props.history);
+    // this.props.createProfile(profileData, this.props.history);
   }
 
   onChange(e) {
@@ -111,7 +111,7 @@ class EducationForm extends Component {
   }
 }
 
-CreateProfile.propTypes = {
+EducationForm.propTypes = {
   errors: PropTypes.object.isRequired
 };
 
