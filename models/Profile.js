@@ -55,9 +55,6 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
       },
-      belts: {
-        type: String
-      },
       from: {
         type: Date,
         required: true
