@@ -7,7 +7,7 @@ import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import AwesomeGroup from '../common/AwesomeGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import DateFieldGroup from '../common/DateFieldGroup';
-// import { createProfile } from '../../actions/profileActions';
+import { addEducation } from '../../actions/profileActions';
 
 class EducationForm extends Component {
   constructor(props) {
@@ -17,8 +17,6 @@ class EducationForm extends Component {
       location: '',
       from: '',
       to: '',
-      website: '',
-      description: '',
       current: false,
       disabled: false,
       errors: {}
@@ -33,17 +31,15 @@ class EducationForm extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const profileData = {
+    const eduData = {
       location: this.state.location,
       gym: this.state.gym,
-      website: this.state.website,
       from: this.state.from,
       to: this.state.to,
-      current: this.state.current,
-      description: this.state.description
+      current: this.state.current
     };
 
-    // this.props.createProfile(profileData, this.props.history);
+    this.props.addEducation(eduData, this.props.history);
   };
 
   onChange = e => {
@@ -149,7 +145,6 @@ class EducationForm extends Component {
                         </label>
                       </div>
                     </div>
-
                     <div className="text-center mt-4 mb-4">
                       <input type="submit" className="btn btn-info btn-round" />
                     </div>
@@ -165,7 +160,8 @@ class EducationForm extends Component {
 }
 
 EducationForm.propTypes = {
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  addEducation: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -174,5 +170,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  {}
+  { addEducation }
 )(withRouter(EducationForm));
