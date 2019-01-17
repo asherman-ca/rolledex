@@ -105,45 +105,29 @@ class EducationForm extends Component {
                     </div>
                     <div className="row mr-4">
                       <div className="col-md-6">
-                        <div className="form-group">
-                          <div className="input-group">
-                            <div className="input-group-prepend">
-                              <span className="input-group-text">
-                                <i className="material-icons">update</i>
-                              </span>
-                            </div>
-                            <input
-                              placeholder="From"
-                              name="from"
-                              type="text"
-                              className="form-control datetimepicker"
-                              value={this.state.from}
-                              onChange={this.onChange}
-                              error={errors.from}
-                            />
-                          </div>
-                        </div>
+                        <TextFieldGroup
+                          placeholder="From Date"
+                          name="from"
+                          value={this.state.from}
+                          onChange={this.onChange}
+                          error={errors.from}
+                          type="date"
+                          info="From Date"
+                          prepend="date_range"
+                        />
                       </div>
                       <div className="col-md-6">
-                        <div className="form-group">
-                          <div className="input-group">
-                            <div className="input-group-prepend">
-                              <span className="input-group-text">
-                                <i className="material-icons">update</i>
-                              </span>
-                            </div>
-                            <input
-                              placeholder="To"
-                              name="to"
-                              type="text"
-                              className="form-control datetimepicker"
-                              value={this.state.to}
-                              onChange={this.onChange}
-                              error={errors.to}
-                              disabled={this.state.disabled ? 'disabled' : ''}
-                            />
-                          </div>
-                        </div>
+                        <TextFieldGroup
+                          placeholder="To Date"
+                          name="to"
+                          value={this.state.to}
+                          onChange={this.onChange}
+                          error={errors.to}
+                          type="date"
+                          info="to Date"
+                          prepend="update"
+                          disabled={this.state.disabled ? 'disabled' : ''}
+                        />
                       </div>
                     </div>
                     <div className="row mr-4">
