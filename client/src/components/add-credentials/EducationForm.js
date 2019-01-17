@@ -18,8 +18,8 @@ class EducationForm extends Component {
       from: '',
       to: '',
       website: '',
-      current: false,
       description: '',
+      current: false,
       disabled: false,
       errors: {}
     };
@@ -130,7 +130,7 @@ class EducationForm extends Component {
                         />
                       </div>
                     </div>
-                    <div className="row mr-4">
+                    <div className="row">
                       <div className="form-check" style={{ paddingTop: '0px' }}>
                         <label className="form-check-label">
                           <input
@@ -149,6 +149,7 @@ class EducationForm extends Component {
                         </label>
                       </div>
                     </div>
+
                     <div className="text-center mt-4 mb-4">
                       <input type="submit" className="btn btn-info btn-round" />
                     </div>
