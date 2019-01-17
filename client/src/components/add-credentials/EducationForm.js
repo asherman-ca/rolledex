@@ -6,6 +6,7 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import AwesomeGroup from '../common/AwesomeGroup';
 import SelectListGroup from '../common/SelectListGroup';
+import DateFieldGroup from '../common/DateFieldGroup';
 // import { createProfile } from '../../actions/profileActions';
 
 class EducationForm extends Component {
@@ -104,7 +105,7 @@ class EducationForm extends Component {
                     </div>
                     <div className="row mr-4">
                       <div className="col-md-6">
-                        <TextFieldGroup
+                        {/* <DateFieldGroup
                           placeholder="From Date"
                           name="from"
                           value={this.state.from}
@@ -113,7 +114,26 @@ class EducationForm extends Component {
                           type="date"
                           info="From Date"
                           prepend="date_range"
-                        />
+                        /> */}
+                        <div className="form-group">
+                          <div className="input-group">
+                            <div className="input-group-prepend">
+                              <span className="input-group-text">
+                                <i className="material-icons">update</i>
+                              </span>
+                            </div>
+                            <input
+                              dateFormat="YYYY-MM-DD"
+                              placeholder="From"
+                              name="from"
+                              type="text"
+                              className="form-control datetimepicker"
+                              value={this.state.from}
+                              onChange={this.onChange}
+                              error={errors.from}
+                            />
+                          </div>
+                        </div>
                       </div>
                       <div className="col-md-6">
                         <TextFieldGroup
