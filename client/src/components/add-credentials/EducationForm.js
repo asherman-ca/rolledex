@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
-import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import AwesomeGroup from '../common/AwesomeGroup';
-import SelectListGroup from '../common/SelectListGroup';
-import DateFieldGroup from '../common/DateFieldGroup';
 import { addEducation } from '../../actions/profileActions';
 
 class EducationForm extends Component {

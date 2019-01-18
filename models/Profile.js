@@ -37,9 +37,6 @@ const ProfileSchema = new Schema({
         type: Date,
         required: true
       },
-      description: {
-        type: String
-      },
       place: {
         type: Number
       }
