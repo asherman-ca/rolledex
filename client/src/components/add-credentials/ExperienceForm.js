@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import { addExperience } from '../../actions/profileActions';
+import { Link } from 'react-router-dom';
 
 class ExperienceForm extends Component {
   constructor(props) {
@@ -117,8 +118,19 @@ class ExperienceForm extends Component {
                         />
                       </div>
                     </div>
-                    <div className="text-center mt-4 mb-4">
-                      <input type="submit" className="btn btn-info btn-round" />
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div className="text-center mt-4 mb-4">
+                          <Link className="btn btn-info" to="/dashboard">
+                            Go Back
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="text-center mt-4 mb-4">
+                          <input type="submit" className="btn btn-info" />
+                        </div>
+                      </div>
                     </div>
                   </form>
                 </div>

@@ -86,10 +86,7 @@ class Login extends Component {
                         prepend="lock_outline"
                       />
                       <div className="text-center mt-4">
-                        <input
-                          type="submit"
-                          className="btn btn-info btn-round"
-                        />
+                        <input type="submit" className="btn btn-info" />
                       </div>
                     </div>
                   </form>

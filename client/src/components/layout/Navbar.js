@@ -19,7 +19,7 @@ class Navbar extends Component {
     const guestLinks = (
       <li className="dropdown nav-item">
         <a href="#" className="dropdown-toggle nav-link" data-toggle="dropdown">
-          <i className="material-icons">account_circle</i> Account
+          <i className="material-icons">account_circle</i> Profile
         </a>
         <div className="dropdown-menu dropdown-with-icons">
           <Link className="dropdown-item" to="/register">
@@ -28,9 +28,6 @@ class Navbar extends Component {
           <Link className="dropdown-item" to="/login">
             <i className="material-icons">fingerprint</i> Login
           </Link>
-          <Link className="dropdown-item" to="/">
-            <i className="material-icons">place</i> Landing
-          </Link>
         </div>
       </li>
     );
@@ -38,7 +35,7 @@ class Navbar extends Component {
     const authLinks = (
       <li className="dropdown nav-item">
         <a href="#" className="dropdown-toggle nav-link" data-toggle="dropdown">
-          <i className="material-icons">account_circle</i> Account
+          <i className="material-icons">account_circle</i> Profile
         </a>
         <div className="dropdown-menu dropdown-with-icons">
           <a
@@ -80,23 +77,6 @@ class Navbar extends Component {
           </div>
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
-              <li className="dropdown nav-item">
-                <a
-                  href="#"
-                  className="dropdown-toggle nav-link"
-                  data-toggle="dropdown"
-                >
-                  <i className="material-icons">view_day</i> Sections
-                </a>
-                <div className="dropdown-menu dropdown-with-icons">
-                  <a href="../sections.html#headers" className="dropdown-item">
-                    <i className="material-icons">dns</i> Profiles
-                  </a>
-                  <a href="../sections.html#features" className="dropdown-item">
-                    <i className="material-icons">build</i> Techniques
-                  </a>
-                </div>
-              </li>
               {isAuthenticated ? authLinks : guestLinks}
             </ul>
           </div>

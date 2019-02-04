@@ -12,7 +12,7 @@ class Dashboard extends Component {
     return (
       <div className="profile-page">
         <div
-          class="page-header header-filter"
+          className="page-header header-filter"
           data-parallax="true"
           style={{ backgroundImage: "url('../assets/img/examples/city.jpg')" }}
         />
@@ -33,12 +33,12 @@ class Dashboard extends Component {
                       <h3 className="title fonting">Jon Danaher</h3>
                       <h6>Head Coach @ RGA</h6>
                       <a href="#pablo">
-                        <button class="btn btn-just-icon btn-round btn-instagram">
+                        <button class="btn btn-just-icon btn-instagram">
                           <i class="fab fa-instagram"> </i>
                         </button>
                       </a>
                       <a href="#pablo">
-                        <button class="btn btn-just-icon btn-round btn-youtube">
+                        <button class="btn btn-just-icon btn-youtube">
                           <i class="fab fa-youtube"> </i>
                         </button>
                       </a>
