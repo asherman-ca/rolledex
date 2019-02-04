@@ -58,13 +58,13 @@ class Dashboard extends Component {
             <div className="row mt-4 mb-4">
               <div className="col-md-6 ml-auto mr-auto edit-buttons">
                 <Link to="/add-experience">
-                  <button className="btn btn-info">Edit Tournaments</button>
+                  <button className="btn">Edit Tournaments</button>
                 </Link>
                 <Link to="/create-profile">
-                  <button className="btn btn-info">Edit Profile</button>
+                  <button className="btn">Edit Profile</button>
                 </Link>
                 <Link to="add-education">
-                  <button className="btn btn-info">Edit Experience</button>
+                  <button className="btn">Edit Experience</button>
                 </Link>
               </div>
             </div>

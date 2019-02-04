@@ -145,14 +145,14 @@ class EducationForm extends Component {
                     <div className="row">
                       <div className="col-md-6">
                         <div className="text-center mt-4 mb-4">
-                          <Link className="btn btn-info" to="/dashboard">
+                          <Link className="btn btn-warning" to="/dashboard">
                             Go Back
                           </Link>
                         </div>
                       </div>
                       <div className="col-md-6">
                         <div className="text-center mt-4 mb-4">
-                          <input type="submit" className="btn btn-info" />
+                          <input type="submit" className="btn btn-success" />
                         </div>
                       </div>
                     </div>

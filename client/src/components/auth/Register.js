@@ -164,7 +164,10 @@ class Register extends Component {
                               prepend="lock_outline"
                             />
                             <div className="text-center">
-                              <input type="submit" className="btn btn-info" />
+                              <input
+                                type="submit"
+                                className="btn btn-success"
+                              />
                             </div>
                           </div>
                         </form>

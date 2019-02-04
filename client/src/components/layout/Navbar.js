@@ -41,6 +41,12 @@ class Navbar extends Component {
           <Link className="dropdown-item" to="/dashboard">
             <i className="material-icons">place</i> Dashboard
           </Link>
+          <Link className="dropdown-item" to="/dashboard">
+            <i className="material-icons">build</i> Techniques
+          </Link>
+          <Link className="dropdown-item" to="/dashboard">
+            <i className="material-icons">account_circle</i> Profiles
+          </Link>
           <a
             href="/"
             onClick={this.onLogoutClick.bind(this)}
