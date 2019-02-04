@@ -19,7 +19,7 @@ class Navbar extends Component {
     const guestLinks = (
       <li className="dropdown nav-item">
         <a href="#" className="dropdown-toggle nav-link" data-toggle="dropdown">
-          <i className="material-icons">account_circle</i> Profile
+          <i className="material-icons">account_circle</i> Sign In
         </a>
         <div className="dropdown-menu dropdown-with-icons">
           <Link className="dropdown-item" to="/register">
@@ -35,9 +35,12 @@ class Navbar extends Component {
     const authLinks = (
       <li className="dropdown nav-item">
         <a href="#" className="dropdown-toggle nav-link" data-toggle="dropdown">
-          <i className="material-icons">account_circle</i> Profile
+          <i className="material-icons">menu</i>
         </a>
         <div className="dropdown-menu dropdown-with-icons">
+          <Link className="dropdown-item" to="/dashboard">
+            <i className="material-icons">place</i> Dashboard
+          </Link>
           <a
             href="/"
             onClick={this.onLogoutClick.bind(this)}
@@ -45,9 +48,6 @@ class Navbar extends Component {
           >
             <i className="material-icons">fingerprint</i> Logout
           </a>
-          <Link className="dropdown-item" to="/dashboard">
-            <i className="material-icons">place</i> Dashboard
-          </Link>
         </div>
       </li>
     );
