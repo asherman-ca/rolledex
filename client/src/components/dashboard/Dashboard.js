@@ -29,14 +29,13 @@ class Dashboard extends Component {
                   <div className="profile">
                     <div className="avatar">
                       <img
-                        src="../img/donjon.jpg"
+                        src={user.avatar}
                         alt="Cirle Image"
                         className="img-raised rounded-circle img-fluid"
                       />
                     </div>
                     <div className="name">
-                      <h3 className="title fonting">Jon Danaher</h3>
-                      <h6>Head Coach @ RGA</h6>
+                      <h3 className="title fonting">{profile.handle}</h3>
                       <a href="#pablo">
                         <button class="btn btn-just-icon btn-instagram">
                           <i class="fab fa-instagram"> </i>
@@ -53,12 +52,7 @@ class Dashboard extends Component {
               </div>
             </div>
             <div className="description text-center">
-              <p>
-                An artist of considerable range, Chet Faker &#x2014; the name
-                taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014;
-                writes, performs and records all of his own music, giving it a
-                warm, intimate feel with a solid groove structure.{' '}
-              </p>
+              <p>{profile.bio}</p>
             </div>
             <div className="row mt-4 mb-4">
               <div className="col-md-6 ml-auto mr-auto edit-buttons">
@@ -104,53 +98,15 @@ class Dashboard extends Component {
                     </div>
                     <div className="name">
                       <h3 className="title fonting">Jon Danaher</h3>
-                      <h6>Head Coach @ RGA</h6>
-                      <a href="#pablo">
-                        <button class="btn btn-just-icon btn-instagram">
-                          <i class="fab fa-instagram"> </i>
-                        </button>
-                      </a>
-                      <a href="#pablo">
-                        <button class="btn btn-just-icon btn-youtube">
-                          <i class="fab fa-youtube"> </i>
-                        </button>
-                      </a>
                     </div>
+                    <div className="description text-center">
+                      <p>Setup your account by adding a profile</p>
+                    </div>
+                    <Link to="/create-profile" className="mt-3 btn">
+                      Create Profile
+                    </Link>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="description text-center">
-              <p>
-                An artist of considerable range, Chet Faker &#x2014; the name
-                taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014;
-                writes, performs and records all of his own music, giving it a
-                warm, intimate feel with a solid groove structure.{' '}
-              </p>
-            </div>
-            <div className="row mt-4 mb-4">
-              <div className="col-md-6 ml-auto mr-auto edit-buttons">
-                <Link to="/add-experience">
-                  <button className="btn">Edit Tournaments</button>
-                </Link>
-                <Link to="/create-profile">
-                  <button className="btn">Edit Profile</button>
-                </Link>
-                <Link to="add-education">
-                  <button className="btn">Edit Experience</button>
-                </Link>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-4 ml-auto mb-5">
-                <h3 className="text-center">
-                  <strong>Tournament Record</strong>
-                </h3>
-              </div>
-              <div className="col-md-4 mr-auto">
-                <h3 className="text-center">
-                  <strong>Gym Affiliations</strong>
-                </h3>
               </div>
             </div>
           </div>
@@ -165,7 +121,9 @@ class Dashboard extends Component {
           data-parallax="true"
           style={{ backgroundImage: "url('../assets/img/examples/city.jpg')" }}
         />
-        <div className="main main-raised">{dashboardContent}</div>
+        <div style={{ minHeight: '400px' }} className="main main-raised">
+          {dashboardContent}
+        </div>
       </div>
     );
   }
