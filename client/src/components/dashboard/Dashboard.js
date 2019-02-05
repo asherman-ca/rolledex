@@ -60,9 +60,12 @@ class Dashboard extends Component {
                             <a href="#pablo" class="dropdown-item">
                               Edit Profile
                             </a>
-                            <a href="#pablo" class="dropdown-item">
+                            <Link
+                              to="/add-experience"
+                              className="dropdown-item"
+                            >
                               Add Tournament
-                            </a>
+                            </Link>
                             <a href="#pablo" class="dropdown-item">
                               Add Gym
                             </a>
@@ -93,12 +96,12 @@ class Dashboard extends Component {
             <div className="row mt-4 mb-4">
               <div className="col-md-6 ml-auto mr-auto edit-buttons">
                 <a href="#pablo">
-                  <button class="btn btn-just-icon">
+                  <button class="btn btn-just-icon btn-instagram">
                     <i class="fab fa-instagram"> </i>
                   </button>
                 </a>
                 <a href="#pablo">
-                  <button class="btn btn-just-icon">
+                  <button class="btn btn-just-icon btn-youtube">
                     <i class="fab fa-youtube"> </i>
                   </button>
                 </a>
