@@ -55,3 +55,8 @@
 .card-profile .card-footer .btn.btn-just-icon {
   padding: 0px !important;
 }
+
+.avatar-btn {
+  display: flex;
+  align-items: center;
+}

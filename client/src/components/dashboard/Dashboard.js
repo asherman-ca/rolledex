@@ -34,28 +34,74 @@ class Dashboard extends Component {
                         className="img-raised rounded-circle img-fluid"
                       />
                     </div>
-                    <div className="name">
-                      <h3 className="title fonting">{profile.handle}</h3>
-                      <a href="#pablo">
-                        <button class="btn btn-just-icon btn-instagram">
-                          <i class="fab fa-instagram"> </i>
-                        </button>
-                      </a>
-                      <a href="#pablo">
-                        <button class="btn btn-just-icon btn-youtube">
-                          <i class="fab fa-youtube"> </i>
-                        </button>
-                      </a>
+                    <div className="name row">
+                      <div className="col-2 avatar-btn">
+                        <div class="dropdown">
+                          <button
+                            href="#pablo"
+                            class="dropdown-toggle btn btn-primary"
+                            data-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <i className="material-icons">add</i>
+                            <div class="ripple-container" />
+                          </button>
+                          <div
+                            class="dropdown-menu dropdown-menu-right"
+                            x-placement="bottom-end"
+                            style={{
+                              position: 'absolute',
+                              top: '41px',
+                              left: '129px',
+                              willChange: 'top, left'
+                            }}
+                          >
+                            <h6 class="dropdown-header">Dropdown header</h6>
+                            <a href="#pablo" class="dropdown-item">
+                              Edit Profile
+                            </a>
+                            <a href="#pablo" class="dropdown-item">
+                              Add Tournament
+                            </a>
+                            <a href="#pablo" class="dropdown-item">
+                              Add Gym
+                            </a>
+                            <div class="dropdown-divider" />
+                            <a href="#pablo" class="dropdown-item">
+                              Add Technique
+                            </a>
+                            <div class="dropdown-divider" />
+                            <a href="#pablo" class="dropdown-item">
+                              Logout
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-8">
+                        <h3 className="title fonting">{profile.handle}</h3>
+                      </div>
+                      <div className="col-2" />
+                    </div>
+                    <div className="description text-center">
+                      <p>{profile.bio}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="description text-center">
-              <p>{profile.bio}</p>
-            </div>
+
             <div className="row mt-4 mb-4">
               <div className="col-md-6 ml-auto mr-auto edit-buttons">
+                <a href="#pablo">
+                  <button class="btn btn-just-icon">
+                    <i class="fab fa-instagram"> </i>
+                  </button>
+                </a>
+                <a href="#pablo">
+                  <button class="btn btn-just-icon">
+                    <i class="fab fa-youtube"> </i>
+                  </button>
+                </a>
                 <Link to="/add-experience">
                   <button className="btn">Edit Tournaments</button>
                 </Link>
