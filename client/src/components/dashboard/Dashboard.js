@@ -56,26 +56,34 @@ class Dashboard extends Component {
                               willChange: 'top, left'
                             }}
                           >
-                            <h6 class="dropdown-header">Dropdown header</h6>
-                            <a href="#pablo" class="dropdown-item">
+                            <h6 class="dropdown-header">Account Actions</h6>
+              
+
+                            <Link to="/create-profile" className="dropdown-item">
                               Edit Profile
-                            </a>
+                            </Link>
                             <Link
                               to="/add-experience"
                               className="dropdown-item"
                             >
                               Add Tournament
                             </Link>
-                            <a href="#pablo" class="dropdown-item">
+                            <Link
+                              to="/add-education"
+                              className="dropdown-item"
+                            >
                               Add Gym
-                            </a>
+                            </Link>
                             <div class="dropdown-divider" />
-                            <a href="#pablo" class="dropdown-item">
+                            <Link
+                              to="/add-post"
+                              className="dropdown-item"
+                            >
                               Add Technique
-                            </a>
+                            </Link>
                             <div class="dropdown-divider" />
                             <a href="#pablo" class="dropdown-item">
-                              Logout
+                              Delete Account
                             </a>
                           </div>
                         </div>
@@ -85,8 +93,12 @@ class Dashboard extends Component {
                       </div>
                       <div className="col-2" />
                     </div>
-                    <div className="description text-center">
-                      <p>{profile.bio}</p>
+                    <div className="row">
+                      <div className="col-8 mr-auto ml-auto">
+                        <div className="description text-center">
+                          <p>{profile.bio}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -105,15 +117,6 @@ class Dashboard extends Component {
                     <i class="fab fa-youtube"> </i>
                   </button>
                 </a>
-                <Link to="/add-experience">
-                  <button className="btn">Edit Tournaments</button>
-                </Link>
-                <Link to="/create-profile">
-                  <button className="btn">Edit Profile</button>
-                </Link>
-                <Link to="add-education">
-                  <button className="btn">Edit Experience</button>
-                </Link>
               </div>
             </div>
             <div className="row">
