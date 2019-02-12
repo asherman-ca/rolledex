@@ -27,10 +27,10 @@ class ExperienceForm extends Component {
   onSubmit = e => {
     e.preventDefault();
     const expData = {
-      name: this.state.location,
-      location: this.state.gym,
-      date: this.state.from,
-      place: this.state.to
+      name: this.state.name,
+      location: this.state.location,
+      date: this.state.date,
+      place: this.state.place
     };
 
     this.props.addExperience(expData, this.props.history);

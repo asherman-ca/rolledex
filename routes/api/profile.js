@@ -175,13 +175,10 @@ router.post(
 
     Profile.findOne({ user: req.user.id }).then(profile => {
       const newExp = {
-        title: req.body.title,
-        company: req.body.company,
+        name: req.body.name,
         location: req.body.location,
-        from: req.body.from,
-        to: req.body.to,
-        current: req.body.current,
-        description: req.body.description
+        date: req.body.date,
+        place: req.body.place
       };
 
       // Add to experience array in profile

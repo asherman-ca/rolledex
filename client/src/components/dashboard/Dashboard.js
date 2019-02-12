@@ -15,6 +15,7 @@ class Dashboard extends Component {
     const { profile, loading } = this.props.profile;
 
     let dashboardContent;
+    console.log(profile)
 
     if (profile === null || loading) {
       dashboardContent = <Spinner />;
@@ -36,18 +37,18 @@ class Dashboard extends Component {
                     </div>
                     <div className="name row">
                       <div className="col-2 avatar-btn">
-                        <div class="dropdown">
+                        <div className="dropdown">
                           <button
                             href="#pablo"
-                            class="dropdown-toggle btn btn-primary"
+                            className="dropdown-toggle btn btn-primary"
                             data-toggle="dropdown"
                             aria-expanded="false"
                           >
                             <i className="material-icons">add</i>
-                            <div class="ripple-container" />
+                            <div className="ripple-container" />
                           </button>
                           <div
-                            class="dropdown-menu dropdown-menu-right"
+                            className="dropdown-menu dropdown-menu-right"
                             x-placement="bottom-end"
                             style={{
                               position: 'absolute',
@@ -56,7 +57,7 @@ class Dashboard extends Component {
                               willChange: 'top, left'
                             }}
                           >
-                            <h6 class="dropdown-header">Account Actions</h6>
+                            <h6 className="dropdown-header">Account Actions</h6>
               
 
                             <Link to="/create-profile" className="dropdown-item">
@@ -74,15 +75,15 @@ class Dashboard extends Component {
                             >
                               Add Gym
                             </Link>
-                            <div class="dropdown-divider" />
+                            <div className="dropdown-divider" />
                             <Link
                               to="/add-post"
                               className="dropdown-item"
                             >
                               Add Technique
                             </Link>
-                            <div class="dropdown-divider" />
-                            <a href="#pablo" class="dropdown-item">
+                            <div className="dropdown-divider" />
+                            <a href="#pablo" className="dropdown-item">
                               Delete Account
                             </a>
                           </div>
@@ -108,13 +109,13 @@ class Dashboard extends Component {
             <div className="row mt-4 mb-4">
               <div className="col-md-6 ml-auto mr-auto edit-buttons">
                 <a href="#pablo">
-                  <button class="btn btn-just-icon btn-instagram">
-                    <i class="fab fa-instagram"> </i>
+                  <button className="btn btn-just-icon btn-instagram">
+                    <i className="fab fa-instagram"> </i>
                   </button>
                 </a>
                 <a href="#pablo">
-                  <button class="btn btn-just-icon btn-youtube">
-                    <i class="fab fa-youtube"> </i>
+                  <button className="btn btn-just-icon btn-youtube">
+                    <i className="fab fa-youtube"> </i>
                   </button>
                 </a>
               </div>
@@ -124,6 +125,7 @@ class Dashboard extends Component {
                 <h3 className="text-center">
                   <strong>Tournament Record</strong>
                 </h3>
+
               </div>
               <div className="col-md-4 mr-auto">
                 <h3 className="text-center">
@@ -183,7 +185,7 @@ class Dashboard extends Component {
 
 const mapStateToProps = state => ({
   profile: state.profile,
-  auth: state.auth
+  auth: state.auth,
 });
 
 Dashboard.propTypes = {

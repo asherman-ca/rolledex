@@ -4,9 +4,9 @@ const isEmpty = require('./is-empty');
 module.exports = function validateExperienceInput(data) {
   let errors = {};
 
-  data.name = !isEmpty(data.title) ? data.title : '';
-  data.location = !isEmpty(data.company) ? data.company : '';
-  data.date = !isEmpty(data.from) ? data.from : '';
+  data.name = !isEmpty(data.name) ? data.name : '';
+  data.location = !isEmpty(data.location) ? data.location : '';
+  data.date = !isEmpty(data.date) ? data.date : '';
 
   if (Validator.isEmpty(data.name)) {
     errors.name = 'Name field is required';
