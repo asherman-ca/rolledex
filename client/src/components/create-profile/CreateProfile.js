@@ -9,11 +9,13 @@ import SelectListGroup from '../common/SelectListGroup';
 import { createProfile } from '../../actions/profileActions';
 import { Link } from 'react-router-dom';
 
+// TODO: load getCurrentProfile in DidMount and then use render logic (like dashboard) to account for page reloading
+
 class CreateProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      handle: '',
+      handle: this.props.profile.profile.handle,
       gym: '',
       belt: '',
       location: '',
@@ -54,6 +56,8 @@ class CreateProfile extends Component {
 
   render() {
     const { errors } = this.state;
+    const { profile } = this.props.profile
+    console.log(profile)
 
     // select options for status
     const options = [
@@ -197,11 +201,13 @@ class CreateProfile extends Component {
 
 CreateProfile.propTypes = {
   errors: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired,
   createProfile: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
-  errors: state.errors
+  errors: state.errors,
+  profile: state.profile
 });
 
 export default connect(

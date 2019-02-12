@@ -15,7 +15,6 @@ class Dashboard extends Component {
     const { profile, loading } = this.props.profile;
 
     let dashboardContent;
-    console.log(profile)
 
     if (profile === null || loading) {
       dashboardContent = <Spinner />;
