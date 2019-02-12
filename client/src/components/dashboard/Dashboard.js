@@ -14,35 +14,31 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
 
-    let experienceContent;
+    // let experienceContent;
 
-    if (profile === null || loading) {
+    // if (profile === null || loading) {
+    //   } else {
+    //   if (Object.keys(profile).length > 0 && profile.experience.length > 0) {
+    //     experienceContent = (
+    //       <p>Experience List</p>
+    //     )
+    //   } else {
+    //     experienceContent = <p>No Experience Available</p>;
+    //   }
+    // }
 
-    } else {
+    // let educationContent;
 
-    if (Object.keys(profile).length > 0 && profile.experience.length > 0) {
-      experienceContent = (
-        <p>Experience List</p>
-      )
-    } else {
-      experienceContent = <p>No Experience Available</p>;
-    }
-    }
-
-    let educationContent;
-
-    if (profile === null || loading) {
-
-    } else {
-    if (Object.keys(profile).length > 0 && profile.education.length > 0) {
-      educationContent = (
-        <p>Education List</p>
-      )
-    } else {
-      educationContent = <p>No Education Available</p>
-    }
-  }
-
+    // if (profile === null || loading) {
+    //   } else {
+    //   if (Object.keys(profile).length > 0 && profile.education.length > 0) {
+    //     educationContent = (
+    //       <p>Education List</p>
+    //     )
+    //   } else {
+    //     educationContent = <p>No Education Available</p>
+    //   }
+    // }
 
     let dashboardContent;
 
@@ -51,6 +47,27 @@ class Dashboard extends Component {
     } else {
       if (Object.keys(profile).length > 0) {
         // has a profile
+
+        let educationContent;
+
+        if (profile.education.length > 0) {
+          educationContent = (
+            <p className="text-center">Education List</p>
+          )
+        } else {
+          educationContent = <p className="text-center">No Education Available</p>
+        }
+
+        let experienceContent;
+
+        if (profile.experience.length > 0) {
+          experienceContent = (
+            <p className="text-center">Experience List</p>
+          )
+        } else {
+          experienceContent = <p className="text-center">No Experience Available</p>
+        }
+
         dashboardContent = (
           <div className="profile-content">
             <div className="container">

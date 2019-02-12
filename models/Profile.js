@@ -38,7 +38,7 @@ const ProfileSchema = new Schema({
         required: true
       },
       place: {
-        type: Number
+        type: String
       }
     }
   ],
