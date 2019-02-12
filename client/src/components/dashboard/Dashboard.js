@@ -177,6 +177,22 @@ class Dashboard extends Component {
                 {educationContent}
               </div>
             </div>
+          
+
+            <div className="row">
+              <div className="col-md-4 ml-auto">
+                <h3 className="title fonting text-center">Technique</h3>
+              </div>
+              <div className="col-md-4 mr-auto">
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-md-2" />
+              <div className="col-md-8">
+                <p className="text-center">All the posts!</p>
+              </div>
+            </div>
           </div>
         );
       } else {
