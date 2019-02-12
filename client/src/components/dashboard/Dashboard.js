@@ -52,25 +52,26 @@ class Dashboard extends Component {
 
         if (profile.education.length > 0) {
           educationContent = (
-            <p className="text-center">Education List</p>
+            <p className="text-center fonting whiting">Education List</p>
           )
         } else {
-          educationContent = <p className="text-center">No Education Available</p>
+          educationContent = <p className="text-center fonting whiting">No Education Available</p>
         }
 
         let experienceContent;
 
         if (profile.experience.length > 0) {
           experienceContent = (
-            <p className="text-center">Experience List</p>
+            <p className="text-center fonting whiting">Experience List</p>
           )
         } else {
-          experienceContent = <p className="text-center">No Experience Available</p>
+          experienceContent = <p className="text-center fonting whiting">No Experience Available</p>
         }
 
         dashboardContent = (
           <div className="profile-content">
             <div className="container">
+            <div style={{padding: "0px", paddingBottom: "20px"}} className="section">
               <div className="row">
                 <div className="col-md-6 ml-auto mr-auto">
                   <div className="profile">
@@ -162,35 +163,37 @@ class Dashboard extends Component {
                 </div>
               </div>
             </div>
-
-            <div className="row">
-              <div className="col-md-4 ml-auto mb-5">
-                <h3 className="text-center title fonting">
-                  <strong>Tournament Record</strong>
-                </h3>
-                {experienceContent}
-              </div>
-              <div className="col-md-4 mr-auto">
-                <h3 className="text-center title fonting">
-                  <strong>Gym Affiliations</strong>
-                </h3>
-                {educationContent}
-              </div>
-            </div>
-          
-
-            <div className="row">
-              <div className="col-md-4 ml-auto">
-                <h3 className="title fonting text-center">Technique</h3>
-              </div>
-              <div className="col-md-4 mr-auto">
-              </div>
             </div>
 
-            <div className="row">
-              <div className="col-md-2" />
-              <div className="col-md-8">
-                <p className="text-center">All the posts!</p>
+            
+            <div style={{padding: "10px"}} className="section section-dark">
+              <div className="row">
+                <div className="col-md-4 ml-auto mb-5">
+                  <h3 className="text-center title fonting">
+                    <strong>Tournament Record</strong>
+                  </h3>
+                  {experienceContent}
+                </div>
+                <div className="col-md-4 mr-auto">
+                  <h3 className="text-center title fonting">
+                    <strong>Gym Affiliations</strong>
+                  </h3>
+                  {educationContent}
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-4 ml-auto">
+                  <h3 className="title fonting text-center">Technique</h3>
+                </div>
+                <div className="col-md-4 mr-auto">
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-md-2" />
+                <div className="col-md-8">
+                  <p className="text-center fonting whiting">All the posts!</p>
+                </div>
               </div>
             </div>
           </div>
