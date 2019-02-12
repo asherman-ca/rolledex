@@ -50,6 +50,7 @@
 .edit-buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .card-profile .card-footer .btn.btn-just-icon {

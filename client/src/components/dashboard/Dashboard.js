@@ -14,6 +14,36 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
 
+    let experienceContent;
+
+    if (profile === null || loading) {
+
+    } else {
+
+    if (Object.keys(profile).length > 0 && profile.experience.length > 0) {
+      experienceContent = (
+        <p>Experience List</p>
+      )
+    } else {
+      experienceContent = <p>No Experience Available</p>;
+    }
+    }
+
+    let educationContent;
+
+    if (profile === null || loading) {
+
+    } else {
+    if (Object.keys(profile).length > 0 && profile.education.length > 0) {
+      educationContent = (
+        <p>Education List</p>
+      )
+    } else {
+      educationContent = <p>No Education Available</p>
+    }
+  }
+
+
     let dashboardContent;
 
     if (profile === null || loading) {
@@ -56,7 +86,7 @@ class Dashboard extends Component {
                               willChange: 'top, left'
                             }}
                           >
-                            <h6 className="dropdown-header">Account Actions</h6>
+                            <h6 className="dropdown-header">Profile Actions</h6>
               
 
                             <Link to="/create-profile" className="dropdown-item">
@@ -91,7 +121,18 @@ class Dashboard extends Component {
                       <div className="col-8">
                         <h3 className="title fonting">{profile.handle}</h3>
                       </div>
-                      <div className="col-2" />
+                      <div className="col-2 edit-buttons">
+                        <a href="#pablo">
+                          <button className="btn btn-just-icon btn-instagram">
+                            <i className="fab fa-instagram"> </i>
+                          </button>
+                        </a>
+                        <a href="#pablo">
+                          <button className="btn btn-just-icon btn-youtube">
+                            <i className="fab fa-youtube"> </i>
+                          </button>
+                        </a>
+                      </div>
                     </div>
                     <div className="row">
                       <div className="col-8 mr-auto ml-auto">
@@ -105,31 +146,18 @@ class Dashboard extends Component {
               </div>
             </div>
 
-            <div className="row mt-4 mb-4">
-              <div className="col-md-6 ml-auto mr-auto edit-buttons">
-                <a href="#pablo">
-                  <button className="btn btn-just-icon btn-instagram">
-                    <i className="fab fa-instagram"> </i>
-                  </button>
-                </a>
-                <a href="#pablo">
-                  <button className="btn btn-just-icon btn-youtube">
-                    <i className="fab fa-youtube"> </i>
-                  </button>
-                </a>
-              </div>
-            </div>
             <div className="row">
               <div className="col-md-4 ml-auto mb-5">
-                <h3 className="text-center">
+                <h3 className="text-center title fonting">
                   <strong>Tournament Record</strong>
                 </h3>
-
+                {experienceContent}
               </div>
               <div className="col-md-4 mr-auto">
-                <h3 className="text-center">
+                <h3 className="text-center title fonting">
                   <strong>Gym Affiliations</strong>
                 </h3>
+                {educationContent}
               </div>
             </div>
           </div>
