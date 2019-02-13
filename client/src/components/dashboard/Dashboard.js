@@ -149,7 +149,7 @@ class Dashboard extends Component {
             
             <div style={{padding: "10px"}} className="section section-dark">
               <div className="row">
-                <div className="col-md-4 ml-auto mb-5">
+                <div className="col-md-4 ml-auto">
                   <h3 className="text-center title fonting">
                     <strong>Tournament Record</strong>
                   </h3>

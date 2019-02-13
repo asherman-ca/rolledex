@@ -1,61 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Moment from 'react-moment';
 import PropTypes from 'prop-types'
 
-const ExpTable = ({exp}) => {
+class ExpTable extends Component {
+
+    render () {
+    const expContent = this.props.exp.map((row, idx) => (
+        <tr>
+            <td className="text-center">{idx+1}</td>
+            <td>{row.name}</td>
+            <td>{row.location}</td>
+            <td className="text-center">
+                <Moment format="YYYY/MM/DD">{row.date}</Moment>
+            </td>
+            <td className="text-center">{row.place}</td>
+            <td className="td-actions text-center">
+            <button type="button" rel="tooltip" className="btn btn-danger">
+                <i className="material-icons">close</i>
+            </button>
+            </td>
+        </tr>  
+    ))
+
     return (
         <table className="table fonting whiting">
-    <thead>
-        <tr>
-            <th className="text-center whiting">#</th>
-            <th className="whiting">Event</th>
-            <th className="whiting">Location</th>
-            <th className="whiting">Date</th>
-            <th className="text-center whiting">Place</th>
-            <th className="text-right whiting">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td className="text-center">1</td>
-            <td>Andrew Mike</td>
-            <td>Develop</td>
-            <td>2013</td>
-            <td className="text-right">&euro; 99,225</td>
-            <td className="td-actions text-right">
-                <button type="button" rel="tooltip" className="btn btn-danger">
-                    <i className="material-icons">close</i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td className="text-center">2</td>
-            <td>John Doe</td>
-            <td>Design</td>
-            <td>2012</td>
-            <td className="text-right">&euro; 89,241</td>
-            <td className="td-actions text-right">
-                <button type="button" rel="tooltip" className="btn btn-danger">
-                    <i className="material-icons">close</i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td className="text-center">3</td>
-            <td>Alex Mike</td>
-            <td>Design</td>
-            <td>2010</td>
-            <td className="text-right">&euro; 92,144</td>
-            <td className="td-actions text-right">
-                <button type="button" rel="tooltip" className="btn btn-danger btn-simple">
-                    <i className="material-icons">close</i>
-                </button>
-            </td>
-        </tr>
-    </tbody>
-</table>
-    )
+            <thead>
+                <tr>
+                    <th className="text-center whiting">#</th>
+                    <th className="whiting">Event</th>
+                    <th className="whiting">Location</th>
+                    <th className="text-center whiting">Date</th>
+                    <th className="text-center whiting">Place</th>
+                    <th className="text-center whiting">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {expContent}
+            </tbody>
+        </table>
+)}}
+
+ExpTable.PropTypes = {
+    exp: PropTypes.object.isRequired
 }
-
-
 
 export default ExpTable;

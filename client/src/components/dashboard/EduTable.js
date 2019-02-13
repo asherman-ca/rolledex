@@ -24,19 +24,23 @@ class EduTable extends Component {
 
     return (
         <table className="table fonting whiting">
-        <thead>
-        <tr>
-            <th className="text-center whiting">#</th>
-            <th className="whiting">Name</th>
-            <th className="whiting">Location</th>
-            <th className="text-center whiting">Dates</th>
-            <th className="text-center whiting">Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-            {eduContent}
-        </tbody>
-    </table>
+            <thead>
+            <tr>
+                <th className="text-center whiting">#</th>
+                <th className="whiting">Name</th>
+                <th className="whiting">Location</th>
+                <th className="text-center whiting">Date</th>
+                <th className="text-center whiting">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                {eduContent}
+            </tbody>
+        </table>
 )}}
+
+EduTable.PropTypes = {
+    edu: PropTypes.object.isRequired
+}
 
 export default EduTable;
