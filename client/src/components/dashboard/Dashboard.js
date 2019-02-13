@@ -64,7 +64,7 @@ class Dashboard extends Component {
                       />
                     </div>
                     <div className="name row">
-                      <div className="col-2 avatar-btn">
+                      <div style={{padding:"20px"}} className="col-md-2 avatar-btn">
                         <div className="dropdown">
                           <button
                             href="#pablo"
@@ -86,8 +86,6 @@ class Dashboard extends Component {
                             }}
                           >
                             <h6 className="dropdown-header">Profile Actions</h6>
-              
-
                             <Link to="/create-profile" className="dropdown-item">
                               Edit Profile
                             </Link>
@@ -117,10 +115,10 @@ class Dashboard extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="col-8">
-                        <h3 className="title fonting">{profile.handle}</h3>
+                      <div className="col-md-8 edit-buttons">
+                        <h3 style={{margin: "0px"}} className="title fonting">{profile.handle}</h3>
                       </div>
-                      <div className="col-2 edit-buttons">
+                      <div style={{padding:"20px"}} className="col-md-2 edit-buttons">
                         <a href="#pablo">
                           <button className="btn btn-just-icon btn-instagram">
                             <i className="fab fa-instagram"> </i>
@@ -149,13 +147,13 @@ class Dashboard extends Component {
             
             <div style={{padding: "10px"}} className="section section-dark">
               <div className="row">
-                <div className="col-md-4 ml-auto">
+                <div className="col-md-6 ml-auto">
                   <h3 className="text-center title fonting">
                     <strong>Tournament Record</strong>
                   </h3>
                   {experienceContent}
                 </div>
-                <div className="col-md-4 mr-auto">
+                <div className="col-md-6 mr-auto">
                   <h3 className="text-center title fonting">
                     <strong>Gym Affiliations</strong>
                   </h3>
@@ -163,10 +161,10 @@ class Dashboard extends Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-md-4 ml-auto">
+                <div className="col-md-6 ml-auto">
                   <h3 className="title fonting text-center">Technique</h3>
                 </div>
-                <div className="col-md-4 mr-auto">
+                <div className="col-md-6 mr-auto">
                 </div>
               </div>
 
