@@ -14,7 +14,7 @@ class EduTable extends Component {
                 <Moment format="YYYY/MM/DD">{row.from}</Moment> -{' '}
                 {row.to === null ? '' : <Moment format="YYYY/MM/DD">{row.to}</Moment>}    
                 </td>
-                <td className="td-actions text-right">
+                <td className="td-actions text-center">
                 <button type="button" rel="tooltip" className="btn btn-danger">
                     <i className="material-icons">close</i>
                 </button>
@@ -38,8 +38,5 @@ class EduTable extends Component {
         </tbody>
     </table>
 )}}
-
-
-
 
 export default EduTable;
