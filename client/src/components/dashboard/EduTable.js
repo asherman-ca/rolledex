@@ -10,7 +10,7 @@ class EduTable extends Component {
                 <td className="text-center">{idx+1}</td>
                 <td>{row.gym}</td>
                 <td>{row.location}</td>
-                <td>
+                <td className="text-center">
                 <Moment format="YYYY/MM/DD">{row.from}</Moment> -{' '}
                 {row.to === null ? '' : <Moment format="YYYY/MM/DD">{row.to}</Moment>}    
                 </td>
@@ -30,7 +30,7 @@ class EduTable extends Component {
             <th className="whiting">Name</th>
             <th className="whiting">Location</th>
             <th className="text-center whiting">Dates</th>
-            <th className="text-right whiting">Actions</th>
+            <th className="text-center whiting">Actions</th>
         </tr>
         </thead>
         <tbody>
