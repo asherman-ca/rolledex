@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
+import ExpTable from './ExpTable'
+import EduTable from './EduTable'
 import { getCurrentProfile } from '../../actions/profileActions';
 
 class Dashboard extends Component {
@@ -14,33 +16,8 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
 
-    // let experienceContent;
-
-    // if (profile === null || loading) {
-    //   } else {
-    //   if (Object.keys(profile).length > 0 && profile.experience.length > 0) {
-    //     experienceContent = (
-    //       <p>Experience List</p>
-    //     )
-    //   } else {
-    //     experienceContent = <p>No Experience Available</p>;
-    //   }
-    // }
-
-    // let educationContent;
-
-    // if (profile === null || loading) {
-    //   } else {
-    //   if (Object.keys(profile).length > 0 && profile.education.length > 0) {
-    //     educationContent = (
-    //       <p>Education List</p>
-    //     )
-    //   } else {
-    //     educationContent = <p>No Education Available</p>
-    //   }
-    // }
-
     let dashboardContent;
+    console.log(profile)
 
     if (profile === null || loading) {
       dashboardContent = <Spinner />;
@@ -52,7 +29,9 @@ class Dashboard extends Component {
 
         if (profile.education.length > 0) {
           educationContent = (
-            <p className="text-center fonting whiting">Education List</p>
+            <EduTable 
+              edu={profile.education}
+            />
           )
         } else {
           educationContent = <p className="text-center fonting whiting">No Education Available</p>
@@ -62,7 +41,9 @@ class Dashboard extends Component {
 
         if (profile.experience.length > 0) {
           experienceContent = (
-            <p className="text-center fonting whiting">Experience List</p>
+            <ExpTable 
+              exp={profile.experience}
+            />
           )
         } else {
           experienceContent = <p className="text-center fonting whiting">No Experience Available</p>
