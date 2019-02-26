@@ -19,6 +19,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/create-profile/CreateProfile';
 import EducationForm from './components/add-credentials/EducationForm';
 import ExperienceForm from './components/add-credentials/ExperienceForm';
+import CreatePost from './components/create-post/CreatePost';
 
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -54,7 +55,6 @@ class App extends Component {
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
-
             <Switch>
               <PrivateRoute
                 exact
@@ -74,6 +74,13 @@ class App extends Component {
                 exact
                 path="/add-experience"
                 component={ExperienceForm}
+              />
+            </Switch>
+            <Switch>
+              <PrivateRoute
+                exact
+                path="/add-post"
+                component={CreatePost}
               />
             </Switch>
           </div>
