@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { deleteExperience } from '../../actions/profileActions';
+
 
 class ExpTable extends Component {
+  onDeleteClick(id) {
+    this.props.deleteExperience(id);
+  }
+
   render() {
     const expContent = this.props.exp.map((row, idx) => (
       <tr>
@@ -14,7 +21,7 @@ class ExpTable extends Component {
         </td>
         <td className="text-center">{row.place}</td>
         <td className="td-actions text-center">
-          <button type="button" rel="tooltip" className="btn btn-danger">
+          <button onClick={this.onDeleteClick.bind(this, row._id)} type="button" rel="tooltip" className="btn btn-danger">
             <i className="material-icons">close</i>
           </button>
         </td>
@@ -39,7 +46,8 @@ class ExpTable extends Component {
 }
 
 ExpTable.PropTypes = {
-  exp: PropTypes.object.isRequired
+  exp: PropTypes.array.isRequired,
+  deleteExperience: PropTypes.object.isRequired
 };
 
-export default ExpTable;
+export default connect(null, {deleteExperience})(ExpTable);
