@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
   constructor() {
@@ -98,22 +99,7 @@ class Register extends Component {
                             <h4 className="info-title">BJJ Community</h4>
                             <p className="description">
                               Share your BJJ profile and connect with other
-                              users. Also, permaban on{' '}
-                              <i
-                                style={{ color: 'red' }}
-                                className="material-icons"
-                              >
-                                bug_report
-                              </i>
-                              <strong>
-                                <span style={{ color: 'red' }}>Anthony </span>
-                              </strong>
-                              <i
-                                style={{ color: 'red' }}
-                                className="material-icons"
-                              >
-                                bug_report
-                              </i>
+                              users. Also, permaban on Anthony
                             </p>
                           </div>
                         </div>
@@ -163,11 +149,15 @@ class Register extends Component {
                               error={errors.password2}
                               prepend="lock_outline"
                             />
-                            <div className="text-center">
+                            <div className="text-center register-buttons row">
                               <input
                                 type="submit"
-                                className="btn btn-success"
+                                className="btn btn-success col-md-6"
+                                style={{margin:'0px'}}
                               />
+                              <Link to="/login" style={{padding:'0px'}} className="col-md-6 register-redirect">
+                                already have an account?
+                              </Link>
                             </div>
                           </div>
                         </form>
