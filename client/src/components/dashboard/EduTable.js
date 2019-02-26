@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Moment from 'react-moment';
 import PropTypes from 'prop-types';
+import { deleteEducation } from '../../actions/profileActions';
 
 class EduTable extends Component {
+  onDeleteClick(id) {
+    this.props.deleteEducation(id);
+  }
+
   render() {
     const eduContent = this.props.edu.map((row, idx) => (
       <tr>
@@ -14,7 +20,7 @@ class EduTable extends Component {
           {row.to === null ? '' : <Moment format="YYYY/MM/DD">{row.to}</Moment>}
         </td>
         <td className="td-actions text-center">
-          <button type="button" rel="tooltip" className="btn btn-danger">
+          <button onClick={this.onDeleteClick.bind(this, row._id)} type="button" rel="tooltip" className="btn btn-danger">
             <i className="material-icons">close</i>
           </button>
         </td>
@@ -38,7 +44,8 @@ class EduTable extends Component {
 }
 
 EduTable.PropTypes = {
-  edu: PropTypes.object.isRequired
+  edu: PropTypes.array.isRequired,
+  deleteEducation: PropTypes.func.isRequired
 };
 
-export default EduTable;
+export default connect(null, {deleteEducation})(EduTable);
