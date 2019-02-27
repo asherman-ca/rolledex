@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
-import { addExperience } from '../../actions/profileActions';
+import SelectListGroup from '../common/SelectListGroup';
+import { addPost } from '../../actions/postActions';
 import { Link } from 'react-router-dom';
 
 class CreatePost extends Component {
@@ -29,7 +30,7 @@ class CreatePost extends Component {
 
     const {user} = this.props.auth;
 
-    const expData = {
+    const postData = {
       text: this.state.text,
       position: this.state.position,
       vector: this.state.vector,
@@ -38,7 +39,7 @@ class CreatePost extends Component {
       avatar: user.avatar
     };
 
-    this.props.addExperience(expData, this.props.history);
+    this.props.addPost(postData, this.props.history);
   };
 
   onChange = e => {
@@ -54,6 +55,11 @@ class CreatePost extends Component {
 
   render() {
     const { errors } = this.state;
+    const options = [
+      { label: '* Select Vector', value: 0 },
+      { label: 'Top', value: 'Top' },
+      { label: 'Bottom', value: 'Bottom' }
+    ];
 
     return (
       <div className="signup-page">
@@ -87,14 +93,13 @@ class CreatePost extends Component {
                         />
                       </div>
                       <div className="col-md-6">
-                        <TextFieldGroup
-                          placeholder="Top/Bottom"
+                        <SelectListGroup
+                          placeholder="Vector"
                           name="vector"
-                          type="text"
                           value={this.state.vector}
                           onChange={this.onChange}
                           error={errors.vector}
-                          prepend="home"
+                          options={options}
                         />
                       </div>
                     </div>
@@ -160,5 +165,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { addExperience }
+  { addPost }
 )(withRouter(CreatePost));
