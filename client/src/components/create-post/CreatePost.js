@@ -100,6 +100,7 @@ class CreatePost extends Component {
                           onChange={this.onChange}
                           error={errors.vector}
                           options={options}
+                          prepend="person_pin"
                         />
                       </div>
                     </div>

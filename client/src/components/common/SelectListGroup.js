@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
+const SelectListGroup = ({ name, value, error, info, onChange, options, prepend }) => {
   const selectOptions = options.map(option => (
     <option key={option.label} value={option.value}>
       {option.label}
@@ -10,9 +10,16 @@ const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
   ));
 
   return (
-    <div className="form-group">
+    <div className="form-group bmd-form-group">
+      <div className="input-group">
+      <div className="input-group-prepend">
+          <span className="input-group-text">
+            <i className="material-icons">{prepend}</i>
+          </span>
+        </div>
       <select
-        className={classnames('form-control form-control-lg', {
+        style={{height:'36px'}}
+        className={classnames('form-control', {
           'is-invalid': error
         })}
         name={name}
@@ -23,6 +30,7 @@ const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
       </select>
       {info && <small className="form-text text-muted">{info}</small>}
       {error && <div className="invalid-feedback">{error}</div>}
+      </div>
     </div>
   );
 };
