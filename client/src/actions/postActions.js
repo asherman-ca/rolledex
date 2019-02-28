@@ -5,7 +5,6 @@ import {
   GET_ERRORS,
   GET_POSTS,
   POST_LOADING,
-  CLEAR_ERRORS,
   GET_POST,
   DELETE_POST
 } from './types';

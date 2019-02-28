@@ -4,6 +4,8 @@ const isEmpty = require('./is-empty');
 module.exports = function validatePostInput(data) {
   let errors = {};
 
+  console.log(data)
+
   data.text = !isEmpty(data.text) ? data.text : '';
   data.vector = !isEmpty(data.vector) ? data.vector : '';
   data.position = !isEmpty(data.position) ? data.position : '';

@@ -56,7 +56,7 @@ class CreatePost extends Component {
   render() {
     const { errors } = this.state;
     const options = [
-      { label: '* Select Vector', value: 0 },
+      { label: '* Select Top/Bottom', value: 0 },
       { label: 'Top', value: 'Top' },
       { label: 'Bottom', value: 'Bottom' }
     ];
@@ -82,17 +82,6 @@ class CreatePost extends Component {
                     </p>
                     <div className="row mr-4">
                       <div className="col-md-6">
-                        <TextFieldGroup
-                          placeholder="Description"
-                          name="name"
-                          type="text"
-                          value={this.state.text}
-                          onChange={this.onChange}
-                          error={errors.text}
-                          prepend="person_pin"
-                        />
-                      </div>
-                      <div className="col-md-6">
                         <SelectListGroup
                           placeholder="Vector"
                           name="vector"
@@ -103,10 +92,8 @@ class CreatePost extends Component {
                           prepend="person_pin"
                         />
                       </div>
-                    </div>
-                    <div className="row mr-4">
                       <div className="col-md-6">
-                        <TextFieldGroup
+                      <TextFieldGroup
                           placeholder="Position"
                           name="position"
                           value={this.state.position}
@@ -114,6 +101,19 @@ class CreatePost extends Component {
                           error={errors.position}
                           type="text"
                           prepend="home"
+                        />
+                      </div>
+                    </div>
+                    <div className="row mr-4">
+                      <div className="col-md-6">
+                        <TextFieldGroup
+                          placeholder="Notes"
+                          name="text"
+                          type="text"
+                          value={this.state.text}
+                          onChange={this.onChange}
+                          error={errors.text}
+                          prepend="person_pin"
                         />
                       </div>
                       <div className="col-md-6">
