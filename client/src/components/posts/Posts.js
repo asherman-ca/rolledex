@@ -21,11 +21,18 @@ class Posts extends Component {
     }
 
     return (
-      <div className="feed">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              {postContent}
+      <div className="profile-page">
+        <div
+          className="page-header header-filter"
+          data-parallax="true"
+          style={{ backgroundImage: "url('../assets/img/examples/city.jpg')" }}
+        />
+          <div style={{ minHeight: '400px' }} className="main main-raised">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-12">
+                    {postContent}
+                </div>
             </div>
           </div>
         </div>

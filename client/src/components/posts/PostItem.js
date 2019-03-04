@@ -31,7 +31,77 @@ class PostItem extends Component {
   render() {
     const { post, auth, showActions } = this.props;
     return (
-      <div className="card card-body mb-3">
+      <div class="media">
+                                <a class="float-left" href="#pablo">
+                                    <div class="avatar">
+                                        <img class="media-object" alt="Tim Picture" src="../assets/img/kit/pro/faces/card-profile1-square.jpg" />
+                                    </div>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">John Camber
+                                        <small>· Yesterday</small>
+                                    </h4>
+                                    <p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
+                                    <p> Don't forget, You're Awesome!</p>
+                                    <div class="media-footer">
+                                        <a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="" data-original-title="Reply to Comment">
+                                            <i class="material-icons">reply</i> Reply
+                                        </a>
+                                        <a href="#pablo" class="btn btn-link float-right">
+                                            <i class="material-icons">favorite</i> 25
+                                        </a>
+                                    </div>
+                                    <div class="media">
+                                        <a class="float-left" href="#pablo">
+                                            <div class="avatar">
+                                                <img class="media-object" alt="64x64" src="../assets/img/kit/pro/faces/card-profile4-square.jpg" />
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Tina Andrew
+                                                <small>· 12 Hours Ago</small>
+                                            </h4>
+                                            <p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
+                                            <p> Don't forget, You're Awesome!</p>
+                                            <div class="media-footer">
+                                                <a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="" data-original-title="Reply to Comment">
+                                                    <i class="material-icons">reply</i> Reply
+                                                </a>
+                                                <a href="#pablo" class="btn btn-link btn-secondary float-right">
+                                                    <i class="material-icons">favorite</i> 2
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+PostItem.propTypes = {
+  post: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired,
+  deletePost: PropTypes.func.isRequired,
+  addLike: PropTypes.func.isRequired,
+  removeLike: PropTypes.func.isRequired
+};
+
+PostItem.defaultProps = {
+  showActions: true
+};
+
+export default connect(
+  mapStateToProps,
+  { deletePost, addLike, removeLike }
+)(PostItem);
+
+
+{/* <div className="card card-body mb-3">
         <div className="row">
           <div className="col-md-2">
             <img
@@ -81,28 +151,4 @@ class PostItem extends Component {
             ) : null}
           </div>
         </div>
-      </div>
-    );
-  }
-}
-
-const mapStateToProps = state => ({
-  auth: state.auth
-});
-
-PostItem.propTypes = {
-  post: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired,
-  deletePost: PropTypes.func.isRequired,
-  addLike: PropTypes.func.isRequired,
-  removeLike: PropTypes.func.isRequired
-};
-
-PostItem.defaultProps = {
-  showActions: true
-};
-
-export default connect(
-  mapStateToProps,
-  { deletePost, addLike, removeLike }
-)(PostItem);
+      </div> */}
