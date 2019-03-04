@@ -22,9 +22,10 @@ class Post extends Component {
     } else {
       postContent = (
         <div>
-          <PostItem post={post} showActions={false} />
+          {/* <PostItem post={post} showActions={false} />
           <CommentForm postId={post._id} />
-          <CommentFeed postId={post._id} comments={post.comments} />
+          <CommentFeed postId={post._id} comments={post.comments} /> */}
+          Hello
         </div>
       );
     }

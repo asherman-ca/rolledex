@@ -45,10 +45,10 @@ class PostItem extends Component {
             </h4>
             <p>{post.text}</p>
             <div class="media-footer">
-              <a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="" data-original-title="Reply to Comment">
+              <Link to={`/post/${post._id}`} className="btn btn-primary btn-link float-right">
                 <i class="material-icons">reply</i> Reply
-              </a>
-              <a href="#pablo" class="btn btn-link float-right">
+              </Link>
+              <a href="#pablo" class="btn btn-link float-right" data-original-title="Like Comment">
                 <i class="material-icons">favorite</i> {post.likes.length}
               </a>
             </div>
