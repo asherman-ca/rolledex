@@ -217,7 +217,7 @@ class Dashboard extends Component {
           data-parallax="true"
           style={{ backgroundImage: "url('../assets/img/examples/city.jpg')" }}
         />
-        <div style={{ minHeight: '400px' }} className="main main-raised">
+        <div style={{ minHeight: '75vh' }} className="main main-raised">
           {dashboardContent}
         </div>
       </div>

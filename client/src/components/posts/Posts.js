@@ -27,8 +27,8 @@ class Posts extends Component {
           data-parallax="true"
           style={{ backgroundImage: "url('../assets/img/examples/city.jpg')" }}
         />
-          <div style={{ minHeight: '400px' }} className="main main-raised">
-            <div className="container">
+          <div style={{ minHeight: '75vh' }} className="main main-raised">
+            <div style={{ paddingTop: '50px' }} className="container">
               <div className="row">
                 <div className="col-md-12">
                     {postContent}

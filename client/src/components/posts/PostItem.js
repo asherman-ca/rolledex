@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
+import Moment from 'react-moment';
 
 class PostItem extends Component {
   onDeleteClick(id) {
@@ -30,51 +31,54 @@ class PostItem extends Component {
 
   render() {
     const { post, auth, showActions } = this.props;
+    const { user } = auth;
     return (
       <div class="media">
-                                <a class="float-left" href="#pablo">
-                                    <div class="avatar">
-                                        <img class="media-object" alt="Tim Picture" src="../assets/img/kit/pro/faces/card-profile1-square.jpg" />
-                                    </div>
-                                </a>
-                                <div class="media-body">
-                                    <h4 class="media-heading">John Camber
-                                        <small>· Yesterday</small>
-                                    </h4>
-                                    <p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
-                                    <p> Don't forget, You're Awesome!</p>
-                                    <div class="media-footer">
-                                        <a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="" data-original-title="Reply to Comment">
-                                            <i class="material-icons">reply</i> Reply
-                                        </a>
-                                        <a href="#pablo" class="btn btn-link float-right">
-                                            <i class="material-icons">favorite</i> 25
-                                        </a>
-                                    </div>
-                                    <div class="media">
-                                        <a class="float-left" href="#pablo">
-                                            <div class="avatar">
-                                                <img class="media-object" alt="64x64" src="../assets/img/kit/pro/faces/card-profile4-square.jpg" />
-                                            </div>
-                                        </a>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Tina Andrew
-                                                <small>· 12 Hours Ago</small>
-                                            </h4>
-                                            <p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
-                                            <p> Don't forget, You're Awesome!</p>
-                                            <div class="media-footer">
-                                                <a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="" data-original-title="Reply to Comment">
-                                                    <i class="material-icons">reply</i> Reply
-                                                </a>
-                                                <a href="#pablo" class="btn btn-link btn-secondary float-right">
-                                                    <i class="material-icons">favorite</i> 2
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <a class="float-left" href="#pablo">
+          <div class="avatar">
+              <img class="media-object" alt="Tim Picture" src={user.avatar} />
+          </div>
+        </a>
+          <div class="media-body">
+            <h4 class="media-heading">{post.vector} · {post.position} · <em>{user.name}</em>
+              <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
+            </h4>
+            <p>{post.text}</p>
+            <div class="media-footer">
+              <a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="" data-original-title="Reply to Comment">
+                <i class="material-icons">reply</i> Reply
+              </a>
+              <a href="#pablo" class="btn btn-link float-right">
+                <i class="material-icons">favorite</i> {post.likes.length}
+              </a>
+            </div>
+            {
+              /* 
+              TODO: create map function to create comment items
+              <div class="media">
+              <a class="float-left" href="#pablo">
+                <div class="avatar">
+                  <img class="media-object" alt="64x64" src="../assets/img/kit/pro/faces/card-profile4-square.jpg" />
+                </div>
+              </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Tina Andrew
+                    <small>· 12 Hours Ago</small>
+                  </h4>
+                  <p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
+                  <p> Don't forget, You're Awesome!</p>
+                    <div class="media-footer">
+                    <a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="" data-original-title="Reply to Comment">
+                        <i class="material-icons">reply</i> Reply
+                    </a>
+                    <a href="#pablo" class="btn btn-link btn-secondary float-right">
+                        <i class="material-icons">favorite</i> 2
+                    </a>
+                    </div>
+                </div>
+            </div> */}
+          </div>
+      </div>
     );
   }
 }
