@@ -10,15 +10,10 @@ import {
 } from './types';
 
 // dont forget to clear errors later
-export const addPost = postData => dispatch => {
+export const addPost = (postData, history) => dispatch => {
   axios
     .post('/api/posts', postData)
-    .then(res =>
-      dispatch({
-        type: ADD_POST,
-        payload: res.data
-      })
-    )
+    .then(res => history.push('/dashboard'))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
