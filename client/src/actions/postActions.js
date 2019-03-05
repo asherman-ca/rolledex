@@ -97,7 +97,7 @@ export const deleteComment = (postId, commentId) => dispatch => {
 // instead of running getPosts and doing full quiery, use reducer to remove it locally
 export const addLike = id => dispatch => {
   axios
-    .post(`api/posts/like/${id}`)
+    .post(`/api/posts/like/${id}`)
     .then(res => dispatch(getPosts()))
     .catch(err =>
       dispatch({
@@ -110,7 +110,7 @@ export const addLike = id => dispatch => {
 // Remove Like
 export const removeLike = id => dispatch => {
   axios
-    .post(`api/posts/unlike/${id}`)
+    .post(`/api/posts/unlike/${id}`)
     .then(res => dispatch(getPosts()))
     .catch(err =>
       dispatch({
