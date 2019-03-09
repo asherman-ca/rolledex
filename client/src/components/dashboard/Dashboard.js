@@ -6,10 +6,12 @@ import Spinner from '../common/Spinner';
 import ExpTable from './ExpTable'
 import EduTable from './EduTable'
 import { getCurrentProfile } from '../../actions/profileActions';
+import { getPosts } from '../../actions/postActions';
 
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getCurrentProfile();
+    this.props.getPosts();
   }
 
   render() {
@@ -166,10 +168,12 @@ class Dashboard extends Component {
                 <div className="col-md-6 mr-auto">
                 </div>
               </div>
-
               <div className="row">
-                <div className="col-md-2" />
-                <div className="col-md-8">
+                {/* <div className="col-md-2" /> */}
+                <div className="col-md-12">
+                  {this.props.post.posts.map(post => (
+                    <p>hello</p>
+                  ))}
                   <p className="text-center fonting whiting">All the posts!</p>
                 </div>
               </div>
@@ -227,15 +231,17 @@ class Dashboard extends Component {
 const mapStateToProps = state => ({
   profile: state.profile,
   auth: state.auth,
+  post: state.post
 });
 
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
+  post: PropTypes.object.isRequired
 };
 
 export default connect(
   mapStateToProps,
-  { getCurrentProfile }
+  { getCurrentProfile, getPosts }
 )(Dashboard);
