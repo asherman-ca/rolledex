@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Moment from 'react-moment';
 import Spinner from '../common/Spinner';
 import ExpTable from './ExpTable'
 import EduTable from './EduTable'
@@ -147,34 +148,54 @@ class Dashboard extends Component {
 
             
             <div style={{padding: "10px"}} className="section section-dark">
-              <div className="row">
-                <div className="col-md-6 ml-auto">
+              <div className="row" style={{marginBottom: "25px"}}>
+                <div className="col-md-5 ml-auto">
                   <h3 className="text-center title fonting">
                     <strong>Tournament Record</strong>
                   </h3>
                   {experienceContent}
                 </div>
-                <div className="col-md-6 mr-auto">
+                <div className="col-md-5 mr-auto">
                   <h3 className="text-center title fonting">
                     <strong>Gym Affiliations</strong>
                   </h3>
                   {educationContent}
                 </div>
               </div>
+              <hr style={{backgroundColor:"white"}} />
               <div className="row">
-                <div className="col-md-6 ml-auto">
-                  <h3 className="title fonting text-center">Technique</h3>
+                <div className="col-md-5 ml-auto">
+                  <h3 className="title fonting text-center" style={{marginTop:"20px"}}>Posts</h3>
                 </div>
-                <div className="col-md-6 mr-auto">
+                <div className="col-md-5 mr-auto">
                 </div>
+                {/* <div className="col-md-10 mr-auto ml-auto">
+                  <h3 className="title fonting text-center">Posts</h3>
+                </div> */}
               </div>
               <div className="row">
                 {/* <div className="col-md-2" /> */}
-                <div className="col-md-12">
-                  {this.props.post.posts.map(post => (
-                    <p>hello</p>
-                  ))}
-                  <p className="text-center fonting whiting">All the posts!</p>
+                <div className="col-md-10 mr-auto ml-auto fonting whiting">
+                  {this.props.post.posts.length > 0 ? this.props.post.posts.map(post => (
+                    <div class="media">
+                    <a class="float-left" href="#pablo">
+                      <div class="avatar">
+                          <img class="media-object" alt="Tim Picture" src={user.avatar} />
+                      </div>
+                    </a>
+                      <div class="media-body">
+                        <h4 class="media-heading fonting whiting">{post.vector} · {post.position}
+                          <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
+                        </h4>
+                        <p>{post.text}</p>
+                        <div class="media-footer">
+                          <div class="btn btn-link float-right">
+                            <i class="material-icons">favorite</i> {post.likes.length}
+                          </div>
+                        </div>
+                        </div>
+                        </div>
+                  )) : <p className="text-center fonting whiting">All the posts!</p>}
                 </div>
               </div>
             </div>
