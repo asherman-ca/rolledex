@@ -149,7 +149,7 @@ class Dashboard extends Component {
             </div>
 
             
-            <div style={{padding: "10px"}} className="section section-dark">
+            <div style={{padding: "10px", minHeight: '400px'}} className="section section-dark">
               <div className="row" style={{marginBottom: "25px"}}>
                 <div className="col-md-5 ml-auto">
                   <h3 className="text-center title fonting">
@@ -178,7 +178,7 @@ class Dashboard extends Component {
               <div className="row">
                 {/* <div className="col-md-2" /> */}
                 <div className="col-md-10 mr-auto ml-auto fonting whiting">
-                  {posts ? posts.map(post => (
+                  {posts.length > 0 ? posts.map(post => (
                     <div class="media">
                     <a class="float-left" href="#pablo">
                       <div class="avatar">
@@ -197,7 +197,8 @@ class Dashboard extends Component {
                         </div>
                         </div>
                         </div>
-                  )) : <p className="text-center fonting whiting">All the posts!</p>}
+                  )) : 
+                  <p className="text-center fonting whiting">No Posts Available</p>}
                 </div>
               </div>
             </div>
