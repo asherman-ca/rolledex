@@ -7,17 +7,19 @@ import Spinner from '../common/Spinner';
 import ExpTable from './ExpTable'
 import EduTable from './EduTable'
 import { getCurrentProfile } from '../../actions/profileActions';
-import { getPosts } from '../../actions/postActions';
+import { getUserPosts } from '../../actions/postActions';
 
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getCurrentProfile();
-    this.props.getPosts();
+    console.log(this.props.auth.user.id)
+    this.props.getUserPosts(this.props.auth.user.id);
   }
 
   render() {
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
+    const { posts } = this.props.post;
 
     let dashboardContent;
 
@@ -176,7 +178,7 @@ class Dashboard extends Component {
               <div className="row">
                 {/* <div className="col-md-2" /> */}
                 <div className="col-md-10 mr-auto ml-auto fonting whiting">
-                  {this.props.post.posts.length > 0 ? this.props.post.posts.map(post => (
+                  {posts ? posts.map(post => (
                     <div class="media">
                     <a class="float-left" href="#pablo">
                       <div class="avatar">
@@ -259,10 +261,11 @@ Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
-  post: PropTypes.object.isRequired
+  post: PropTypes.object.isRequired,
+  getUserPost: PropTypes.func.isRequired
 };
 
 export default connect(
   mapStateToProps,
-  { getCurrentProfile, getPosts }
+  { getCurrentProfile, getUserPosts }
 )(Dashboard);

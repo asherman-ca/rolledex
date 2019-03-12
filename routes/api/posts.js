@@ -31,6 +31,20 @@ router.get('/', (req, res) => {
     });
 });
 
+// @route   GET api/posts/user/:user_id
+// @desc    Get user's posts
+// @access  Private
+
+router.get('/user/:id', (req, res) => {
+  // Post.find({user: '5c2e7ea332bbfea9ab259bc7'})
+  Post.find({user: req.params.id})
+  .sort({ date: -1 })
+  .then(posts => res.json(posts))
+  .catch(err => {
+    res.status(404).json({ nopostfound: 'No posts found'});  
+  })
+})
+
 // @route   GET api/posts/:post_id
 // @desc    Get a single post
 // @access  Private
