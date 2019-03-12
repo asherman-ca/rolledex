@@ -41,7 +41,7 @@ class Navbar extends Component {
           <Link className="dropdown-item" to="/dashboard">
             <i className="material-icons">place</i> Dashboard
           </Link>
-          <Link className="dropdown-item" to="/posts">
+          <Link className="dropdown-item" to="/feed">
             <i className="material-icons">build</i> Techniques
           </Link>
           <Link className="dropdown-item" to="/profiles">
