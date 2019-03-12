@@ -38,7 +38,7 @@ class CreatePost extends Component {
       name: user.name,
       avatar: user.avatar
     };
-
+    
     this.props.addPost(postData, this.props.history);
   };
 

@@ -76,7 +76,8 @@ router.post(
       vector: req.body.vector,
       position: req.body.position,
       avatar: req.body.avatar,
-      user: req.user.id
+      user: req.user.id,
+      name: req.body.name
     });
 
     newPost.save().then(post => res.json(post));

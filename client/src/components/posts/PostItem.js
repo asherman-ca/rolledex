@@ -36,11 +36,11 @@ class PostItem extends Component {
       <div class="media">
         <a class="float-left" href="#pablo">
           <div class="avatar">
-              <img class="media-object" alt="Tim Picture" src={user.avatar} />
+              <img class="media-object" alt="Tim Picture" src={post.avatar} />
           </div>
         </a>
           <div class="media-body">
-            <h4 class="media-heading">{post.vector} · {post.position} · <em>{user.name}</em>
+            <h4 class="media-heading">{post.vector} · {post.position} · <em>{post.name}</em>
               <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
             </h4>
             <p>{post.text}</p>
