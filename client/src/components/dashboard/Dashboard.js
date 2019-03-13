@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Moment from 'react-moment';
 import Spinner from '../common/Spinner';
 import ExpTable from './ExpTable'
 import EduTable from './EduTable'
@@ -92,7 +91,8 @@ class Dashboard extends Component {
               exp={experienceContent} 
               edu={educationContent} 
               posts={posts} 
-              user={user} />
+              user={user}
+              />
           </div>
         );
       } else {

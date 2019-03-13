@@ -60,6 +60,14 @@ class CreatePost extends Component {
       { label: 'Top', value: 'Top' },
       { label: 'Bottom', value: 'Bottom' }
     ];
+    const positionOptions = [
+      { label: '* Selection position', value: 0},
+      { label: 'Side Control', value: 'Side Control'},
+      { label: 'Half Guard', value: 'Half Guard'},
+      { label: 'Sit Up', value: 'Sit Up'},
+      { label: 'Closed Guard', value: 'Closed Guard'},
+      { label: 'Open Guard', value: 'Open Guard'}
+    ]
 
     return (
       <div className="signup-page">
@@ -89,11 +97,20 @@ class CreatePost extends Component {
                           onChange={this.onChange}
                           error={errors.vector}
                           options={options}
-                          prepend="person_pin"
+                          prepend="exposure"
                         />
                       </div>
                       <div className="col-md-6">
-                      <TextFieldGroup
+                      <SelectListGroup
+                          placeholder="Postition"
+                          name="position"
+                          value={this.state.position}
+                          onChange={this.onChange}
+                          error={errors.position}
+                          options={positionOptions}
+                          prepend="videogame_asset"
+                        />
+                      {/* <TextFieldGroup
                           placeholder="Position"
                           name="position"
                           value={this.state.position}
@@ -101,7 +118,7 @@ class CreatePost extends Component {
                           error={errors.position}
                           type="text"
                           prepend="home"
-                        />
+                        /> */}
                       </div>
                     </div>
                     <div className="row mr-4">
@@ -113,7 +130,7 @@ class CreatePost extends Component {
                           value={this.state.text}
                           onChange={this.onChange}
                           error={errors.text}
-                          prepend="person_pin"
+                          prepend="notes"
                         />
                       </div>
                       <div className="col-md-6">
@@ -124,7 +141,7 @@ class CreatePost extends Component {
                           value={this.state.youtube}
                           onChange={this.onChange}
                           error={errors.youtube}
-                          prepend="home"
+                          prepend="movie"
                         />
                       </div>
                     </div>

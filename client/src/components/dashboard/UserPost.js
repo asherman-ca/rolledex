@@ -16,6 +16,7 @@ const UserPost = (post) => {
                 <p>{post.text}</p>
                 <div class="media-footer">
                     <div class="btn btn-link float-right">
+                        <i class="material-icons">delete</i>
                         <i class="material-icons">favorite</i> {post.likes.length}
                     </div>
                 </div>
