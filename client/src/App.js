@@ -22,6 +22,7 @@ import ExperienceForm from './components/add-credentials/ExperienceForm';
 import CreatePost from './components/create-post/CreatePost';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
+import Profiles from './components/profiles/Profiles';
 
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -94,6 +95,9 @@ class App extends Component {
             </Switch>
             <Switch>
                 <PrivateRoute exact path="/post/:id" component={Post} />
+            </Switch>
+            <Switch>
+                <PrivateRoute exact path="/profiles" component={Profiles} />
             </Switch>
           </div>
         </Router>
