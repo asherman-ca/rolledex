@@ -28,10 +28,14 @@ class Posts extends Component {
           style={{ backgroundImage: "url('../assets/img/examples/city.jpg')" }}
         />
           <div style={{ minHeight: '75vh' }} className="main main-raised">
-            <div style={{ paddingTop: '50px' }} className="container">
+            <div className="container">
               <div className="row">
                 <div className="col-md-12">
-                    {postContent}
+                  <h1 className="display-4 text-center" style={{marginTop: '25px'}}><strong>Rolledex Tech</strong></h1>
+                  <p className="lead text-center">
+                    Browse the hottest tech on Rolledex
+                  </p>
+                  {postContent}
                 </div>
             </div>
           </div>
