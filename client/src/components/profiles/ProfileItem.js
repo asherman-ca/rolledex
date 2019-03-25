@@ -12,7 +12,7 @@ class ProfileItem extends Component {
     console.log(profile)
     return (
       <div className="col-md-4">
-        <div className="card card-profile lightbg" style={{ marginBottom: '50px' }}>
+        <div className="card card-profile lightbg" style={{ marginBottom: '50px', height: '335px' }}>
           <div className="card-header card-avatar">
             <a href="#pablo">
               <img className="img" src={profile.user.avatar} />
