@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteComment } from '../../actions/postActions';
+import Moment from 'react-moment';
 
 class CommentItem extends Component {
   onDeleteClick(postId, commentId) {
@@ -12,33 +13,19 @@ class CommentItem extends Component {
     const { comment, postId, auth } = this.props;
 
     return (
-      <div className="card card-body mb-3">
-        <div className="row">
-          <div className="col-md-2">
-            <a href="profile.html">
-              <img
-                className="rounded-circle d-none d-md-block"
-                src={comment.avatar}
-                alt=""
-              />
-            </a>
-            <br />
-            <p className="text-center">{comment.name}</p>
+      <div class="media" style={{marginBottom: '15px', marginLeft: '50px'}}>
+        <a class="float-left" href="#pablo">
+          <div class="avatar">
+            <img class="media-object" alt="64x64" src={comment.avatar} />
           </div>
-          <div className="col-md-10">
-            <p className="lead">{comment.text}</p>
-            {comment.user === auth.user.id ? (
-              <button
-                type="button"
-                onClick={this.onDeleteClick.bind(this, postId, comment._id)}
-                className="btn btn-danger mr-1"
-              >
-                <i className="fas fa-times" />
-              </button>
-            ) : null}
-          </div>
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">{comment.name}
+            <small>· <Moment format="YYYY/MM/DD">{comment.date}</Moment></small>
+          </h4>
+          <p>{comment.text}</p>
         </div>
-      </div>
+      </div> 
     );
   }
 }
