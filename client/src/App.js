@@ -23,6 +23,7 @@ import CreatePost from './components/create-post/CreatePost';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
 import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
 
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -98,6 +99,9 @@ class App extends Component {
             </Switch>
             <Switch>
                 <PrivateRoute exact path="/profiles" component={Profiles} />
+            </Switch>
+            <Switch>
+                <PrivateRoute exact path="/profile/:id" component={Profile} />
             </Switch>
           </div>
         </Router>

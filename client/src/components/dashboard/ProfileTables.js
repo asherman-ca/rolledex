@@ -42,7 +42,7 @@ class ProfileTables extends Component {
                         <div class="media">
                             <a class="float-left" href="#pablo">
                                 <div class="avatar">
-                                    <img class="media-object" alt="Tim Picture" src={user.avatar} />
+                                    <img class="media-object" alt="Tim Picture" src={post.avatar} />
                                 </div>
                             </a>
                             <div class="media-body">

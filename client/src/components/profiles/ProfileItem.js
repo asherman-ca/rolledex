@@ -9,14 +9,13 @@ import isEmpty from '../../validation/is-empty';
 class ProfileItem extends Component {
   render() {
     const { profile } = this.props;
-    console.log(profile)
     return (
       <div className="col-md-4">
         <div className="card card-profile lightbg" style={{ marginBottom: '50px', height: '335px' }}>
           <div className="card-header card-avatar">
-            <a href="#pablo">
+            <Link to={`profile/${profile._id}`}>
               <img className="img" src={profile.user.avatar} />
-            </a>
+            </Link>
           </div>
           <div className="card-body">
             <h4 className="card-title">{profile.handle}</h4>

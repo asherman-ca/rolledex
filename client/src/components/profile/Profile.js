@@ -3,19 +3,17 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
-import ExpTable from './ExpTable'
-import EduTable from './EduTable'
-import Dropdown from './Dropdown';
-import SocialButtons from './SocialButtons';
-import ProfileTables from './ProfileTables';
-import { getCurrentProfile } from '../../actions/profileActions';
+import ExpTable from '../dashboard/ExpTable'
+import EduTable from '../dashboard/EduTable'
+import SocialButtons from '../dashboard/SocialButtons';
+import ProfileTables from '../dashboard/ProfileTables';
+import { getProfileById } from '../../actions/profileActions';
 import { getUserPosts } from '../../actions/postActions';
 
-class Dashboard extends Component {
+class Profile extends Component {
   componentDidMount() {
-    this.props.getCurrentProfile();
-    console.log(this.props.auth.user.id)
-    this.props.getUserPosts(this.props.auth.user.id);
+    this.props.getProfileById(this.props.match.params.id);
+    this.props.getUserPosts(this.props.match.params.id);
   }
 
   render() {
@@ -64,13 +62,12 @@ class Dashboard extends Component {
                     <div className="profile">
                       <div className="avatar">
                         <img
-                          src={user.avatar}
+                          src={profile.user.avatar}
                           alt="Cirle Image"
                           className="img-raised rounded-circle img-fluid"
                         />
                       </div>
                       <div className="name row">
-                        <Dropdown />
                         <div className="col-md-8 edit-buttons">
                           <h3 style={{margin: "0px"}} className="title fonting">{profile.handle}</h3>
                         </div>
@@ -115,11 +112,8 @@ class Dashboard extends Component {
                       <h3 className="title fonting">{user.name}</h3>
                     </div>
                     <div className="description text-center">
-                      <p>Setup your account by adding a profile</p>
+                      <p>User hasn't setup profile</p>
                     </div>
-                    <Link to="/create-profile" className="mt-3 btn">
-                      Create Profile
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -150,8 +144,8 @@ const mapStateToProps = state => ({
   post: state.post
 });
 
-Dashboard.propTypes = {
-  getCurrentProfile: PropTypes.func.isRequired,
+Profile.propTypes = {
+  getProfileById: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
   post: PropTypes.object.isRequired,
@@ -160,5 +154,5 @@ Dashboard.propTypes = {
 
 export default connect(
   mapStateToProps,
-  { getCurrentProfile, getUserPosts }
-)(Dashboard);
+  { getProfileById, getUserPosts }
+)(Profile);
