@@ -36,15 +36,16 @@ class Profiles extends Component {
         <div style={{ minHeight: '75vh' }} className="main main-raised">
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
-              <h1 className="display-4 text-center" style={{marginTop: '25px'}}><strong>Rolledex Users</strong></h1>
-              <p className="lead text-center">
-                Browse and connect with practitioners
-              </p>
-              <div className="row" style={{ paddingTop: '50px' }}>
-                {profileItems}
-              </div>
-            </div>
+          <div className="col-md-6 tech-box" style={{marginTop: '50px', marginBottom: '60px'}}>
+            <h1 className="display-4 fonting" style={{marginTop: "0px", marginBottom: "0px"}}><strong>Rolledex Users</strong></h1>
+            <p className="lead tech-paragraph description fonting" style={{margin: "0px", paddingTop: '5px'}}>
+              Find your Favorite Practitioners
+            </p>
+          </div>
+          <div className="col-md-6" />
+          <div className="row">
+            {profileItems}
+          </div>
           </div>
           </div>
         </div>

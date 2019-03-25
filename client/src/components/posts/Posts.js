@@ -31,8 +31,8 @@ class Posts extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-6 tech-box" style={{marginTop: '50px', marginBottom: '50px'}}>
-                  <h1 className="display-4" style={{marginTop: "0px", marginBottom: "0px"}}><strong>Hot Techniques</strong></h1>
-                  <p className="lead tech-paragraph description" style={{margin: "0px", paddingTop: '5px'}}>
+                  <h1 className="display-4 fonting" style={{marginTop: "0px", marginBottom: "0px"}}><strong>Hot Techniques</strong></h1>
+                  <p className="lead tech-paragraph description fonting" style={{margin: "0px", paddingTop: '5px'}}>
                     Browse Rolledex's Best Tech
                   </p>
                 </div>
