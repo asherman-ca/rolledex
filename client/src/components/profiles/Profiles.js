@@ -7,9 +7,7 @@ import ProfileItem from './ProfileItem';
 
 class Profiles extends Component {
   componentDidMount() {
-    console.log('hits')
     this.props.getProfiles();
-    console.log('hits2')
   }
 
   render() {
