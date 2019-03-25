@@ -16,11 +16,11 @@ const TextAreaFieldGroup = ({
       className={classnames('form-group bmd-form-group', { 'mb-reset': error })}
     >
       <div className="input-group">
-        <div className="input-group-prepend">
+        {prepend ? <div className="input-group-prepend">
           <span className="input-group-text">
             <i className="material-icons">{prepend}</i>
           </span>
-        </div>
+        </div> : null}
         <textarea
           className={classnames('form-control', {
             'is-invalid': error
@@ -44,7 +44,7 @@ TextAreaFieldGroup.propTypes = {
   value: PropTypes.string.isRequired,
   error: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  prepend: PropTypes.string.isRequired
+  prepend: PropTypes.string
 };
 
 export default TextAreaFieldGroup;

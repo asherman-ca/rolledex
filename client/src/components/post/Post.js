@@ -24,8 +24,7 @@ class Post extends Component {
       postContent = (
         <div>
           <PostBody post={post} showActions={false} />
-          {/* <CommentForm postId={post._id} />
-          <CommentFeed postId={post._id} comments={post.comments} /> */}
+          <CommentForm postId={post._id} />
         </div>
       );
     }
@@ -45,21 +44,6 @@ class Post extends Component {
                   Back To Feed
                   </Link>
                   {postContent}
-                  <div class="media media-post">
-                            <a class="author float-left" href="#pablo">
-                                <div class="avatar">
-                                    <img class="media-object" alt="64x64" src={user.avatar} />
-                                </div>
-                            </a>
-                            <div class="media-body">
-                                <div class="form-group label-floating bmd-form-group">
-                                    <textarea class="form-control" rows="1" id="exampleBlogPost"></textarea>
-                                </div>
-                                <div class="media-footer">
-                                    <a href="#pablo" class="btn btn-primary btn-round btn-wd float-right">Post Comment</a>
-                                </div>
-                            </div>
-                        </div>
                 </div>
             </div>
           </div>
