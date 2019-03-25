@@ -5,9 +5,14 @@ module.exports = function validateProfileInput(data) {
   let errors = {};
 
   data.handle = !isEmpty(data.handle) ? data.handle : '';
+  data.bio = !isEmpty(data.bio) ? data.bio : '';
 
   if (!Validator.isLength(data.handle, { min: 2, max: 40 })) {
     errors.handle = 'Handle needs to be between 2 and 4 characters';
+  }
+
+  if (!Validator.isLength(data.bio, { min: 0, max: 125 })) {
+    errors.bio = 'Bio needs to be between 0 and 125 characters';
   }
 
   if (Validator.isEmpty(data.handle)) {

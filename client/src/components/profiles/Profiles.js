@@ -29,16 +29,25 @@ class Profiles extends Component {
     }
 
     return (
-      <div className="profiles">
+      <div className="profile-page">
+       <div
+          className="page-header header-filter"
+          data-parallax="true"
+          style={{ backgroundImage: "url('../assets/img/examples/city.jpg')" }}
+        />
+        <div style={{ minHeight: '75vh' }} className="main main-raised">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4 text-center">Developer Profiles</h1>
+              <h1 className="display-4 text-center" style={{marginTop: '25px'}}><strong>Rolledex Users</strong></h1>
               <p className="lead text-center">
-                Browse and connect with Developers
+                Browse and connect with practitioners
               </p>
-              {profileItems}
+              <div className="row" style={{ paddingTop: '50px' }}>
+                {profileItems}
+              </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
