@@ -30,11 +30,14 @@ class Posts extends Component {
           <div style={{ minHeight: '75vh' }} className="main main-raised">
             <div className="container">
               <div className="row">
-                <div className="col-md-12">
-                  <h1 className="display-4 text-center" style={{marginTop: '25px'}}><strong>Rolledex Tech</strong></h1>
-                  <p className="lead text-center">
-                    Browse the hottest tech on Rolledex
+                <div className="col-md-6 tech-box" style={{marginTop: '50px', marginBottom: '50px'}}>
+                  <h1 className="display-4" style={{marginTop: "0px", marginBottom: "0px"}}><strong>Hot Techniques</strong></h1>
+                  <p className="lead tech-paragraph description" style={{margin: "0px", paddingTop: '5px'}}>
+                    Browse Rolledex's Best Tech
                   </p>
+                </div>
+                <div className="col-md-6" />
+                <div className="col-md-12">
                   {postContent}
                 </div>
             </div>

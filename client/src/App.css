@@ -73,3 +73,13 @@
   align-items: center;
   color: black !important;
 }
+
+.tech-box {
+  display: flex;
+}
+
+.tech-paragraph {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
