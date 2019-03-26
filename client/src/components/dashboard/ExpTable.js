@@ -12,7 +12,7 @@ class ExpTable extends Component {
 
   render() {
     const expContent = this.props.exp.map((row, idx) => (
-      <tr>
+      <tr key={idx}>
         <td className="text-center">{idx + 1}</td>
         <td>{row.name}</td>
         <td>{row.location}</td>
@@ -45,9 +45,9 @@ class ExpTable extends Component {
   }
 }
 
-ExpTable.PropTypes = {
+ExpTable.propTypes = {
   exp: PropTypes.array.isRequired,
-  deleteExperience: PropTypes.object.isRequired
+  deleteExperience: PropTypes.func.isRequired
 };
 
 export default connect(null, {deleteExperience})(ExpTable);

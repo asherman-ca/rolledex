@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import isEmpty from '../../validation/is-empty';
+// import isEmpty from '../../validation/is-empty';
 
 // The columns have specified values for each screen size
 // The skillset column won't display on smaller than medium because d-none
@@ -13,8 +13,8 @@ class ProfileItem extends Component {
       <div className="col-md-4">
         <div className="card card-profile lightbg" style={{ marginBottom: '50px', height: '335px' }}>
           <div className="card-header card-avatar">
-            <Link to={`profile/${profile._id}`}>
-              <img className="img" src={profile.user.avatar} />
+            <Link to={`profile/${profile.user._id}`}>
+              <img className="img" alt="../img/miyao.jpg" src={profile.user.avatar} />
             </Link>
           </div>
           <div className="card-body">

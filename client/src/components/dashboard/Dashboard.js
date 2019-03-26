@@ -13,12 +13,12 @@ import { getUserPosts } from '../../actions/postActions';
 
 class Dashboard extends Component {
   componentDidMount() {
+    console.log(this.props.auth.user.id)
     this.props.getCurrentProfile();
     this.props.getUserPosts(this.props.auth.user.id);
   }
 
   render() {
-    console.log(this.props)
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
     const { posts } = this.props.post;
@@ -65,7 +65,7 @@ class Dashboard extends Component {
                       <div className="avatar">
                         <img
                           src={user.avatar}
-                          alt="Cirle Image"
+                          alt="../img/miyao.jpg"
                           className="img-raised rounded-circle img-fluid"
                         />
                       </div>
@@ -107,7 +107,7 @@ class Dashboard extends Component {
                     <div className="avatar">
                       <img
                         src={user.avatar}
-                        alt="Cirle Image"
+                        alt="../img/miyao.jpg"
                         className="img-raised rounded-circle img-fluid"
                       />
                     </div>

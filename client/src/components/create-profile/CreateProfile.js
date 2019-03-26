@@ -56,11 +56,10 @@ class CreateProfile extends Component {
 
   render() {
     const { errors } = this.state;
-    const { profile } = this.props.profile
-    console.log(profile)
+    // const { profile } = this.props.profile;
 
     // select options for status
-    const options = [
+    const beltOptions = [
       { label: '* Select Belt', value: 0 },
       { label: 'White', value: 'White' },
       { label: 'Blue', value: 'Blue' },
@@ -116,13 +115,13 @@ class CreateProfile extends Component {
                     </div>
                     <div className="row mr-4">
                       <div className="col-md-6">
-                        <TextFieldGroup
+                        <SelectListGroup
                           placeholder="Belt"
                           name="belt"
-                          type="text"
                           value={this.state.belt}
                           onChange={this.onChange}
                           error={errors.belt}
+                          options={beltOptions}
                           prepend="horizontal_split"
                         />
                       </div>

@@ -11,7 +11,7 @@ class ProfileTables extends Component {
     }
 
     render () {
-        const { exp, edu, posts, user } = this.props
+        const { exp, edu, posts } = this.props
 
         return (
             <div style={{padding: "10px", minHeight: '400px'}} className="section section-dark">
@@ -39,21 +39,21 @@ class ProfileTables extends Component {
                 <div className="row">
                     <div className="col-md-10 mr-auto ml-auto fonting whiting">
                         {posts ? posts.map(post => (
-                        <div class="media">
-                            <a class="float-left" href="#pablo">
-                                <div class="avatar">
-                                    <img class="media-object" alt="Tim Picture" src={post.avatar} />
+                        <div key={post._id} className="media">
+                            <a className="float-left" href="#pablo">
+                                <div className="avatar">
+                                    <img className="media-object" alt="../img/miyao.jpg" src={post.avatar} />
                                 </div>
                             </a>
-                            <div class="media-body">
-                                <h4 class="media-heading fonting whiting">{post.vector} · {post.position}
+                            <div className="media-body">
+                                <h4 className="media-heading fonting whiting">{post.vector} · {post.position}
                                     <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
                                 </h4>
                                 <p>{post.text}</p>
-                                <div class="media-footer">
-                                    <div class="btn btn-link float-right">
-                                    <i onClick={this.onDeleteClick.bind(this, post._id)} style={{marginRight: "10px"}} class="material-icons">delete</i>
-                                    <i class="material-icons">favorite</i> {post.likes.length}
+                                <div className="media-footer">
+                                    <div className="btn btn-link float-right">
+                                    <i onClick={this.onDeleteClick.bind(this, post._id)} style={{marginRight: "10px"}} className="material-icons">delete</i>
+                                    <i className="material-icons">favorite</i> {post.likes.length}
                                     </div>
                                 </div>
                             </div>
@@ -70,9 +70,8 @@ ProfileTables.propTypes = {
     deletePost: PropTypes.func.isRequired,
     user: PropTypes.object.isRequired,
     posts: PropTypes.array.isRequired,
-    exp: PropTypes.array.isRequired,
-    edu: PropTypes.array.isRequired
+    exp: PropTypes.object.isRequired,
+    edu: PropTypes.object.isRequired
 }
 
-export default connect(null, {deletePost})
-(ProfileTables);
+export default connect(null, {deletePost})(ProfileTables);

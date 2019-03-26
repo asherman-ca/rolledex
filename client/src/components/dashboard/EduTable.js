@@ -11,7 +11,7 @@ class EduTable extends Component {
 
   render() {
     const eduContent = this.props.edu.map((row, idx) => (
-      <tr>
+      <tr key={idx}>
         <td className="text-center">{idx + 1}</td>
         <td>{row.gym}</td>
         <td>{row.location}</td>
@@ -43,7 +43,7 @@ class EduTable extends Component {
   }
 }
 
-EduTable.PropTypes = {
+EduTable.propTypes = {
   edu: PropTypes.array.isRequired,
   deleteEducation: PropTypes.func.isRequired
 };

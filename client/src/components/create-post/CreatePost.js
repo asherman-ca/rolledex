@@ -110,15 +110,6 @@ class CreatePost extends Component {
                           options={positionOptions}
                           prepend="videogame_asset"
                         />
-                      {/* <TextFieldGroup
-                          placeholder="Position"
-                          name="position"
-                          value={this.state.position}
-                          onChange={this.onChange}
-                          error={errors.position}
-                          type="text"
-                          prepend="home"
-                        /> */}
                       </div>
                     </div>
                     <div className="row mr-4">

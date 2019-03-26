@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
 import ExpTable from '../dashboard/ExpTable'
@@ -12,12 +11,14 @@ import { getUserPosts } from '../../actions/postActions';
 
 class Profile extends Component {
   componentDidMount() {
-    this.props.getProfileById(this.props.match.params.id);
+    console.log(this.props.match.params.id)
     this.props.getUserPosts(this.props.match.params.id);
-    console.log(this.props);
+    this.props.getProfileById(this.props.match.params.id);
+    // console.log(this.props);
   }
 
   render() {
+    console.log(this.props)
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
     const { posts } = this.props.post;
@@ -64,7 +65,7 @@ class Profile extends Component {
                       <div className="avatar">
                         <img
                           src={profile.user.avatar}
-                          alt="Cirle Image"
+                          alt="../img/miyao.jpg"
                           className="img-raised rounded-circle img-fluid"
                         />
                       </div>
@@ -106,7 +107,7 @@ class Profile extends Component {
                     <div className="avatar">
                       <img
                         src={user.avatar}
-                        alt="Cirle Image"
+                        alt="../img/miyao.jpg"
                         className="img-raised rounded-circle img-fluid"
                       />
                     </div>

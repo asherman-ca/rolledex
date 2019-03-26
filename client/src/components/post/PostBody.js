@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import classnames from 'classnames';
+// import { Link } from 'react-router-dom';
+// import classnames from 'classnames';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
 import Moment from 'react-moment';
-import CommentFeed from './CommentFeed';
+// import CommentFeed from './CommentFeed';
 
 class PostBody extends Component {
   onDeleteClick = (id) => {
@@ -31,14 +31,14 @@ class PostBody extends Component {
   }
 
   render() {
-    const { post, auth, showActions } = this.props;
+    const { post, auth } = this.props;
     const { user } = auth;
     
     return (
       <div class="media">
         <a class="float-left" href="#pablo">
           <div class="avatar">
-              <img class="media-object" alt="Tim Picture" src={post.avatar} />
+              <img class="media-object" alt="../img/miyao.jpg" src={post.avatar} />
           </div>
         </a>
           <div class="media-body">

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LandingTile from './LandingTile';
+// import LandingTile from './LandingTile';
 
 class Landing extends Component {
   render() {
@@ -27,6 +27,7 @@ class Landing extends Component {
                 <a
                   href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="btn btn-danger btn-raised btn-lg"
                 >
                   <i className="fa fa-play" /> Watch video
@@ -109,7 +110,7 @@ class Landing extends Component {
                       <div className="card card-profile lightbg">
                         <div className="card-header card-avatar">
                           <a href="#pablo">
-                            <img className="img" src="../img/miyao.jpg" />
+                            <img className="img" src="../img/miyao.jpg" alt="../img/miyao.jpg" />
                           </a>
                         </div>
                         <div className="card-body">
@@ -125,13 +126,13 @@ class Landing extends Component {
                         </div>
                         <div className="card-footer justify-content-center">
                           <a href="#pablo">
-                            <button class="btn btn-just-icon btn-round btn-instagram">
-                              <i class="fab fa-instagram"> </i>
+                            <button className="btn btn-just-icon btn-round btn-instagram">
+                              <i className="fab fa-instagram"> </i>
                             </button>
                           </a>
                           <a href="#pablo">
-                            <button class="btn btn-just-icon btn-round btn-youtube">
-                              <i class="fab fa-youtube"> </i>
+                            <button className="btn btn-just-icon btn-round btn-youtube">
+                              <i className="fab fa-youtube"> </i>
                             </button>
                           </a>
                         </div>
@@ -141,7 +142,7 @@ class Landing extends Component {
                       <div className="card card-profile lightbg">
                         <div className="card-header card-avatar">
                           <a href="#pablo">
-                            <img className="img" src="../img/donjon.jpg" />
+                            <img className="img" src="../img/donjon.jpg" alt="../img/miyao.jpg" />
                           </a>
                         </div>
                         <div className="card-body">
@@ -157,13 +158,13 @@ class Landing extends Component {
                         </div>
                         <div className="card-footer justify-content-center">
                           <a href="#pablo">
-                            <button class="btn btn-just-icon btn-round btn-instagram">
-                              <i class="fab fa-instagram"> </i>
+                            <button className="btn btn-just-icon btn-round btn-instagram">
+                              <i className="fab fa-instagram"> </i>
                             </button>
                           </a>
                           <a href="#pablo">
-                            <button class="btn btn-just-icon btn-round btn-youtube">
-                              <i class="fab fa-youtube"> </i>
+                            <button className="btn btn-just-icon btn-round btn-youtube">
+                              <i className="fab fa-youtube"> </i>
                             </button>
                           </a>
                         </div>
@@ -173,7 +174,7 @@ class Landing extends Component {
                       <div className="card card-profile lightbg">
                         <div className="card-header card-avatar">
                           <a href="#pablo">
-                            <img className="img" src="../img/gary.jpg" />
+                            <img className="img" src="../img/gary.jpg" alt="../img/miyao.jpg" />
                           </a>
                         </div>
                         <div className="card-body">
@@ -189,13 +190,13 @@ class Landing extends Component {
                         </div>
                         <div className="card-footer justify-content-center">
                           <a href="#pablo">
-                            <button class="btn btn-just-icon btn-round btn-instagram">
-                              <i class="fab fa-instagram"> </i>
+                            <button className="btn btn-just-icon btn-round btn-instagram">
+                              <i className="fab fa-instagram"> </i>
                             </button>
                           </a>
                           <a href="#pablo">
-                            <button class="btn btn-just-icon btn-round btn-youtube">
-                              <i class="fab fa-youtube"> </i>
+                            <button className="btn btn-just-icon btn-round btn-youtube">
+                              <i className="fab fa-youtube"> </i>
                             </button>
                           </a>
                         </div>

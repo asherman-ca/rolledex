@@ -87,7 +87,7 @@ router.get('/handle/:handle', (req, res) => {
 // @access  Public
 
 router.get('/id/:id', (req, res) => {
-  Profile.findOne({ _id: req.params.id })
+  Profile.findOne({ user: req.params.id })
     .populate('user', ['name', 'avatar'])
     .then(profile => {
       if (!profile) {
