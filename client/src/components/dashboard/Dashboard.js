@@ -14,11 +14,11 @@ import { getUserPosts } from '../../actions/postActions';
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getCurrentProfile();
-    console.log(this.props.auth.user.id)
     this.props.getUserPosts(this.props.auth.user.id);
   }
 
   render() {
+    console.log(this.props)
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
     const { posts } = this.props.post;

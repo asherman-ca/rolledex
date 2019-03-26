@@ -38,7 +38,7 @@ class ProfileTables extends Component {
                 </div>
                 <div className="row">
                     <div className="col-md-10 mr-auto ml-auto fonting whiting">
-                        {posts.length > 0 ? posts.map(post => (
+                        {posts ? posts.map(post => (
                         <div class="media">
                             <a class="float-left" href="#pablo">
                                 <div class="avatar">

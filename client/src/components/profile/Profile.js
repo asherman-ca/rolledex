@@ -14,6 +14,7 @@ class Profile extends Component {
   componentDidMount() {
     this.props.getProfileById(this.props.match.params.id);
     this.props.getUserPosts(this.props.match.params.id);
+    console.log(this.props);
   }
 
   render() {
@@ -68,6 +69,7 @@ class Profile extends Component {
                         />
                       </div>
                       <div className="name row">
+                        <div className="col-md-2" />
                         <div className="col-md-8 edit-buttons">
                           <h3 style={{margin: "0px"}} className="title fonting">{profile.handle}</h3>
                         </div>
