@@ -6,15 +6,15 @@ import ExpTable from '../dashboard/ExpTable'
 import EduTable from '../dashboard/EduTable'
 import SocialButtons from '../dashboard/SocialButtons';
 import ProfileTables from '../dashboard/ProfileTables';
+import ProfileEduTable from './ProfileEduTable';
+import ProfileExpTable from './ProfileExpTable';
 import { getProfileById } from '../../actions/profileActions';
 import { getUserPosts } from '../../actions/postActions';
 
 class Profile extends Component {
   componentDidMount() {
-    console.log(this.props.match.params.id)
     this.props.getUserPosts(this.props.match.params.id);
     this.props.getProfileById(this.props.match.params.id);
-    // console.log(this.props);
   }
 
   render() {
@@ -35,7 +35,7 @@ class Profile extends Component {
 
         if (profile.education.length > 0) {
           educationContent = (
-            <EduTable 
+            <ProfileEduTable 
               edu={profile.education}
             />
           )
@@ -47,7 +47,7 @@ class Profile extends Component {
 
         if (profile.experience.length > 0) {
           experienceContent = (
-            <ExpTable 
+            <ProfileExpTable 
               exp={profile.experience}
             />
           )
@@ -93,6 +93,7 @@ class Profile extends Component {
               edu={educationContent} 
               posts={posts} 
               user={user}
+              showDelete={false}
               />
           </div>
         );

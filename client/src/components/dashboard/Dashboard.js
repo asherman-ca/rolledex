@@ -93,6 +93,7 @@ class Dashboard extends Component {
               edu={educationContent} 
               posts={posts} 
               user={user}
+              showDelete={true}
               />
           </div>
         );

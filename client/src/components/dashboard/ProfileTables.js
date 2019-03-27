@@ -5,14 +5,14 @@ import PropTypes from 'prop-types'
 import {deletePost} from '../../actions/postActions'
 
 class ProfileTables extends Component {
-
     onDeleteClick(id) {
         this.props.deletePost(id);
     }
 
     render () {
-        const { exp, edu, posts } = this.props
-
+        const { exp, edu, posts, showDelete } = this.props
+        const { user } = this.props.auth
+       
         return (
             <div style={{padding: "10px", minHeight: '400px'}} className="section section-dark">
                 <div className="row" style={{marginBottom: "25px"}}>
@@ -52,10 +52,11 @@ class ProfileTables extends Component {
                                 <p>{post.text}</p>
                                 <div className="media-footer">
                                     <div className="btn btn-link float-right">
-                                    <i onClick={this.onDeleteClick.bind(this, post._id)} style={{marginRight: "10px"}} className="material-icons">delete</i>
+                                    {showDelete ?
+                                    <i onClick={this.onDeleteClick.bind(this, post._id)} style={{marginRight: "10px"}} className="material-icons">delete</i> : null}
                                     <i className="material-icons">favorite</i> {post.likes.length}
                                     </div>
-                                </div>
+                                </div> 
                             </div>
                         </div>
                         )) : 
@@ -74,4 +75,8 @@ ProfileTables.propTypes = {
     edu: PropTypes.object.isRequired
 }
 
-export default connect(null, {deletePost})(ProfileTables);
+const mapStateToProps = state => ({
+    auth: state.auth
+})
+
+export default connect(mapStateToProps, {deletePost})(ProfileTables);
