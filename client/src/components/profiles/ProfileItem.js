@@ -11,12 +11,10 @@ class ProfileItem extends Component {
     const { profile } = this.props;
     return (
       <div className="col-md-4">
-        <div className="card card-profile lightbg" style={{ marginBottom: '50px', height: '335px' }}>
-          <div className="card-header card-avatar">
-            <Link to={`profile/${profile.user._id}`}>
-              <img className="img" alt="../img/miyao.jpg" src={profile.user.avatar} />
-            </Link>
-          </div>
+        <div className="card card-profile lightbg" style={{ marginBottom: '50px' }}>
+          <Link className="card-header card-avatar" to={`profile/${profile.user._id}`}>
+            <img className="img" alt="../img/miyao.jpg" src={profile.user.avatar} />
+          </Link>
           <div className="card-body">
             <h4 className="card-title">{profile.handle}</h4>
             <h6 className="card-category text-muted">

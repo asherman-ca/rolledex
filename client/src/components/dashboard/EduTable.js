@@ -27,14 +27,14 @@ class EduTable extends Component {
       </tr>
     ));
     return (
-      <table className="table fonting whiting">
+      <table className="table fonting">
         <thead>
           <tr>
-            <th className="text-center whiting">#</th>
-            <th className="whiting">Name</th>
-            <th className="whiting">Location</th>
-            <th className="text-center whiting">Date</th>
-            <th className="text-center whiting">Actions</th>
+            <th className="text-center">#</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th className="text-center">Date</th>
+            <th className="text-center">Actions</th>
           </tr>
         </thead>
         <tbody>{eduContent}</tbody>

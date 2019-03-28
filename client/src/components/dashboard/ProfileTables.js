@@ -12,10 +12,9 @@ class ProfileTables extends Component {
 
     render () {
         const { exp, edu, posts, showDelete } = this.props
-        // const { user } = this.props.auth
        
         return (
-            <div style={{padding: "10px", minHeight: '400px'}} className="section section-dark">
+            <div style={{padding: "10px", minHeight: '400px'}} className="section">
                 <div className="row" style={{marginBottom: "25px"}}>
                     <div className="col-md-5 ml-auto">
                         <h3 className="text-center title fonting">
@@ -30,7 +29,7 @@ class ProfileTables extends Component {
                         {edu}
                     </div>
                 </div>
-                <hr style={{backgroundColor:"white"}} />
+                <hr />
                 <div className="row">
                     <div className="col-md-5 ml-auto">
                         <h3 className="title fonting text-center" style={{marginTop:"20px"}}>Posts</h3>
@@ -48,11 +47,11 @@ class ProfileTables extends Component {
                             </div>
                             <div className="media-body">
                                 <Link to={`/post/${post._id}`}>
-                                    <h4 className="media-heading fonting whiting">{post.vector} · {post.position}
+                                    <h4 className="media-heading fonting">{post.vector} · {post.position}
                                         <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
                                     </h4>
                                 </Link>
-                                <p>{post.text}</p>
+                                <p style={{color: 'black'}}>{post.text}</p>
                                 <div className="media-footer">
                                     <div className="btn btn-link float-right">
                                     {showDelete ?
