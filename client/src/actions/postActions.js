@@ -116,7 +116,7 @@ export const deleteComment = (postId, commentId) => dispatch => {
 export const addLike = id => dispatch => {
   axios
     .post(`/api/posts/like/${id}`)
-    .then(res => dispatch(getPosts()))
+    .then(res => dispatch(getPost(id)))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
@@ -129,7 +129,7 @@ export const addLike = id => dispatch => {
 export const removeLike = id => dispatch => {
   axios
     .post(`/api/posts/unlike/${id}`)
-    .then(res => dispatch(getPosts()))
+    .then(res => dispatch(getPost(id)))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
