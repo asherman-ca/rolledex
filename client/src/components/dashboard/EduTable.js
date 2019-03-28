@@ -34,7 +34,7 @@ class EduTable extends Component {
             <th>Name</th>
             <th>Location</th>
             <th className="text-center">Date</th>
-            <th className="text-center">Actions</th>
+            <th className="text-center">{' '}</th>
           </tr>
         </thead>
         <tbody>{eduContent}</tbody>

@@ -28,13 +28,13 @@ class ProfileItem extends Component {
           </div>
           <div className="card-footer justify-content-center">
             <a href={profile.social ? profile.social.instagram ? profile.social.instagram : `https://www.instagram.com/danaherjohn/?hl=en` : `https://www.instagram.com/danaherjohn/?hl=en`}>
-              <button class="btn btn-just-icon btn-round btn-instagram">
-                <i class="fab fa-instagram"> </i>
+              <button className="btn btn-just-icon btn-round btn-instagram">
+                <i className="fab fa-instagram"> </i>
               </button>
             </a>
             <a href={profile.social ? profile.social.youtube ? profile.social.youtube : `https://www.instagram.com/danaherjohn/?hl=en` : `https://www.instagram.com/danaherjohn/?hl=en`}>
-              <button class="btn btn-just-icon btn-round btn-youtube">
-                <i class="fab fa-youtube"> </i>
+              <button className="btn btn-just-icon btn-round btn-youtube">
+                <i className="fab fa-youtube"> </i>
               </button>
             </a>
           </div>

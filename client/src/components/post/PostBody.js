@@ -41,7 +41,7 @@ class PostBody extends Component {
           </div>
         </Link>
           <div className="media-body">
-            <h4 className="media-heading">{post.vector} · {post.position} · <em>{user.name}</em>
+            <h4 className="media-heading">{post.vector} · {post.position} · <em>{post.name}</em>
               <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
             </h4>
             <p>{post.text}</p>

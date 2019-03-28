@@ -36,7 +36,7 @@ class ExpTable extends Component {
             <th>Location</th>
             <th className="text-center">Date</th>
             <th className="text-center">Place</th>
-            <th className="text-center">Actions</th>
+            <th className="text-center">{' '}</th>
           </tr>
         </thead>
         <tbody>{expContent}</tbody>
