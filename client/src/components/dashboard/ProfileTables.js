@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Moment from 'react-moment';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import {deletePost} from '../../actions/postActions'
 
 class ProfileTables extends Component {
@@ -11,7 +12,7 @@ class ProfileTables extends Component {
 
     render () {
         const { exp, edu, posts, showDelete } = this.props
-        const { user } = this.props.auth
+        // const { user } = this.props.auth
        
         return (
             <div style={{padding: "10px", minHeight: '400px'}} className="section section-dark">
@@ -40,21 +41,23 @@ class ProfileTables extends Component {
                     <div className="col-md-10 mr-auto ml-auto fonting whiting">
                         {posts ? posts.map(post => (
                         <div key={post._id} className="media">
-                            <a className="float-left" href="#pablo">
+                            <div className="float-left">
                                 <div className="avatar">
                                     <img className="media-object" alt="../img/miyao.jpg" src={post.avatar} />
                                 </div>
-                            </a>
+                            </div>
                             <div className="media-body">
-                                <h4 className="media-heading fonting whiting">{post.vector} · {post.position}
-                                    <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
-                                </h4>
+                                <Link to={`/post/${post._id}`}>
+                                    <h4 className="media-heading fonting whiting">{post.vector} · {post.position}
+                                        <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
+                                    </h4>
+                                </Link>
                                 <p>{post.text}</p>
                                 <div className="media-footer">
                                     <div className="btn btn-link float-right">
                                     {showDelete ?
                                     <i onClick={this.onDeleteClick.bind(this, post._id)} style={{marginRight: "10px"}} className="material-icons">delete</i> : null}
-                                    <i className="material-icons">favorite</i> {post.likes.length}
+                                    <i style={{cursor: 'auto'}} className="material-icons">favorite</i> {post.likes.length}
                                     </div>
                                 </div> 
                             </div>

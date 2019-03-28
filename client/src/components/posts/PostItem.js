@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import classnames from 'classnames';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
 import Moment from 'react-moment';
 
@@ -31,13 +30,16 @@ class PostItem extends Component {
 
   render() {
     const { post } = this.props;
+    console.log(post);
     // const { user } = auth;
     return (
       <div class="media">
         <a class="float-left" href="#pablo">
-          <div class="avatar">
-              <img class="media-object" alt="../img/miyao.jpg" src={post.avatar} />
-          </div>
+          <Link to={`/profile/${post.user}`}>
+            <div class="avatar">
+                <img class="media-object" alt="../img/miyao.jpg" src={post.avatar} />
+            </div>
+          </Link>
         </a>
           <div class="media-body">
             <h4 class="media-heading">{post.vector} · {post.position} · <em>{post.name}</em>
@@ -45,12 +47,12 @@ class PostItem extends Component {
             </h4>
             <p>{post.text}</p>
             <div class="media-footer">
-              <Link to={`/post/${post._id}`} className="btn btn-primary btn-link float-right" style={{marginBottom: '0px'}}>
+              <Link to={`/post/${post._id}`} className="btn btn-primary btn-link float-right" style={{marginBottom: '0px', padding: '0px', marginLeft: '5px'}}>
                 <i class="material-icons">reply</i> Reply
               </Link>
-              <a href="#pablo" class="btn btn-link float-right" data-original-title="Like Comment" style={{marginBottom: '0px'}}>
+              <div class="btn btn-link float-right" style={{marginBottom: '0px', cursor: 'auto', padding: '0px'}}>
                 <i class="material-icons">favorite</i> {post.likes.length}
-              </a>
+              </div>
             </div>
           </div>
       </div>
