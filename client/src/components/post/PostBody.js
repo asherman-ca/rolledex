@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
-// import classnames from 'classnames';
+import classnames from 'classnames';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
 import Moment from 'react-moment';
-// import CommentFeed from './CommentFeed';
 
 class PostBody extends Component {
   onDeleteClick = (id) => {
@@ -35,21 +34,27 @@ class PostBody extends Component {
     const { user } = auth;
     
     return (
-      <div class="media">
-        <a class="float-left" href="#pablo">
-          <div class="avatar">
-              <img class="media-object" alt="../img/miyao.jpg" src={post.avatar} />
+      <div className="media">
+        <Link className="float-left" to={`/profile/${post.user}`}>
+          <div className="avatar">
+              <img className="media-object" alt="../img/miyao.jpg" src={post.avatar} />
           </div>
-        </a>
-          <div class="media-body">
-            <h4 class="media-heading">{post.vector} · {post.position} · <em>{user.name}</em>
+        </Link>
+          <div className="media-body">
+            <h4 className="media-heading">{post.vector} · {post.position} · <em>{user.name}</em>
               <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
             </h4>
             <p>{post.text}</p>
-            <div class="media-footer">
+            <div className="media-footer">
               <div className="btn btn-link float-right">
-                <i onClick={this.onLikeClick.bind(this, post._id)} style={{marginRight: '15px'}} className="material-icons">thumb_up</i>
-                <i onClick={this.onUnlikeClick.bind(this, post._id)} style={{marginRight: '15px'}} className="material-icons">thumb_down</i>
+                <i 
+                  onClick={this.onLikeClick.bind(this, post._id)} 
+                  style={{marginRight: '15px'}} 
+                  className={classnames("material-icons", {'text-info': this.findUserLike(post.likes)})}>thumb_up</i>
+                <i 
+                  onClick={this.onUnlikeClick.bind(this, post._id)} 
+                  style={{marginRight: '15px'}} 
+                  className="material-icons">thumb_down</i>
                 <i className="material-icons">favorite</i> {post.likes.length}
               </div>
             </div>

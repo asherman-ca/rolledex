@@ -48,12 +48,12 @@ class CommentForm extends Component {
     
     return (
         <form onSubmit={this.onSubmit} class="media media-post">
-            <a class="author float-left" href="#pablo">
-                <div class="avatar">
-                    <img class="media-object" alt="64x64" src={user.avatar} />
+            <div className="author float-left">
+                <div className="avatar">
+                    <img className="media-object" alt="64x64" src={user.avatar} />
                 </div>
-            </a>
-            <div class="media-body">
+            </div>
+            <div className="media-body">
                 <TextAreaFieldGroup 
                     placeholder="Post Comment"
                     name="text"
@@ -61,8 +61,8 @@ class CommentForm extends Component {
                     onChange={this.onChange}
                     error={errors.text}
                 />
-                <div class="media-footer">
-                    <input type="submit" class="btn btn-primary btn-round btn-wd float-right"/>
+                <div className="media-footer">
+                    <input type="submit" className="btn btn-primary btn-round btn-wd float-right"/>
                 </div>
             </div>
         </form>
