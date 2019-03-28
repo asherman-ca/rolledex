@@ -13,7 +13,7 @@ class ExpTable extends Component {
   render() {
     const expContent = this.props.exp.map((row, idx) => (
       <tr key={idx}>
-        <td className="text-center">{idx + 1}</td>
+        {/* <td className="text-center">{idx + 1}</td> */}
         <td>{row.name}</td>
         <td>{row.location}</td>
         <td className="text-center">
@@ -31,7 +31,7 @@ class ExpTable extends Component {
       <table className="table fonting">
         <thead>
           <tr>
-            <th className="text-center">#</th>
+            {/* <th className="text-center">#</th> */}
             <th>Event</th>
             <th>Location</th>
             <th className="text-center">Date</th>

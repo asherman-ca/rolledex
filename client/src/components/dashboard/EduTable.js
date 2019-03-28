@@ -12,7 +12,7 @@ class EduTable extends Component {
   render() {
     const eduContent = this.props.edu.map((row, idx) => (
       <tr key={idx}>
-        <td className="text-center">{idx + 1}</td>
+        {/* <td className="text-center">{idx + 1}</td> */}
         <td>{row.gym}</td>
         <td>{row.location}</td>
         <td className="text-center">
@@ -30,7 +30,7 @@ class EduTable extends Component {
       <table className="table fonting">
         <thead>
           <tr>
-            <th className="text-center">#</th>
+            {/* <th className="text-center">#</th> */}
             <th>Name</th>
             <th>Location</th>
             <th className="text-center">Date</th>

@@ -38,7 +38,7 @@ class Profile extends Component {
             />
           )
         } else {
-          educationContent = <p className="text-center fonting whiting">No Education Available</p>
+          educationContent = <p className="text-center fonting">No Education Available</p>
         }
 
         let experienceContent;
@@ -50,7 +50,7 @@ class Profile extends Component {
             />
           )
         } else {
-          experienceContent = <p className="text-center fonting whiting">No Experience Available</p>
+          experienceContent = <p className="text-center fonting">No Experience Available</p>
         }
 
         dashboardContent = (

@@ -51,7 +51,7 @@ class ProfileTables extends Component {
                                         <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
                                     </h4>
                                 </Link>
-                                <p>{post.text}</p>
+                                <p style={{color: '#3C4858'}}>{post.text}</p>
                                 <div className="media-footer">
                                     <div className="btn btn-link float-right" style={{cursor: 'auto'}}>
                                     {showDelete ?

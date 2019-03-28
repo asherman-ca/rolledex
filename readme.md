@@ -22,5 +22,11 @@ vscode user settings:
 "editor.formatOnSave": true
 }
 
-
 Heroku: dry-ravine-58394
+
+dummy accounts:
+
+paulomiyao77@gmail.com
+jonthomasbjj77@gmail.com
+jondanaher77@outlook.com
+garytonon77@outlook.com

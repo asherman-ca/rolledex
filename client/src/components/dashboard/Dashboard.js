@@ -39,7 +39,7 @@ class Dashboard extends Component {
             />
           )
         } else {
-          educationContent = <p className="text-center fonting whiting">No Education Available</p>
+          educationContent = <p className="text-center fonting">No Education Available</p>
         }
 
         let experienceContent;
@@ -51,7 +51,7 @@ class Dashboard extends Component {
             />
           )
         } else {
-          experienceContent = <p className="text-center fonting whiting">No Experience Available</p>
+          experienceContent = <p className="text-center fonting">No Experience Available</p>
         }
 
         dashboardContent = (
@@ -107,7 +107,7 @@ class Dashboard extends Component {
                     <div className="avatar">
                       <img
                         src={user.avatar}
-                        alt="../img/miyao.jpg"
+                        alt="../../../public/img/miyao.jpg"
                         className="img-raised rounded-circle img-fluid"
                       />
                     </div>
