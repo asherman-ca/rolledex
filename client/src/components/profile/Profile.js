@@ -105,7 +105,7 @@ class Profile extends Component {
                   <div className="profile">
                     <div className="avatar">
                       <img
-                        src={user.avatar}
+                        src={profile.user.avatar}
                         alt="../img/miyao.jpg"
                         className="img-raised rounded-circle img-fluid"
                       />

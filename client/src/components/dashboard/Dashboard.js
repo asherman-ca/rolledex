@@ -64,7 +64,7 @@ class Dashboard extends Component {
                       <div className="avatar">
                         <img
                           src={user.avatar}
-                          alt="../img/miyao.jpg"
+                          alt="./img/miyao.jpg"
                           className="img-raised rounded-circle img-fluid"
                         />
                       </div>
@@ -107,7 +107,7 @@ class Dashboard extends Component {
                     <div className="avatar">
                       <img
                         src={user.avatar}
-                        alt="../../../public/img/miyao.jpg"
+                        alt="./img/miyao.jpg"
                         className="img-raised rounded-circle img-fluid"
                       />
                     </div>
