@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
-import ExpTable from '../dashboard/ExpTable'
-import EduTable from '../dashboard/EduTable'
 import SocialButtons from '../dashboard/SocialButtons';
 import ProfileTables from '../dashboard/ProfileTables';
 import ProfileEduTable from './ProfileEduTable';

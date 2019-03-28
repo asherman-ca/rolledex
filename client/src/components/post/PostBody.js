@@ -46,14 +46,14 @@ class PostBody extends Component {
             </h4>
             <p>{post.text}</p>
             <div className="media-footer">
-              <div className="btn btn-link float-right">
+              <div className="btn btn-link float-right" style={{cursor: 'auto', marginBottom: '0px'}}>
                 <i 
                   onClick={this.onLikeClick.bind(this, post._id)} 
-                  style={{marginRight: '15px'}} 
+                  style={{marginRight: '15px', cursor: 'pointer'}} 
                   className={classnames("material-icons", {'text-info': this.findUserLike(post.likes)})}>thumb_up</i>
                 <i 
                   onClick={this.onUnlikeClick.bind(this, post._id)} 
-                  style={{marginRight: '15px'}} 
+                  style={{marginRight: '15px', cursor: 'pointer'}} 
                   className="material-icons">thumb_down</i>
                 <i className="material-icons">favorite</i> {post.likes.length}
               </div>

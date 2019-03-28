@@ -51,9 +51,9 @@ class ProfileTables extends Component {
                                         <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
                                     </h4>
                                 </Link>
-                                <p style={{color: 'black'}}>{post.text}</p>
+                                <p>{post.text}</p>
                                 <div className="media-footer">
-                                    <div className="btn btn-link float-right">
+                                    <div className="btn btn-link float-right" style={{cursor: 'auto'}}>
                                     {showDelete ?
                                     <i onClick={this.onDeleteClick.bind(this, post._id)} style={{marginRight: "10px"}} className="material-icons">delete</i> : null}
                                     <i style={{cursor: 'auto'}} className="material-icons">favorite</i> {post.likes.length}

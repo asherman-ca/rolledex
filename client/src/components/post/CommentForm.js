@@ -47,7 +47,7 @@ class CommentForm extends Component {
     const {user} = this.props.auth
     
     return (
-        <form onSubmit={this.onSubmit} class="media media-post">
+        <form onSubmit={this.onSubmit} className="media media-post">
             <div className="author float-left">
                 <div className="avatar">
                     <img className="media-object" alt="64x64" src={user.avatar} />
@@ -62,7 +62,11 @@ class CommentForm extends Component {
                     error={errors.text}
                 />
                 <div className="media-footer">
-                    <input type="submit" className="btn btn-primary btn-round btn-wd float-right"/>
+                    <input 
+                      type="submit" 
+                      className="btn btn-primary btn-round btn-wd float-right"
+                      style={{marginBottom: '0px'}}
+                    />
                 </div>
             </div>
         </form>
