@@ -149,7 +149,7 @@ class Register extends Component {
                               error={errors.password2}
                               prepend="lock_outline"
                             />
-                            <div className="text-center register-buttons row">
+                            <div className="text-center register-buttons row" style={{marginLeft:'0px'}}>
                               <input
                                 type="submit"
                                 className="btn btn-success col-md-6"
