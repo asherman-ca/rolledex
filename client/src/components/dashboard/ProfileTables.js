@@ -55,7 +55,7 @@ class ProfileTables extends Component {
                                 <div className="media-footer">
                                     <div className="btn btn-link float-right" style={{cursor: 'auto'}}>
                                     {showDelete ?
-                                    <i onClick={this.onDeleteClick.bind(this, post._id)} style={{marginRight: "10px"}} className="material-icons">delete</i> : null}
+                                    <i onClick={this.onDeleteClick.bind(this, post._id)} style={{marginRight: "10px", cursor: 'pointer'}} className="material-icons">delete</i> : null}
                                     <i style={{cursor: 'auto'}} className="material-icons">favorite</i> {post.likes.length}
                                     </div>
                                 </div> 

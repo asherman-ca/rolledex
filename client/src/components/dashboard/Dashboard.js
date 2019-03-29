@@ -21,6 +21,7 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
     const { posts } = this.props.post;
+    console.log(profile)
 
     let dashboardContent;
 
@@ -73,7 +74,7 @@ class Dashboard extends Component {
                         <div className="col-md-8 edit-buttons">
                           <h3 style={{margin: "0px"}} className="title fonting">{profile.handle}</h3>
                         </div>
-                        <SocialButtons />
+                        {profile.social ? <SocialButtons social={profile.social} /> : <SocialButtons />}
                       </div>
                       <div className="row">
                         <div className="col-8 mr-auto ml-auto">
