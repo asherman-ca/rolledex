@@ -9,6 +9,7 @@ const passport = require('passport');
 // Load Input Validation
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
+const validateResetInput = require('../../validation/reset');
 
 // load User model from mongoose
 
@@ -116,6 +117,40 @@ router.post('/login', (req, res) => {
     });
   });
 });
+
+// @route   POST api/users/reset
+// @desc    Reset user's password
+// @access  Private
+
+router.post(
+  '/reset', 
+  passport.authenticate('jwt', { session: false}),
+  (req, res) => {
+    const { errors, isValid } = validateResetInput(req.body);
+
+    // check validation
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
+
+    var newPassword = req.body.password 
+    
+    bcrypt.genSalt(10, (err, salt) => {
+      bcrypt.hash(newPassword, salt, (err, hash) => {
+        if (err) throw err;
+        newPassword = hash;
+        changeFields = {password: newPassword}
+
+        User.findOneAndUpdate(
+          { _id: req.user.id },
+          { $set: changeFields },
+          { new: true })
+          .then(user => { res.json(user)})
+      });
+    });
+  }
+)
+
 
 // @route   POST api/users/current
 // @desc    Return current user

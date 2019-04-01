@@ -41,16 +41,22 @@ const Dropdown = () => {
                     Add Gym
                 </Link>
                 <div className="dropdown-divider" />
-                <Link
-                    to="/add-post"
-                    className="dropdown-item"
-                >
-                    Add Technique
-                </Link>
+                    <Link
+                        to="/add-post"
+                        className="dropdown-item"
+                    >
+                        Add Technique
+                    </Link>
                 <div className="dropdown-divider" />
-                <a href="#pablo" className="dropdown-item">
-                    Delete Account
-                </a>
+                    <Link
+                        to="/reset"
+                        className="dropdown-item"
+                    >
+                        Reset Password
+                    </Link>
+                    <a href="#pablo" className="dropdown-item">
+                        Delete Account
+                    </a>
                 </div>
             </div>
         </div>
