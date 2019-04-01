@@ -44,6 +44,10 @@ export const resetUser = (resetData, history) => dispatch => {
       }))
 }
 
+export const recoverUser = (email, history) => {
+  console.log(email, history)
+}
+
 export const setCurrentUser = decoded => {
   return {
     type: SET_CURRENT_USER,

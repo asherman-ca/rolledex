@@ -30,8 +30,8 @@ class PostBody extends Component {
   }
 
   render() {
-    const { post, auth } = this.props;
-    const { user } = auth;
+    const { post } = this.props;
+    // const { user } = auth;
     
     return (
       <div className="media">

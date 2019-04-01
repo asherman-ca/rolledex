@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { loginUser } from '../../actions/authActions';
+import { loginUser, recoverUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 import { Link } from 'react-router-dom';
 
@@ -38,6 +38,10 @@ class Login extends Component {
     };
     this.props.loginUser(newUser);
   };
+
+  onRecoverClick = () => {
+    this.props.recoverUser(this.state.email, this.props.history);
+  }
 
   render() {
     const { errors } = this.state;
