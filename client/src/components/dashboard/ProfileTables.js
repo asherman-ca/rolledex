@@ -14,7 +14,7 @@ class ProfileTables extends Component {
         const { exp, edu, posts, showDelete } = this.props
        
         return (
-            <div style={{padding: "10px", minHeight: '400px'}} className="section">
+            <div style={{padding: "10px", minHeight: '400px', paddingTop:'0px'}} className="section">
                 <div className="row" style={{marginBottom: "25px"}}>
                     <div className="col-md-5 ml-auto">
                         <h3 className="text-center title fonting">

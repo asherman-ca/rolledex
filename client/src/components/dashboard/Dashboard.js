@@ -58,7 +58,7 @@ class Dashboard extends Component {
         dashboardContent = (
           <div className="profile-content">
             <div className="container">
-              <div style={{padding: "0px", paddingBottom: "20px"}} className="section">
+              <div style={{padding: "0px"}} className="section">
                 <div className="row">
                   <div className="col-md-6 ml-auto mr-auto">
                     <div className="profile">
@@ -76,13 +76,15 @@ class Dashboard extends Component {
                         </div>
                         {profile.social ? <SocialButtons social={profile.social} /> : <SocialButtons />}
                       </div>
+                      { profile.bio ?
                       <div className="row">
                         <div className="col-8 mr-auto ml-auto">
                           <div className="description text-center">
                             <p>{profile.bio}</p>
                           </div>
                         </div>
-                      </div>
+                      </div> : null
+                      }
                     </div>
                   </div>
                 </div>

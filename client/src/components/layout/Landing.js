@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 // import LandingTile from './LandingTile';
 
 class Landing extends Component {
@@ -24,14 +25,12 @@ class Landing extends Component {
                   results. We beleive in training smarter - not harder.
                 </h4>
                 <br />
-                <a
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  to="/register"
                   className="btn btn-danger btn-raised btn-lg"
                 >
-                  <i className="fa fa-play" /> Watch video
-                </a>
+                  <i className="fa fa-play" /> Register
+                </Link>
               </div>
             </div>
           </div>
@@ -125,12 +124,12 @@ class Landing extends Component {
                           </p>
                         </div>
                         <div className="card-footer justify-content-center">
-                          <a href="#pablo">
+                          <a href="https://www.instagram.com/paulomiyao/">
                             <button className="btn btn-just-icon btn-round btn-instagram">
                               <i className="fab fa-instagram"> </i>
                             </button>
                           </a>
-                          <a href="#pablo">
+                          <a href="https://www.youtube.com/channel/UCeOvhU6RbmEj8GKFiIMWxKQ">
                             <button className="btn btn-just-icon btn-round btn-youtube">
                               <i className="fab fa-youtube"> </i>
                             </button>
@@ -157,12 +156,12 @@ class Landing extends Component {
                           </p>
                         </div>
                         <div className="card-footer justify-content-center">
-                          <a href="#pablo">
+                          <a href="https://www.instagram.com/danaherjohn/?hl=en">
                             <button className="btn btn-just-icon btn-round btn-instagram">
                               <i className="fab fa-instagram"> </i>
                             </button>
                           </a>
-                          <a href="#pablo">
+                          <a href="https://www.youtube.com/channel/UCeOvhU6RbmEj8GKFiIMWxKQ">
                             <button className="btn btn-just-icon btn-round btn-youtube">
                               <i className="fab fa-youtube"> </i>
                             </button>
@@ -189,12 +188,12 @@ class Landing extends Component {
                           </p>
                         </div>
                         <div className="card-footer justify-content-center">
-                          <a href="#pablo">
+                          <a href="https://www.instagram.com/garrytonon/?hl=en">
                             <button className="btn btn-just-icon btn-round btn-instagram">
                               <i className="fab fa-instagram"> </i>
                             </button>
                           </a>
-                          <a href="#pablo">
+                          <a href="https://www.youtube.com/channel/UCeOvhU6RbmEj8GKFiIMWxKQ">
                             <button className="btn btn-just-icon btn-round btn-youtube">
                               <i className="fab fa-youtube"> </i>
                             </button>
