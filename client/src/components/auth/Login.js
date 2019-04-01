@@ -39,7 +39,8 @@ class Login extends Component {
     this.props.loginUser(newUser);
   };
 
-  onRecoverClick = () => {
+  onRecoverClick() {
+    // console.log(this.state.email)
     this.props.recoverUser(this.state.email, this.props.history);
   }
 
@@ -92,9 +93,15 @@ class Login extends Component {
                       />
                       <div className="text-center row" style={{marginLeft: '0px', paddingTop: '20px'}}>
                         <input type="submit" className="btn btn-success col-6" style={{margin:"0px"}} />
-                        <Link to="/register" style={{padding:'0px'}} className="col-6 register-redirect">
+                        <div 
+                          style={{padding: '0px'}}
+                          className="col-6 register-redirect"
+                          onClick={this.onRecoverClick.bind(this)}
+                        >Forgot Password?</div>
+
+                        {/* <Link to="/register" style={{padding:'0px'}} className="col-6 register-redirect">
                           Forgot Password?
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </form>
@@ -121,5 +128,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { loginUser }
+  { loginUser, recoverUser }
 )(withRouter(Login));
