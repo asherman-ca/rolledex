@@ -10,13 +10,15 @@ const SelectListGroup = ({ name, value, error, info, onChange, options, prepend 
   ));
 
   return (
-    <div className="form-group bmd-form-group">
+    <div
+      className={classnames('form-group bmd-form-group', { 'mb-reset': error })}
+    >
       <div className="input-group">
       <div className="input-group-prepend">
           <span className="input-group-text">
             <i className="material-icons">{prepend}</i>
           </span>
-        </div>
+      </div>
       <select
         style={{height:'36px'}}
         className={classnames('form-control', {
@@ -28,9 +30,9 @@ const SelectListGroup = ({ name, value, error, info, onChange, options, prepend 
       >
         {selectOptions}
       </select>
-      {info && <small className="form-text text-muted">{info}</small>}
-      {error && <div className="invalid-feedback">{error}</div>}
       </div>
+      {info && <small className="form-text text-muted">{info}</small>}
+      {error && <span style={{color:'red'}} className="description ml-5">{error}</span>}
     </div>
   );
 };

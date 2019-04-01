@@ -136,19 +136,17 @@ class CreatePost extends Component {
                         />
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <div className="text-center mt-4 mb-4">
-                          <Link className="btn btn-warning" to="/dashboard">
-                            Go Back
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <div className="text-center mt-4 mb-4">
-                          <input type="submit" className="btn btn-success" />
-                        </div>
-                      </div>
+                    <div className="text-center row" style={{margin: '0px 15px', paddingTop: '20px'}}>
+                        <Link 
+                          className="mr-auto col-4 btn btn-warning" 
+                          to="/dashboard"
+                          style={{padding: '12px 0px'}}>
+                          Go Back
+                        </Link>
+                        <input 
+                          type="submit" 
+                          className="ml-auto col-4 btn btn-success" 
+                          style={{padding: '12px 0px'}}/>
                     </div>
                   </form>
                 </div>
