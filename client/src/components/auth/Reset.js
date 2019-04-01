@@ -84,11 +84,16 @@ class Reset extends Component {
                           prepend="lock_outline"
                         />
                       </div>
-                      <div className="text-center row">
-                            <Link style={{margin: '0px'}} className="col-4 ml-auto mr-auto mt-4 btn btn-warning" to="/dashboard">
+                      <div className="text-center row" style={{margin: '0px'}}>
+                            <Link style={{margin: '0px', padding: '12px 0px'}} 
+                                  className="col-4 ml-auto mr-auto mt-4 btn btn-warning" 
+                                  to="/dashboard">
                               Go Back
                             </Link>
-                            <input style={{margin: '0px'}} type="submit" className="mt-4 ml-auto mr-auto col-4 btn btn-success" />
+                            <input 
+                              style={{margin: '0px', padding: '12px 0px'}} 
+                              type="submit" 
+                              className="mt-4 ml-auto mr-auto col-4 btn btn-success" />
                       </div>
                     </div>
                   </form>
