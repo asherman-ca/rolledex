@@ -21,7 +21,6 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
     const { posts } = this.props.post;
-    console.log(profile)
 
     let dashboardContent;
 

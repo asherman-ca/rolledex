@@ -40,7 +40,7 @@ const TextFieldGroup = ({
           {info}
         </small>
       )}
-      {error && <span className="description ml-5">{error}</span>}
+      {error && <span style={{color:'red'}} className="description ml-5">{error}</span>}
     </div>
   );
 };

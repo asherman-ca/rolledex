@@ -60,12 +60,12 @@ class Register extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-10 ml-auto mr-auto">
-                <div className="card card-signup fonting">
+                <div className="card card-signup fonting" style={{padding:'20px'}}>
                   <h2 className="card-title text-center">Register</h2>
                   <div className="card-body">
                     <div className="row">
                       <div className="col-md-5 ml-auto">
-                        <div className="info info-horizontal">
+                        <div className="info info-horizontal" style={{paddingBottom: '0px'}}>
                           <div className="icon icon-rose">
                             <i className="material-icons">timeline</i>
                           </div>
@@ -77,7 +77,7 @@ class Register extends Component {
                             </p>
                           </div>
                         </div>
-                        <div className="info info-horizontal">
+                        <div className="info info-horizontal" style={{paddingBottom: '0px'}}>
                           <div className="icon icon-primary">
                             <i className="material-icons">code</i>
                           </div>
@@ -91,7 +91,7 @@ class Register extends Component {
                             </p>
                           </div>
                         </div>
-                        <div className="info info-horizontal">
+                        <div className="info info-horizontal" style={{paddingBottom: '0px'}}>
                           <div className="icon icon-info">
                             <i className="material-icons">group</i>
                           </div>
@@ -104,7 +104,7 @@ class Register extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-5 mr-auto mb-4">
+                      <div className="col-md-5 mr-auto">
                         <form
                           className="form"
                           method=""
@@ -149,13 +149,13 @@ class Register extends Component {
                               error={errors.password2}
                               prepend="lock_outline"
                             />
-                            <div className="text-center register-buttons row" style={{marginLeft:'0px'}}>
+                            <div className="text-center register-buttons row" style={{marginLeft:'0px', paddingTop: '20px'}}>
                               <input
                                 type="submit"
-                                className="btn btn-success col-md-6"
+                                className="btn btn-success col-6"
                                 style={{margin:'0px'}}
                               />
-                              <Link to="/login" style={{padding:'0px'}} className="col-md-6 register-redirect">
+                              <Link to="/login" style={{padding:'0px'}} className="col-6 register-redirect">
                                 already have an account?
                               </Link>
                             </div>

@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
   constructor() {
@@ -85,8 +86,11 @@ class Login extends Component {
                         error={errors.password}
                         prepend="lock_outline"
                       />
-                      <div className="text-center mt-4">
-                        <input type="submit" className="btn btn-success" />
+                      <div className="text-center row" style={{marginLeft: '0px', paddingTop: '20px'}}>
+                        <input type="submit" className="btn btn-success col-6" style={{margin:"0px"}} />
+                        <Link to="/register" style={{padding:'0px'}} className="col-6 register-redirect">
+                          Forgot Password?
+                        </Link>
                       </div>
                     </div>
                   </form>
