@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Dropdown = () => {
     return (
-        <div style={{padding:"20px"}} className="col-md-2 avatar-btn">
+        <div style={{padding:"20px"}} className="col-4 avatar-btn">
             <div className="dropdown">
                 <button
                 href="#pablo"

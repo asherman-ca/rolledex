@@ -41,8 +41,11 @@ class Login extends Component {
   };
 
   onRecoverClick() {
-    // console.log(this.state.email)
+    this.setState({ errors: {}})
     this.props.recoverUser(this.state.email, this.props.history);
+    if (this.state.errors.email !== undefined) {
+      this.setState({ errors: {email: 'Reset link will arrive shortly'} })
+    }
   }
 
   render() {
@@ -95,7 +98,7 @@ class Login extends Component {
                       <div className="text-center row" style={{marginLeft: '0px', paddingTop: '20px'}}>
                         <input type="submit" className="btn btn-success col-6" style={{margin:"0px"}} />
                         <div 
-                          style={{padding: '0px'}}
+                          style={{padding: '0px', cursor: 'pointer'}}
                           className="col-6 register-redirect"
                           onClick={this.onRecoverClick.bind(this)}
                         >Forgot Password?</div>

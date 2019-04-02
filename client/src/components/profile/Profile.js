@@ -68,8 +68,8 @@ class Profile extends Component {
                         />
                       </div>
                       <div className="name row">
-                        <div className="col-md-2" />
-                        <div className="col-md-8 edit-buttons">
+                        <div className="col-4" />
+                        <div className="col-4 edit-buttons">
                           <h3 style={{margin: "0px"}} className="title fonting">{profile.handle}</h3>
                         </div>
                         {profile.social ? <SocialButtons social={profile.social} /> : <SocialButtons />}

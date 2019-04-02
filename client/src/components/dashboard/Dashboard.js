@@ -61,16 +61,16 @@ class Dashboard extends Component {
                 <div className="row">
                   <div className="col-md-6 ml-auto mr-auto">
                     <div className="profile">
-                      <div className="avatar">
+                      <Link to={`profile/${user.id}`} className="avatar">
                         <img
                           src={user.avatar}
                           alt="./img/miyao.jpg"
                           className="img-raised rounded-circle img-fluid"
                         />
-                      </div>
+                      </Link>
                       <div className="name row">
                         <Dropdown />
-                        <div className="col-md-8 edit-buttons">
+                        <div className="col-4 edit-buttons">
                           <h3 style={{margin: "0px"}} className="title fonting">{profile.handle}</h3>
                         </div>
                         {profile.social ? <SocialButtons social={profile.social} /> : <SocialButtons />}

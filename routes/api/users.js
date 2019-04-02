@@ -11,6 +11,7 @@ const nodemailer = require('nodemailer');
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 const validateResetInput = require('../../validation/reset');
+const validateRecoverInput = require('../../validation/recover');
 
 // load User model from mongoose
 
@@ -156,11 +157,16 @@ router.post(
 // @desc    Begin password Recovery
 // @access  Public
 
-
-
 router.post(
   '/recover/:email',
   (req,res) => {
+    const { errors, isValid } = validateRecoverInput({email: req.params.email});
+
+    // check validation
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
+
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -172,8 +178,8 @@ router.post(
     var mailOptions = {
       from: 'rolledex@gmail.com',
       to: req.params.email,
-      subject: 'Sending Email using Node.js',
-      text: 'That was easy!'
+      subject: 'Rolledex Password Recovery',
+      text: 'Follow this link to reset your account: www.rolledex.com/recover/a8eb63kkn2'
     };
     
     transporter.sendMail(mailOptions, function(error, info){

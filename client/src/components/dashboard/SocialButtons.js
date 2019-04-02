@@ -2,7 +2,7 @@ import React from 'react';
 
 const SocialButtons = social => {
     return (
-        <div style={{padding:'20px'}} className="col-md-2 edit-buttons">
+        <div style={{padding:'20px'}} className="col-4 edit-buttons">
             <a href={social.instagram ? social.instagram : 'https://www.instagram.com'}>
                 <button className="btn btn-just-icon btn-instagram">
                 <i className="fab fa-instagram"> </i>
