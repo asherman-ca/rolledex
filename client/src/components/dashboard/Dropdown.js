@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const Dropdown = () => {
+const Dropdown = data => {
     return (
         <div style={{padding:"20px"}} className="col-4 avatar-btn">
             <div className="dropdown">
@@ -54,9 +54,9 @@ const Dropdown = () => {
                     >
                         Reset Password
                     </Link>
-                    <a href="#pablo" className="dropdown-item">
+                    <div onClick={data.remover} className="dropdown-item">
                         Delete Account
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>

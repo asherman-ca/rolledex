@@ -8,7 +8,7 @@ import EduTable from './EduTable'
 import Dropdown from './Dropdown';
 import SocialButtons from './SocialButtons';
 import ProfileTables from './ProfileTables';
-import { getCurrentProfile } from '../../actions/profileActions';
+import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
 import { getUserPosts } from '../../actions/postActions';
 
 class Dashboard extends Component {
@@ -69,7 +69,7 @@ class Dashboard extends Component {
                         />
                       </Link>
                       <div className="name row">
-                        <Dropdown />
+                        <Dropdown remover={this.props.deleteAccount} />
                         <div className="col-4 edit-buttons">
                           <h3 style={{margin: "0px"}} className="title fonting">{profile.handle}</h3>
                         </div>
@@ -157,10 +157,11 @@ Dashboard.propTypes = {
   profile: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
   post: PropTypes.object.isRequired,
-  getUserPosts: PropTypes.func.isRequired
+  getUserPosts: PropTypes.func.isRequired,
+  deleteAccount: PropTypes.func.isRequired
 };
 
 export default connect(
   mapStateToProps,
-  { getCurrentProfile, getUserPosts }
+  { getCurrentProfile, getUserPosts, deleteAccount }
 )(Dashboard);
