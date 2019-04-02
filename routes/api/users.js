@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const passport = require('passport');
+const nodemailer = require('nodemailer');
 
 // Load Input Validation
 const validateRegisterInput = require('../../validation/register');
@@ -150,6 +151,41 @@ router.post(
     });
   }
 )
+
+// @route   POST api/users/recover/:email
+// @desc    Begin password Recovery
+// @access  Public
+
+
+
+router.post(
+  '/recover/:email',
+  (req,res) => {
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'rolledex@gmail.com',
+        pass: 'Needs2Change!'
+      }
+    });
+    
+    var mailOptions = {
+      from: 'rolledex@gmail.com',
+      to: req.params.email,
+      subject: 'Sending Email using Node.js',
+      text: 'That was easy!'
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+  }
+)
+
 
 
 // @route   POST api/users/current
