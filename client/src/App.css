@@ -83,3 +83,8 @@
   align-items: center;
   padding-left: 10px;
 }
+
+.post-links {
+  display: flex;
+  align-items: center;
+}

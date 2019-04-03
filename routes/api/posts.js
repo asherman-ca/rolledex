@@ -76,7 +76,8 @@ router.post(
       position: req.body.position,
       avatar: req.body.avatar,
       user: req.user.id,
-      name: req.body.name
+      name: req.body.name,
+      youtube: req.body.youtube
     });
 
     newPost.save().then(post => res.json(post));

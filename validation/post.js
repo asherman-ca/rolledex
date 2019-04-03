@@ -29,6 +29,8 @@ module.exports = function validatePostInput(data) {
   if (!isEmpty(data.youtube)) {
     if (!Validator.isURL(data.youtube)) {
       errors.youtube = 'Not a valid URL';
+    } else if (!data.youtube.includes('http')) {
+      errors.youtube = 'URL must include https'
     }
   }
 

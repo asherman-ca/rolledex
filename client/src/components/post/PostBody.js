@@ -31,7 +31,6 @@ class PostBody extends Component {
 
   render() {
     const { post } = this.props;
-    // const { user } = auth;
     
     return (
       <div className="media">
@@ -46,7 +45,14 @@ class PostBody extends Component {
             </h4>
             <p>{post.text}</p>
             <div className="media-footer">
-              <div className="btn btn-link float-right" style={{cursor: 'auto', marginBottom: '0px'}}>
+              <div className="btn btn-link float-right post-links" style={{cursor: 'auto', marginBottom: '0px', padding: '0px'}}>
+                {post.youtube ? 
+                <a href={post.youtube}>
+                  <i
+                  className="fab fa-youtube fa-2x"
+                  style={{marginRight: '15px'}}
+                  />
+                </a> : null }
                 <i 
                   onClick={this.onLikeClick.bind(this, post._id)} 
                   style={{marginRight: '15px', cursor: 'pointer'}} 
