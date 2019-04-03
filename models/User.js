@@ -22,6 +22,12 @@ const UserSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  recover_token: {
+    type: String
+  },
+  recover_token_exp: {
+    type: Date
   }
 });
 

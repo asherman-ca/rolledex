@@ -16,7 +16,6 @@ class Profile extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
     const { posts } = this.props.post;

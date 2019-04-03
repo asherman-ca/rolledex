@@ -166,29 +166,38 @@ router.post(
     if (!isValid) {
       return res.status(400).json(errors);
     }
-
-    var transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'rolledex@gmail.com',
-        pass: 'Needs2Change!'
-      }
-    });
-    
-    var mailOptions = {
-      from: 'rolledex@gmail.com',
-      to: req.params.email,
-      subject: 'Rolledex Password Recovery',
-      text: 'Follow this link to reset your account: www.rolledex.com/recover/a8eb63kkn2'
-    };
-    
-    transporter.sendMail(mailOptions, function(error, info){
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-      }
-    });
+    let recoverFields = {
+      recover_token: 'a8eb63kkn2',
+      recover_token_exp: Date.now()
+    }
+    User
+      .findOneAndUpdate(
+        { email: req.params.email },
+        { $set: recoverFields },
+        { new: true })
+      .then(user => {
+        var transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: 'rolledex@gmail.com',
+            pass: 'Needs2Change!'
+          }
+        });
+        var mailOptions = {
+          from: 'rolledex@gmail.com',
+          to: req.params.email,
+          subject: 'Rolledex Password Recovery',
+          text: 'Follow this link to reset your account: www.rolledex.com/recover/a8eb63kkn2'
+        };
+        transporter.sendMail(mailOptions, function(error, info){
+          if (error) {
+            console.log(error);
+          } else {
+            console.log('Email sent: ' + info.response);
+          }
+        });
+        console.log(user)
+    })
   }
 )
 

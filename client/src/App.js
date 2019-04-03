@@ -25,6 +25,7 @@ import Post from './components/post/Post';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Reset from './components/auth/Reset';
+import Recover from './components/auth/Recover';
 
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -65,6 +66,10 @@ class App extends Component {
             <Route 
               exact path="/login" 
               component={Login} 
+            />
+             <Route 
+              exact path="/recover" 
+              component={Recover} 
             />
             <Switch>
                 <PrivateRoute 

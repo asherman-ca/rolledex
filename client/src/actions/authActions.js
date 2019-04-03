@@ -57,6 +57,17 @@ export const recoverUser = (email, history) => dispatch => {
     );
 }
 
+export const recoverReset = (resetData, history) => dispatch => {
+  axios
+    .post('/api/users/recoverreset', resetData)
+    .then(res => history.push('/login'))
+    .catch(err => 
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      }))
+}
+
 export const setCurrentUser = decoded => {
   return {
     type: SET_CURRENT_USER,
