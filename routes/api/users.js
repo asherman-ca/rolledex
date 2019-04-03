@@ -176,6 +176,11 @@ router.post(
         { $set: recoverFields },
         { new: true })
       .then(user => {
+        if (!user) {
+          errors.email = 'No account for this email'
+          return res.status(404).json(errors);
+        }
+
         var transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
@@ -197,9 +202,14 @@ router.post(
           }
         });
         console.log(user)
-    })
+    }).
+    catch(err => res.status(404).json({ email: 'email not found' }))
   }
 )
+
+// @route   POST api/users/recoverresewt/:token
+// @desc    Finalize password Recovery
+// @access  Public
 
 
 

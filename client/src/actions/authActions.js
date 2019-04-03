@@ -47,19 +47,19 @@ export const resetUser = (resetData, history) => dispatch => {
 export const recoverUser = (email, history) => dispatch => {
   console.log(email)
   axios
-    .post(`/api/users/recover/${email || 'nothing'}`)
-    .then(res => console.log('sent'))
+    .post(`./api/users/recover/${email || 'nothing'}`)
+    .then(res => console.log(res))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
         payload: err.response.data
       })
-    );
+    )
 }
 
-export const recoverReset = (resetData, history) => dispatch => {
+export const recoverReset = (resetData, history, token) => dispatch => {
   axios
-    .post('/api/users/recoverreset', resetData)
+    .post(`./api/users/recoverreset/${token}`, resetData)
     .then(res => history.push('/login'))
     .catch(err => 
       dispatch({

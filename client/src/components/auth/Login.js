@@ -41,9 +41,9 @@ class Login extends Component {
   };
 
   onRecoverClick() {
-    this.setState({ errors: {}})
+    this.setState({ errors: {} })
     this.props.recoverUser(this.state.email, this.props.history);
-    if (this.state.errors.email !== undefined) {
+    if (this.state.errors.email === undefined) {
       this.setState({ errors: {email: 'Reset link will arrive shortly'} })
     }
   }

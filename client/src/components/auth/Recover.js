@@ -28,15 +28,17 @@ class Recover extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+    const { token } = this.props.match.params
     const resetData = {
       password: this.state.password,
       password2: this.state.password2
     };
-    this.props.recoverReset(resetData, this.props.history);
+    this.props.recoverReset(resetData, this.props.history, token);
   };
 
   render() {
     const { errors } = this.state;
+    
 
     return (
       <div className="signup-page">

@@ -60,7 +60,7 @@ class Register extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-10 ml-auto mr-auto">
-                <div className="card card-signup fonting" style={{padding:'20px'}}>
+                <div className="card card-signup fonting" style={{padding:'20px', paddingBottom: '40px'}}>
                   <h2 className="card-title text-center">Register</h2>
                   <div className="card-body">
                     <div className="row">

@@ -36,23 +36,32 @@ class PostBody extends Component {
       <div className="media">
         <Link className="float-left" to={`/profile/${post.user}`}>
           <div className="avatar">
-              <img className="media-object" alt="../img/miyao.jpg" src={post.avatar} />
+              <img 
+                className="media-object" 
+                alt="../img/miyao.jpg" 
+                src={post.avatar} />
           </div>
         </Link>
           <div className="media-body">
-            <h4 className="media-heading">{post.vector} · {post.position} · <em>{post.name}</em>
+            <h4 className="media-heading">
+              {post.vector} · {post.position} · <em>{post.name}</em>
               <small> · <Moment format="YYYY/MM/DD">{post.date}</Moment></small>
             </h4>
             <p>{post.text}</p>
             <div className="media-footer">
-              <div className="btn btn-link float-right post-links" style={{cursor: 'auto', marginBottom: '0px', padding: '0px'}}>
+              <div 
+                className="btn btn-link float-right post-links" 
+                style={{cursor: 'auto', 
+                marginBottom: '0px', 
+                padding: '0px'}} >
                 {post.youtube ? 
-                <a href={post.youtube}>
-                  <i
-                  className="fab fa-youtube fa-2x"
-                  style={{marginRight: '15px'}}
-                  />
-                </a> : null }
+                  <a href={post.youtube}>
+                    <i
+                      className="fab fa-youtube fa-2x"
+                      style={{marginRight: '15px'}}
+                      />
+                  </a> : null 
+                }
                 <i 
                   onClick={this.onLikeClick.bind(this, post._id)} 
                   style={{marginRight: '15px', cursor: 'pointer'}} 

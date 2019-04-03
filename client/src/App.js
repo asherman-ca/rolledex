@@ -68,7 +68,7 @@ class App extends Component {
               component={Login} 
             />
              <Route 
-              exact path="/recover" 
+              exact path="/recover/:token" 
               component={Recover} 
             />
             <Switch>

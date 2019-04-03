@@ -95,7 +95,7 @@ export const createProfile = (profileData, history) => dispatch => {
 
 export const addEducation = (eduData, history) => dispatch => {
   axios
-    .post('/api/profile/education', eduData)
+    .post('./api/profile/education', eduData)
     .then(res => history.push('./dashboard'))
     .catch(err =>
       dispatch({
@@ -107,7 +107,7 @@ export const addEducation = (eduData, history) => dispatch => {
 
 export const addExperience = (expData, history) => dispatch => {
   axios
-    .post('/api/profile/experience', expData)
+    .post('./api/profile/experience', expData)
     .then(res => history.push('/dashboard'))
     .catch(err =>
       dispatch({
@@ -119,7 +119,7 @@ export const addExperience = (expData, history) => dispatch => {
 
 export const deleteExperience = id => dispatch => {
   axios
-    .delete(`/api/profile/experience/${id}`)
+    .delete(`./api/profile/experience/${id}`)
     .then(res =>
       dispatch({
         type: GET_PROFILE,
@@ -136,7 +136,7 @@ export const deleteExperience = id => dispatch => {
 
 export const deleteEducation = id => dispatch => {
   axios
-    .delete(`/api/profile/education/${id}`)
+    .delete(`./api/profile/education/${id}`)
     .then(res =>
       dispatch({
         type: GET_PROFILE,
