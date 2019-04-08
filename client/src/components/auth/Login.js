@@ -74,6 +74,14 @@ class Login extends Component {
                     onSubmit={this.onSubmit}
                     style={{ height: '100%' }}
                   >
+                  {/* <div className="card-header card-header-primary text-center">
+                    <h4 className="card-title">Log in</h4>
+                    <div className="social-line">
+                      <a href="#pablo" className="btn btn-just-icon btn-link">
+                        <i className="fab fa-google"></i>
+                      </a>
+                    </div>
+                  </div> */}
                     <div className="form-style">
                       <h3 className="card-title text-center">Sign in</h3>
                       <p className="description text-center">

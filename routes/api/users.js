@@ -184,7 +184,6 @@ router.post(
           errors.email = 'No account for this email'
           return res.status(404).json(errors);
         }
-
         var transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
@@ -196,7 +195,7 @@ router.post(
           from: 'rolledex@gmail.com',
           to: req.params.email,
           subject: 'Rolledex Password Recovery',
-          text: 'Follow this link to reset your account: www.rolledex.com/recover/a8eb63kkn2'
+          text: `Follow this link to reset your account: www.rolledex.com/recover/${recoverFields.recover_token}`
         };
         transporter.sendMail(mailOptions, function(error, info){
           if (error) {
