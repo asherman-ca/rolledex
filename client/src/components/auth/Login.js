@@ -22,6 +22,8 @@ class Login extends Component {
       this.props.history.push('./dashboard');
     }
 
+    { newProps.errors ? console.log(newProps.errors) : console.log('nothin') }
+
     if (newProps.errors) {
       this.setState({ errors: newProps.errors });
     }

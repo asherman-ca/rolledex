@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const passport = require('passport');
 const nodemailer = require('nodemailer');
+const crypto = require("crypto");
 
 // Load Input Validation
 const validateRegisterInput = require('../../validation/register');
@@ -21,9 +22,13 @@ const User = require('../../models/User');
 // @desc    Tests users route
 // @access  Public
 
+
+
+
 router.get('/test', (req, res) => {
+  var id = crypto.randomBytes(20).toString('hex');
   res.json({
-    msg: 'Users Works'
+    msg: id
   });
 });
 
@@ -161,13 +166,12 @@ router.post(
   '/recover/:email',
   (req,res) => {
     const { errors, isValid } = validateRecoverInput({email: req.params.email});
-
     // check validation
     if (!isValid) {
       return res.status(400).json(errors);
     }
     let recoverFields = {
-      recover_token: 'a8eb63kkn2',
+      recover_token: crypto.randomBytes(15).toString('hex'),
       recover_token_exp: Date.now()
     }
     User
@@ -207,11 +211,45 @@ router.post(
   }
 )
 
-// @route   POST api/users/recoverresewt/:token
+// @route   POST api/users/recoverreset/:token
 // @desc    Finalize password Recovery
 // @access  Public
 
+router
+  .post('/recoverreset/:token',
+  (req, res) => {
+    const { errors, isValid } = validateResetInput(req.body);
 
+    if (!isValid) {
+      return res.status(400).json(errors)
+    }
+
+    var newPassword = req.body.password
+    var token = req.params.token
+
+    User
+      .findOne({recover_token: token})
+      .then(user => {
+        if (user.recover_token_exp < (Date.now() / 1000)) {
+          errors = { password: 'token expired' }
+          return res.status(400).json(errors)
+        } else if (!user) {
+          errors = { password: 'token not found'}
+          return res.status(400).json(errors)
+        } else {
+          bcrypt.genSalt(10, (err, salt) => {
+            bcrypt.hash(newPassword, salt, (err, hash) => {
+              if (err) throw err;
+              newPassword = hash;
+              user.password = newPassword
+              user.save(function(){})
+              return res.json({ success: 'success' })
+            })
+          })
+        }
+      })
+
+  })
 
 // @route   POST api/users/current
 // @desc    Return current user

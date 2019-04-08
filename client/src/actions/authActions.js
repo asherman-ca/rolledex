@@ -59,7 +59,7 @@ export const recoverUser = (email, history) => dispatch => {
 
 export const recoverReset = (resetData, history, token) => dispatch => {
   axios
-    .post(`./api/users/recoverreset/${token}`, resetData)
+    .post(`/api/users/recoverreset/${token}`, resetData)
     .then(res => history.push('/login'))
     .catch(err => 
       dispatch({
