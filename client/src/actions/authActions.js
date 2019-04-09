@@ -45,7 +45,6 @@ export const resetUser = (resetData, history) => dispatch => {
 }
 
 export const recoverUser = (email, history) => dispatch => {
-  console.log(email)
   axios
     .post(`./api/users/recover/${email || 'nothing'}`)
     .then(res => console.log(res))
