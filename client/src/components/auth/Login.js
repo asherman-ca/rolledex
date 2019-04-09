@@ -74,6 +74,7 @@ class Login extends Component {
                     onSubmit={this.onSubmit}
                     style={{ height: '100%' }}
                   >
+                  <a href="http://localhost:5000/api/users/auth/google">Login</a>
                   {/* <div className="card-header card-header-primary text-center">
                     <h4 className="card-title">Log in</h4>
                     <div className="social-line">
